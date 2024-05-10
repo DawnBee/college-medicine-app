@@ -8,7 +8,7 @@ class Events(models.Model):
 	title = models.CharField(max_length=30)
 	image = models.ImageField(default="default.png", upload_to="events", null=True, blank=True)
 	description = models.TextField()
-	event_date = models.DateTimeField(auto_now_add=True)
+	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.title
@@ -16,4 +16,4 @@ class Events(models.Model):
 	class Meta:
 		verbose_name = "Event"
 		verbose_name_plural = "Events"
-		ordering = ['-event_date']
+		ordering = ['-date_added']
