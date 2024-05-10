@@ -1,2 +1,6 @@
 # Virtual Environment
 env/
+
+
+# Test Database
+backend/db.sqlite3
