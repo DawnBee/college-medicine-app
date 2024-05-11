@@ -2,18 +2,12 @@ import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import api from '../api'
-
-// Asset Imports
-import eventImageOne from '../assets/images/event-1.jpg'
-import eventImageTwo from '../assets/images/event-2.jfif'
-import eventImageThree from '../assets/images/event-3.jpg'
-import eventImageFour from '../assets/images/event-4.jpeg'
+import { API_BASE_URL } from '../api'
 
 const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
-    items: 1
+    items: 4
   },
   desktop: {
     breakpoint: { max: 3000, min: 920 },
@@ -30,75 +24,16 @@ const responsive = {
 }
 
 const EventCards = () => {
-    const events = [
-        {
-            title: "Spring Break",
-            image: eventImageOne,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Intramurals",
-            image: eventImageTwo,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Entrance Exam",
-            image: eventImageThree,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis illum perferendis sed laudantium nemo libero, sunt tempora quisquam placeat quis vero quia soluta accusantium obcaecati. Fugiat magnam unde qui eaque esse facere modi! Doloremque, corrupti."
-        },
-        {
-            title: "Aquintance Party",
-            image: eventImageFour,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Chirstmas Party",
-            image: eventImageOne,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Awarding Ceremony",
-            image: eventImageTwo,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },       
-        {
-            title: "Community Outreach Program",
-            image: eventImageThree,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Night Gala",
-            image: eventImageFour,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },
-        {
-            title: "Halloween Party",
-            image: eventImageOne,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, fugit."
-        },                            
-    ]
+    const [events, setEvents] = useState([]);
 
-    // const [events, setEvents] = useState([])
-    // const [loading, setLoading] = useState(true)
-
-    // useEffect(() => {
-    //   const fetchEvents = async () => {
-    //     try {
-    //       const response = await api.get('/events')
-    //       setEvents(response.data)
-    //       setLoading(false)
-    //     } catch (error) {
-    //       console.error('Error fetching events:', error)
-    //       setLoading(false)
-    //     }
-    //   }
-    //   fetchEvents()
-    // }, [])
-
-    // if (loading) {
-    //   return <p>Loading...</p>
-    // }
-
+    useEffect(() => {
+      axios.get(`${API_BASE_URL}/home/events`)
+        .then(res => {
+          console.log(res)
+          setEvents(res.data);
+        });
+    }, []);
+  
     const CustomLeftArrow = ({ onClick }) => (
       <i id="prev" className="slider-btn fa-solid fa-chevron-left" onClick={onClick}></i>
     )
@@ -117,12 +52,12 @@ const EventCards = () => {
               customLeftArrow={<CustomLeftArrow />}
               customRightArrow={<CustomRightArrow />}
             >
-              {events.map((event, index) => {
+              {events.map((event) => {
                 let truncatedTitle = event.title.length > 20 ? `${event.title.substring(0, 20)} ...` : event.title
                 let truncatedDescription = event.description.length > 90 ? `${event.description.substring(0, 90)} ...` : event.description
 
                 return (
-                  <div key={index} className="event-card">
+                  <div key={event.id} className="event-card">
                     <div className="image-box">
                       <img className="event-img" src={event.image} alt="event image" />
                     </div>
@@ -136,7 +71,8 @@ const EventCards = () => {
             </Carousel>
         </div>
       </section>
-    )
+    )      
+    
   }
 
   export default EventCards
