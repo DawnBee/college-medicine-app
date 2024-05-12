@@ -4,15 +4,11 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
-from rest_framework.routers import DefaultRouter
-from api.views import EventViewSet
-
-router = DefaultRouter()
-router.register(r'home/events', EventViewSet)
+from home.urls import home_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls))
+    path('api/home/', include(home_router.urls)),
 ]
 
 if settings.DEBUG:

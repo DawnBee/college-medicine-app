@@ -1,5 +1,5 @@
 // Components
-import Carousel from '../components/Carousel'
+import Announcements from '../components/Announcements'
 import EventCards from '../components/EventCards'
 import ParallaxBanner from '../components/ParallaxBanner'
 import Publications from '../components/Publications'
@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <main id="home-content">
         <ParallaxBanner />
-        <Carousel />
+        <Announcements />
         <EventCards />
         <Publications />    
         <Testimonials />
