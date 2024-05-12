@@ -1,10 +1,7 @@
-from django.shortcuts import render
-from django.contrib.auth.models import User
-from rest_framework import generics
-from .serializers import UserSerializer
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework import viewsets
+from .models import Events
+from .serializers import EventSerializer
 
-class CreateUserView(generics.CreateAPIView):
-	queryset = User.objects.all()
-	serializers_class = UserSerializer
-
+class EventViewSet(viewsets.ModelViewSet):
+	queryset = Events.objects.all()
+	serializer_class = EventSerializer

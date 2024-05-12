@@ -1,0 +1,3986 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap')    
+    
+// Custom Variables
+$primary-color: #9E2828
+$secondary-color: #C02121
+$tertiary-color: #CD1919
+$placeholder: #C6C6C6
+$bg-black: #272727
+$bg-yellow: #FFF800
+$bg-dark-green: #0C4F3B
+$bg-light-red: #F0E1E1
+$bg-light-biege: #F9F6EF
+$bg-light-gray: #F4F4F4
+$bg-light-gray-2: #D8D8D8
+$bg-glassmorph: rgba(255, 255, 255, .3)
+$backdrop-fill: blur(10px)
+$header-font: "Montserrat", sans-serif
+$content-font: "Lora", serif
+$border-radius-3: 3px
+$border-radius-5: 5px
+$border-radius-10: 10px
+$drop-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4)
+$img-trans-effect: transform 0.3s ease
+$linear-glassmorph: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 100%)
+
+// CSS Resets    
+*, *::before, *::after
+    box-sizing: border-box
+
+::selection
+    color: #000
+    background: $bg-yellow        
+
+body
+    margin: 0
+    padding: 0
+    height: 100%
+    font-family: $content-font
+
+img
+    max-width: 100%
+    vertical-align: bottom
+
+h1, h2, h3, h4, ul, p
+    margin: 0
+    padding: 0   
+
+.layout-container
+    margin: 0 auto
+    max-width: 2000px
+
+// Mixins
+@mixin bento-box-transparent-content()
+    padding: 0
+    position: relative
+    @include img-hover-effect()
+
+    .image-box
+        width: 100%
+        height: 100%
+        @include img-box-styles()
+        border-radius: $border-radius-10
+        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: $img-trans-effect
+    
+    .content
+        left: 0
+        bottom: 0
+        width: 100%
+        z-index: 100
+        padding: 1em
+        position: absolute
+
+@mixin bento-box-solid-content($bg-color)
+    display: grid
+    grid-template-rows: 60% 40%
+
+    .image-box
+        @include img-box-styles()
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: $img-trans-effect
+            border-top-left-radius: $border-radius-10
+            border-top-right-radius: $border-radius-10
+
+    .content
+        position: relative
+        background: $bg-color
+        padding: 1.5em 1.5em 1.5em 2em
+        border-bottom-left-radius: $border-radius-10
+        border-bottom-right-radius: $border-radius-10
+
+    // Line Styles
+    .content::before
+        top: 0
+        left: 15px
+        width: 3px
+        content: ''
+        height: 100%
+        position: absolute
+        background: #fff
+
+    .content::after
+        left: 0
+        top: 15px
+        content: ''
+        height: 3px
+        width: 100%
+        position: absolute
+        background: #fff
+
+@mixin bg-image-format($bg-image)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url($bg-image)
+    
+@mixin testimonial-card()   
+    margin: 1em
+    padding: 1em
+    text-align: center
+    background: $bg-glassmorph
+    backdrop-filter: $backdrop-fill
+    border-radius: $border-radius-10
+
+    .student-img
+        width: 200px
+        aspect-ratio: 1
+        object-fit: cover
+        border-radius: 100px
+    
+    p
+        font-family: $header-font
+
+    .student-name
+        text-align: right
+        font-family: $content-font
+         
+@mixin hero-button()
+    border: none
+    color: #fff
+    margin-top: 1em
+    cursor: pointer
+    padding: .5em 1em
+    box-shadow: $drop-shadow
+    text-transform: uppercase
+    font-family: $content-font
+    background: $tertiary-color
+    border-radius: $border-radius-5
+
+@mixin global-btn()
+    border: none
+    color: #fff
+    cursor: pointer
+    font-weight: 600
+    padding: .5em 1em
+    text-transform: uppercase
+    font-family: $header-font
+    background: $tertiary-color
+    border-radius: $border-radius-3
+
+@mixin vertical-line-style-right($bg-color, $right-gap)
+    top: 0
+    width: 3px
+    content: ''
+    height: 100%
+    right: $right-gap
+    position: absolute
+    background: $bg-color
+
+@mixin vertical-line-style-left($bg-color, $left-gap)
+    top: 0
+    width: 3px
+    content: ''
+    height: 100%
+    left: $left-gap
+    position: absolute
+    background: $bg-color    
+
+@mixin horizontal-line-style-top($bg-color, $top-gap)
+    left: 0
+    height: 3px
+    width: 100%
+    content: ''
+    top: $top-gap
+    position: absolute
+    background: $bg-color
+    
+@mixin slider-btn($left-position:-30px, $right-position:-30px, $hov-bg-color)
+    .slider-btn:hover
+        background: $hov-bg-color
+
+    .slider-btn
+        top: 50%
+        width: 50px
+        z-index: 700
+        display: grid
+        cursor: pointer
+        aspect-ratio: 1
+        background: #fff
+        position: absolute
+        place-items: center
+        border-radius: 100px
+        box-shadow: $drop-shadow
+        color: rgba(0, 0, 0, .8)
+        transform: translateY(-50%)
+        border: 1px solid rgba(0, 0, 0, .1)
+
+    .fa-chevron-left
+        left: $left-position
+
+    .fa-chevron-right
+        right: $right-position
+
+@mixin slide-styles()
+    width: 100%
+    border-radius: $border-radius-10
+
+@mixin hero-styles($height, $bg-color)
+    height: $height
+    overflow: hidden
+    position: relative
+    background-color: $bg-color
+        
+@mixin hero-overlay()
+    top: 50%
+    left: 50%
+    width: 400px
+    color: #fff
+    position: absolute
+    transform: translate(-50%, -50%)                       
+
+@mixin color-overlay($bg-color)
+    top: 0
+    left: 0
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $bg-color
+    
+@mixin expand-btn($btn-color, $hover-color, $font-weight)
+    .expand-btn:hover
+        color: $hover-color
+
+    .expand-btn
+        gap: 5px
+        border: none
+        display: flex
+        cursor: pointer
+        margin: 1em auto
+        color: $btn-color
+        align-items: center
+        background: transparent
+        text-transform: uppercase
+        font-family: $header-font
+        font-weight: $font-weight
+        
+@mixin sidebar-top-style()
+    top: 0
+    left: 0
+    height: 1em
+    width: 100%
+    content: ''
+    position: absolute
+    background: $tertiary-color
+
+@mixin img-hover-effect()
+    .image-box:hover img,
+    .image-box:focus-within img
+        transform: scale(1.1)
+
+@mixin img-box-styles()
+    cursor: pointer
+    overflow: hidden
+    border-top-left-radius: $border-radius-10
+    border-top-right-radius: $border-radius-10
+
+// Animations
+@keyframes moveFromRight
+    0%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0)            
+
+// Interactive Styles
+header.scrolled #navbar
+    color: #000
+    background: #fff
+
+    a
+        color: #000
+
+    .logo-group
+        .logo-img
+            border-radius: 100px
+            border: 5px solid #fff
+
+    .nav-menu
+        .nav-item
+            .nav-link:hover
+                color: $bg-yellow
+            .nav-link
+                color: #000
+
+// **Mobile Styling**
+
+// Navigation
+#navbar
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 1500
+    color: #fff
+    display: flex
+    position: fixed
+    padding: .5em 1em
+    align-items: center
+    box-shadow: $drop-shadow
+    backdrop-filter: blur(10px)
+    justify-content: space-between
+    transition: background-color .5s ease-out
+    background-color: rgba(255, 255, 255, .1)    
+
+    a
+        color: #fff
+        text-decoration: none
+
+    .logo-group
+        gap: .5em
+        display: flex
+        position: relative
+
+        .logo-img
+            width: 90px
+            aspect-ratio: 1
+            position: absolute
+        
+        .logo-text
+            display: flex
+            margin-left: 5.6em
+            align-items: center
+            flex-direction: column
+            justify-content: center
+
+        .logo-text > span
+            display: block
+
+        .primary
+            font-weight: 700
+            font-size: 1.3rem            
+            font-family: $header-font
+        
+        .secondary
+            font-size: .9rem
+
+    .nav-menu
+        display: none
+
+    .hamburger
+        width: 50px
+        aspect-ratio: 1
+        cursor: pointer
+
+// Footer 
+#footer
+    color: #fff
+    position: relative
+    padding-bottom: .5em
+    background: $tertiary-color
+
+    .broad-style
+        display: block
+        min-height: 5em
+        background: $primary-color
+
+    .narrow-style
+        display: block
+        min-height: 2em
+        margin-bottom: 5em
+        background: $secondary-color  
+
+    .footer-menu
+        text-align: center
+        list-style-type: none
+        margin: 1em 1em 3em 1em
+
+        .row-1,.row-2
+            list-style-type: none
+
+            .footer-item:not(:first-of-type)
+                margin-top: 1em
+
+            .footer-link
+                color: #fff
+                font-weight: 600
+                font-size: 1.7rem
+                text-decoration: none
+                font-family: $header-font         
+
+    .newsletter-container
+        padding: 1em
+        display: flex
+        text-align: center
+        align-items: center
+        justify-content: center
+        flex-flow: column nowrap
+
+        h2
+            font-weight: 400
+            text-transform: uppercase
+            font-family: $header-font
+
+        small
+            margin: 1em   
+        
+        form
+            input
+                width: 100%
+                border: none
+                display: block
+                
+            input::placeholder
+                font-size: 1rem
+                border-radius: 3px
+                color: rgba(0, 0, 0, .5)
+
+            .newsletter-btn  
+                width: 100%
+                border: none
+                color: #fff
+                cursor: pointer
+                margin-top: 1em
+                padding: .5em 1em
+                font-size: 1.5rem
+                text-transform: uppercase
+                background: $primary-color
+                border-radius: $border-radius-5
+
+            .newsletter-btn:hover
+                color: $bg-yellow
+    
+    .social-media-links
+        text-align: center
+        font-family: $header-font
+        h3
+            font-weight: 200
+            font-size: 1.6rem
+            margin-bottom: .5em
+            text-transform: capitalize
+        i
+            margin: 3px
+            cursor: pointer
+            font-size: 2.5rem
+           
+
+    .footer-logo
+        padding: 1em
+        margin-top: 1em
+        text-align: center
+        border-bottom: 1px solid #fff
+
+        h3
+            font-size: 1.5rem
+
+        p
+            font-weight: 200
+            font-family: $header-font
+
+    .address-group
+        margin-top: .5em
+        list-style-type: none
+
+        .address-item
+            display: flex
+            align-items: center
+            justify-content: center
+
+            i
+                font-size: 1.2rem
+                margin-right: .5em
+
+            p
+                margin: .2rem 
+                font-size: 1rem
+                font-weight: 200
+                font-family: $header-font
+
+    .copyright-info
+        font-weight: 200
+        font-size: .8rem
+        margin-top: 2rem
+        text-align: center
+        font-family: $header-font
+
+// Home Page
+#home-content
+    .hero-section
+        @include hero-styles(initial, #fff)
+        
+        .bg-video
+            width: 100vw
+            height: 100%
+            object-fit: cover
+            vertical-align: bottom
+        
+        .hero-overlay
+            @include hero-overlay()
+
+    .banner-image
+        width: 100% 
+        z-index: 800
+        margin-top: -25%
+        position: relative
+        vertical-align: bottom
+    
+    .announcement-section
+        position: relative
+
+        .siren-icon
+            top: -5em
+            left: -1.5em
+            z-index: 850
+            width: 150px
+            aspect-ratio: 1
+            position: absolute
+
+        .carousel-container
+            height: 90vh
+            display: flex
+            overflow: hidden
+            position: relative
+            border: 15px solid $primary-color
+
+            .carousel-slide
+                min-width: 100%
+                transition: transform 0.5s ease
+
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+
+            .carousel-navigation
+                bottom: 0
+                left: 50%
+                position: absolute
+                margin-bottom: .2em
+                transform: translateX(-50%)
+                
+                .carousel-nav-btn
+                    width: 20px
+                    margin: 0 .2em
+                    aspect-ratio: 1
+                    cursor: pointer
+                    border-radius: 100px
+                    background: transparent
+                    border: 3px solid #fff
+                    transition: background-color 1s ease
+
+                .carousel-nav-btn.active
+                    background: $primary-color
+
+    .event-section
+        padding-bottom: .5em
+        background-position: left center
+        @include bg-image-format("../assets/images/events-red-side-style.svg")
+
+        .layout-container
+            overflow: hidden
+
+            .event-header
+                color: #fff
+                padding: .2em .5em
+                margin-bottom: .2em
+                background: $bg-black
+                display: inline-block
+                font-family: $header-font
+                border-top-right-radius: 3px
+                border-bottom-right-radius: 3px
+
+            .card-container
+                margin: 2em
+                @include slider-btn(0,0, $bg-light-gray)
+
+                .event-card
+                    display: grid
+                    margin: 3px 1em
+                    min-height: 98%
+                    box-shadow: $drop-shadow
+                    @include img-hover-effect()
+                    border-radius: $border-radius-10
+                    grid-template-rows: repeat(2, 50%)
+
+                    .image-box
+                        @include img-box-styles()
+                        
+                        .event-img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                            transition: $img-trans-effect
+
+                    .content
+                        padding: 1em
+                        background: #fff
+                        position: relative
+                        border-bottom-left-radius: $border-radius-10
+                        border-bottom-right-radius: $border-radius-10
+                        
+                        .card-title
+                            color: #fff
+                            padding: .5em
+                            border-radius: 5px
+                            text-align: center
+                            display: inline-block
+                            font-family: $header-font
+                            background: $secondary-color
+                        p
+                            padding: .5em
+
+                    .content::before
+                        right: 0
+                        bottom: 5%
+                        width: 40%
+                        content: ''
+                        height: 10px
+                        position: absolute
+                        background: $secondary-color
+                
+    .publication-section
+        padding: 0 0 1em 0
+        @include bg-image-format("../assets/images/bg-medical.svg")
+        
+        .publication-header
+            color: #fff 
+            padding: .5em .6em
+            display: inline-block
+            font-family: $header-font
+            text-decoration: underline
+            background: $primary-color
+            border-top-right-radius: $border-radius-10
+            border-bottom-right-radius: $border-radius-10
+
+        // Bento Boxes
+        .bento-container
+            gap: 1em
+            margin: 1em
+            color: #fff
+            display: flex
+            flex-direction: column
+
+            .bento-box
+                border-radius: $border-radius-10
+
+                .bento-title
+                    color: #fff
+                    margin-bottom: .5em
+                    text-transform: uppercase
+                    font-family: $header-font
+                    
+
+            .bento-box:nth-child(1)
+                @include bento-box-transparent-content()  
+                
+            .bento-box:nth-child(2)
+                @include bento-box-transparent-content()           
+                
+            .bento-box:nth-child(3)
+                @include img-hover-effect()
+                @include bento-box-solid-content($bg-black)
+                
+            .bento-box:nth-child(4)
+                @include img-hover-effect()
+                @include bento-box-solid-content($bg-dark-green)
+               
+    .testimonial-section
+        padding: 1em
+        color: #fff
+        @include bg-image-format("../assets/images/bg-university-grounds.jpg")
+
+        .testimonial-card
+            @include testimonial-card()
+        
+// Admission Page
+#admission-content
+    .hero-section::before
+        @include color-overlay(rgba(0,0,0,0.2))
+        
+    .hero-section
+        @include hero-styles(60vh, $placeholder)
+        @include bg-image-format("../assets/images/bg-admission.jpg")
+
+        .hero-overlay
+            padding: 1em
+            text-align: center
+            @include hero-overlay()
+            background: $linear-glassmorph
+            border-radius: $border-radius-5
+
+            .pulse-icon
+                top: -5em
+                right: -3em
+                width: 200px
+                z-index: 600
+                aspect-ratio: 1
+                position: absolute
+
+            .page-header
+                z-index: 900
+                font-size: 3rem
+                position: relative
+                text-transform: uppercase
+                font-family: $header-font
+                
+            p
+                z-index: 800
+                position: relative
+
+            .hero-cta:hover
+                background: $primary-color
+
+            .hero-cta
+                @include hero-button()
+
+    .process-section
+        color: #fff
+        background: $primary-color
+
+        .layout-container::before
+            @include vertical-line-style-right(#fff, 12px)
+
+        .layout-container
+            position: relative
+  
+            .macro-btn-container
+                top: -5em
+                left: 50%
+                width: 80%
+                z-index: 700
+                position: absolute
+                transform: translateX(-50%)
+                
+                .admission-menu
+                    gap: 1em
+                    display: flex
+                    flex-wrap: nowrap
+                    align-items: center
+                    list-style-type: none
+                    flex-direction: column
+                    justify-content: center
+
+                    .anchor-link
+                        .macro-btn:hover
+                            transform: scale(1.05)
+                        
+                        .macro-btn
+                            gap: 1em
+                            width: 100%
+                            padding: 1em
+                            display: flex
+                            cursor: pointer
+                            background: #fff
+                            align-items: center
+                            flex-direction: column
+                            justify-content: center
+                            box-shadow: $drop-shadow
+                            transition: $img-trans-effect
+                            border-radius: $border-radius-10
+                        
+                        i
+                            width: 60px
+                            display: grid  
+                            aspect-ratio: 1
+                            font-size: 1.5rem
+                            place-items: center
+                            border-radius: 100px
+                            color: $primary-color
+                            background: $bg-light-red
+                        
+                        .anchor-tag:hover
+                            color: $bg-yellow
+                            transition: color .3s ease-out
+
+                        .anchor-tag
+                            font-weight: 700
+                            text-decoration: none
+                            color: $primary-color
+                            text-transform: uppercase
+                            font-family: $header-font
+                        p
+                            color: #000
+                            text-align: center
+
+            .section-header::before
+                top: 17em
+                left: 0
+                content: ''
+                width: 100%
+                height: 3px
+                position: absolute
+                background: #fff
+
+            .section-header
+                font-size: 2rem
+                font-weight: 700
+                position: relative
+                padding: 18em 1em 0 1em
+                font-family: $header-font
+                text-transform: uppercase
+            
+            .content-container
+                display: flex
+                justify-content: center
+                flex-flow: column nowrap
+                    
+                .grid-content
+                    order: 2
+
+                    .process-item
+                        margin: 2em
+                        position: relative
+                        border: 3px solid #fff
+                        border-radius: $border-radius-3
+
+                        .item-header
+                            top: -1em
+                            left: -.8em
+                            font-size: 1rem
+                            text-align: center
+                            position: absolute
+                            padding: .5em .8em
+                            display: inline-block
+                            background: $bg-black
+                            font-family: $header-font
+                            text-transform: uppercase                    
+                            border-radius: $border-radius-5
+
+                        p
+                            padding: 1.5em                    
+
+                .process-image
+                    order: 1           
+                    margin: 1.5em
+                    object-fit: cover
+                    border-radius: $border-radius-10                
+
+    .requirement-section
+        padding: 1em
+        background: #fff
+
+        .section-header
+            font-weight: 800
+            font-size: 1.8rem
+            text-align: center
+            margin-bottom: 1.5em
+            font-family: $header-font
+            text-transform: uppercase
+
+        .require-list
+            margin: 1em
+
+            .require-item:not(:first-of-type)
+                margin-top: 1em
+
+            .require-item
+                gap: 1.5em
+                display: flex
+                align-items: center
+                
+                i
+                    color: #fff
+                    display: grid
+                    font-size: 2rem
+                    min-width: 70px
+                    aspect-ratio: 1
+                    align-self: center
+                    place-items: center
+                    border-radius: 1000px
+                    background: $primary-color
+
+                .content
+                    .require-header
+                        margin-bottom: .5em
+                        font-family: $header-font
+            
+    .payment-fee-section
+        padding-top: 1em
+        overflow: hidden
+        text-align: center
+        background: $bg-light-gray 
+
+        .section-header
+            margin-bottom: 1em
+            font-family: $header-font
+            text-transform: uppercase
+
+        .payment-cta
+            margin: 1em
+            padding: .5em 1.5em
+            @include global-btn()      
+
+        .sub-heading
+            margin: 1em
+            text-align: initial
+            color: $primary-color
+            text-transform: uppercase
+            font-family: $header-font
+            
+        .payment-group
+            gap: 1em
+            margin: 1em
+            display: flex
+            align-items: center
+            list-style-type: none
+            flex-direction: column
+            justify-content: center
+            
+            .payment-item
+                flex: 1
+                padding: 1em
+                min-width: 10em
+                text-align: center
+                background: $bg-light-red
+                border-radius: $border-radius-5
+
+                i
+                    font-size: 1.8rem
+                    margin-bottom: .5em
+                    color: $primary-color
+
+                p
+                    font-weight: 600
+                    font-family: $header-font
+
+        .image-frame
+            margin-top: 5em
+            position: relative
+
+            i
+                left: 50%    
+                top: -1.5em
+                display: grid
+                color: #fff
+                aspect-ratio: 1
+                font-size: 2rem
+                min-width: 100px
+                background: #fff
+                position: absolute
+                place-items: center
+                border-radius: 1000px
+                border: 10px solid #fff
+                background: $primary-color
+                transform: translateX(-50%)
+            
+            img
+                width: 100%
+                height: 300px
+                object-fit: cover
+
+        .image-frame::before
+            top: 0
+            left: 0            
+            content: ''     
+            width: 100%
+            height: 100%
+            position: absolute
+            background-image: linear-gradient(to top, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))    
+
+    .scholarship-section
+        background: #fff
+        .top
+            background: $bg-black
+            .layout-container::before
+                @include vertical-line-style-right(#fff, 12px)
+
+            .layout-container
+                height: 20em
+                position: relative  
+
+                .section-header
+                    color: #fff
+                    font-weight: 700
+                    padding-top: 1em
+                    text-align: center
+                    text-wrap: balance
+                    text-transform: uppercase
+                    font-family: $header-font                
+        
+        .bottom
+            position: relative
+            .overview-container
+                left: 50%
+                top: -15em
+                width: 70vw
+                position: absolute
+                background: #fff
+                box-shadow: $drop-shadow
+                transform: translateX(-50%)
+                border-radius: $border-radius-10
+                
+                img
+                    width: 100%
+                    min-height: 20em
+                    object-fit: cover
+                    border-top-left-radius: $border-radius-10
+                    border-top-right-radius: $border-radius-10
+
+                .overview-heading
+                    margin: 1em 0 0 1.5em
+                    text-transform: uppercase
+                    font-family: $header-font
+
+                .info
+                    text-align: center
+
+                    p
+                        padding: 1.5em
+                        text-align: initial
+
+                    .overview-btn
+                        margin-bottom: 2em
+                        @include global-btn()
+            
+            .aid-app-group
+                padding: 25em 2em 2em 2em
+
+                .sub-heading
+                    font-weight: 700
+                    color: $primary-color
+                    text-transform: uppercase
+                    font-family: $header-font
+                
+                .aid-list
+                    list-style-type: none
+
+                    .aid-item
+                        gap: 1em
+                        margin: 1em
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        
+                        i
+                            color: #fff
+                            display: grid
+                            min-width: 60px
+                            aspect-ratio: 1
+                            font-size: 1.5rem
+                            align-self: center
+                            place-items: center
+                            border-radius: 1000px
+                            background: $primary-color
+                            
+    .year-highlight-section
+        color: #fff
+        position: relative
+        background: $secondary-color
+
+        .layout-container::before
+            @include vertical-line-style-right(#fff, 12px)
+
+        .layout-container
+            position: relative
+        
+        .section-header
+            z-index: 900
+            padding: 1rem
+            font-weight: 700
+            text-wrap: balance
+            position: relative
+            font-family: $header-font
+            text-transform: uppercase
+                   
+        .intro-group
+            i
+                top: 16px
+                left: 16px
+                font-size: 12rem 
+                position: absolute
+                color: $primary-color
+            p
+                z-index: 900
+                padding: 1rem
+                position: relative
+            
+        .highlight-event-container
+            position: relative
+            padding-bottom: 1em
+
+            .header-group
+                margin-top: 2em
+                position: relative
+
+                .image-frame
+                    img
+                        width: 100%
+                
+                .month-header
+                    top: 25%
+                    left: 1em   
+                    color: #fff
+                    font-size: 2rem
+                    position: absolute
+                    text-transform: uppercase
+                    font-family: $header-font
+                    transform: translateY(-40%)
+
+                    span
+                        display: block
+                        font-weight: 200
+                        font-size: 1.125rem
+                        text-align: center
+
+            .month-events
+                h4
+                    margin-left: 1em
+                    font-size: 1.5rem
+                    font-family: $header-font
+                    text-transform: uppercase
+
+                .event-list
+                    position: relative
+                    list-style-type: none
+
+                    .event-item
+                        width: 80%
+                        margin: 4em auto
+                        background: #fff
+                        position: relative
+                        box-shadow: $drop-shadow
+                        border-radius: $border-radius-10
+                        @include img-hover-effect()
+
+                        .day
+                            top: -40px
+                            left: -20px
+                            z-index: 300
+                            font-size: 5rem
+                            font-weight: 900
+                            position: absolute
+                            font-family: $header-font
+
+                        .card-title
+                            margin: 0
+                            font-size: 1.2rem
+                            padding: .5em 1em
+                            display: inline-block
+                            font-family: $header-font
+                            background: $primary-color
+                            text-transform: capitalize
+                            border-bottom-right-radius: $border-radius-5
+
+                        .image-box
+                            @include img-box-styles()
+
+                            img
+                                width: 100%
+                                object-fit: cover
+                                transition: $img-trans-effect
+                                border-top-left-radius: $border-radius-10
+                                border-top-right-radius: $border-radius-10
+                        p
+                            padding: 1em 
+                            color: #000
+                                               
+            .bot-cross-style
+                bottom: 0
+                right: 20px
+                width: 90px
+                aspect-ratio: 1
+                position: absolute
+
+        .bottom-img
+            width: 100%
+            height: 15em
+            z-index: 900
+            object-fit: cover
+            position: relative
+
+// Simulation Page    
+#simulation-content
+    .hero-section::before
+        @include color-overlay(rgba(0,0,0,0.2))
+
+    .hero-section
+        @include hero-styles(60vh, $placeholder)
+        @include bg-image-format("../assets/images/sim-2.jpg")
+        
+        .hero-overlay
+            padding: 1em
+            text-align: center
+            @include hero-overlay()
+            background: $linear-glassmorph
+            border-radius: $border-radius-5
+
+            .pulse-icon
+                top: -5em
+                right: -3em
+                width: 200px
+                z-index: 600
+                aspect-ratio: 1
+                position: absolute
+
+            .page-header
+                z-index: 900
+                font-size: 3rem
+                position: relative
+                text-transform: uppercase
+                font-family: $header-font
+                
+            p
+                z-index: 800
+                position: relative
+
+            .hero-cta:hover
+                background: $primary-color
+
+            .hero-cta
+                @include hero-button()
+
+    .facility-section
+        .first::before
+            @include vertical-line-style-left(#fff, 12px)
+
+        .first::after
+            @include horizontal-line-style-top(#fff, 12px)  
+
+        .first
+            color: #fff
+            padding: 1.5em
+            overflow: hidden
+            text-align: center
+            position: relative
+            background: $primary-color
+
+            h2
+                margin-bottom: 1em
+                font-family: $header-font
+                text-transform: capitalize
+            video
+                width: 90%
+                margin: 2em 0 1em 0
+                border: 3px solid #fff
+                border-radius: $border-radius-5
+        
+        .second
+            padding: 1em
+            .facility-list
+                list-style-type: none 
+                .facility-item
+                    margin: 1em 0
+                    h3
+                        font-weight: 800
+                        text-transform: uppercase
+                        font-family: $header-font
+                    p
+                        text-indent: 1rem
+
+    .sim-lab-section
+        .layout-container
+            overflow: hidden
+            padding-bottom: 15em
+            background-size: 100% auto
+            background-position: bottom
+            background-repeat: no-repeat
+            background-image: url("../assets/images/side-boxes-bottom.svg")
+
+            h2
+                margin: 2em
+                color: #fff
+                padding: .2em .5em
+                text-align: center
+                background: $bg-black
+                box-shadow: $drop-shadow
+                font-family: $header-font
+                text-transform: uppercase
+                border-radius: $border-radius-5
+                
+            .collage-container
+                height: 17em
+                max-width: 20em            
+                margin: 2em auto
+                position: relative
+                transition: transform 1s ease-in-out
+                animation: moveFromRight 1s ease-in-out forwards
+                
+                .style-block
+                    z-index: 900
+                    display: block
+                    aspect-ratio: 1
+                    position: absolute
+                    background: $primary-color
+                    border-radius: $border-radius-5
+                    
+                // Right - Big
+                .style-block:nth-child(2)
+                    top: 50%
+                    right: 3px
+                    width: 35px
+                    height: 55px
+                    transform: translateY(-50%)
+
+                // Bottom
+                .style-block:nth-child(3)
+                    width: 30px
+                    left: 3.8em
+                    bottom: -5px
+                    transform: translateX(-28%)
+
+                // Top
+                .style-block:nth-child(4)
+                    left: 50%
+                    top: -25px
+                    width: 60px
+                    height: 45px
+                    transform: translateX(-50%)
+                
+                // Right - Small
+                .style-block:nth-child(5)
+                    top: 65%
+                    right: 12px
+                    width: 15px
+                    transform: translate(-65%)
+
+                .image-wrapper
+                    margin: 0 auto
+                    max-width: 17em
+                    aspect-ratio: 1
+                    position: relative
+
+                    img
+                        aspect-ratio: 1
+                        object-fit: cover
+                        position: absolute
+                        box-shadow: $drop-shadow
+                        border-radius: $border-radius-5
+            
+                    // Center Image
+                    img:nth-child(1)
+                        top: 50%
+                        left: 50%
+                        width: 220px
+                        height: 200px
+                        transform: translate(-50%, -50%)
+
+                    // Bottom Image
+                    img:nth-child(2)
+                        left: 50%
+                        width: 120px
+                        bottom: -25px
+                        transform: translateX(-50%)
+                        
+                    // Top Image
+                    img:nth-child(3)
+                        top: 0
+                        right: 0
+                        width: 90px
+            
+            .text-content
+                padding: 1em
+                text-align: center
+                margin: 3em 0 1em 0
+                background: #fff
+
+                h3
+                    font-weight: 800
+                    margin-bottom: 1em
+                    color: $primary-color
+                    text-transform: uppercase
+                    font-family: $header-font
+                
+                .sim-list
+                    list-style-type: none
+
+                    .sim-item
+                        gap: 1em
+                        display: flex
+                        margin: 1em 0
+                        align-items: center
+                        text-align: initial
+                        i   
+                            font-size: 2.5rem
+                            color: $primary-color
+
+    .sim-mannequins-section
+        color: #fff
+        @include bg-image-format("../assets/images/bg-medical.svg")
+
+        .layout-container
+            padding: 1em
+            h2
+                margin: 1em 0
+                font-size: 2rem
+                text-align: center
+                font-family: $header-font
+                text-transform: capitalize
+            p
+                margin: 1em
+                text-align: center
+
+            .mannequin-list
+                list-style-type: none
+
+                .mannequin-item
+                    margin: 1em
+                    overflow: hidden
+                    position: relative
+
+                    .image-frame
+                        height: 250px
+                        margin: 0 auto
+                        position: relative
+                        box-shadow: $drop-shadow
+
+                        img
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+                            border-top-left-radius: $border-radius-10
+                            border-top-right-radius: $border-radius-10
+
+                        strong
+                            top: 0
+                            left: 0
+                            padding: 1em
+                            color: #000
+                            font-weight: 800
+                            font-size: 1.5rem
+                            background: #fff
+                            position: absolute
+                            font-family: $header-font
+                            border-top-left-radius: $border-radius-10
+                            border-bottom-right-radius: $border-radius-10
+                        
+                        .info-box.show
+                            transform: translateY(0)
+                            border-top-left-radius: $border-radius-10
+                            border-top-right-radius: $border-radius-10                            
+
+                        .info-box
+                            bottom: 0
+                            width: 100%
+                            height: 100%
+                            cursor: pointer
+                            position: absolute
+                            transform: translateY(75%)
+                            transition: transform .5s ease
+                            background: rgba(0, 0, 0, .5)
+                            
+                            h3
+                                padding: 1em
+                                font-weight: 800
+                                text-align: center
+                                font-family: $header-font
+                                text-transform: uppercase
+
+                            button:hover
+                                background: $primary-color
+                            button
+                                @include global-btn()
+                                display: block
+                                margin: 0 auto
+                                a
+                                    color: #fff
+                                    font-size: 1.2rem
+                                    text-decoration: none
+                                    text-transform: capitalize                                   
+
+                             
+
+    .task-trainers-section
+        .layout-container
+            padding-bottom: 8em
+            background-size: 100% auto
+            background-position: bottom
+            background-repeat: no-repeat
+            background-image: url("../assets/images/side-boxes-bottom.svg")
+
+            h2
+                margin: 1em
+                padding: .5em
+                color: #fff
+                font-size: 2rem
+                text-align: center
+                background: $bg-black
+                font-family: $header-font
+                border-radius: $border-radius-10
+
+            .trainer-list
+                height: 100%
+                margin: 0 auto
+                list-style-type: none
+
+                .trainer-item:hover img
+                    transform: scale(1.1)
+
+                .trainer-item
+                    margin: 2em
+                    height: 300px
+                    cursor: pointer
+                    overflow: hidden
+                    position: relative
+                    border-radius: $border-radius-10
+                    
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        box-shadow: $drop-shadow
+                        transition: $img-trans-effect
+                        border-radius: $border-radius-10
+
+                    h3
+                        left: 0
+                        bottom: 0
+                        width: 100%
+                        padding: 1em
+                        color: #fff
+                        font-weight: 200
+                        text-align: center
+                        position: absolute
+                        font-family: $header-font
+                        background: rgba(0, 0, 0, .5)
+                        border-bottom-left-radius: $border-radius-10
+                        border-bottom-right-radius: $border-radius-10
+                        
+    .team-based-section
+        @include bg-image-format("../assets/images/bg-medical.svg")
+
+        .top
+            color: #fff
+            text-align: center
+            padding: 1em
+
+            h2
+                margin-bottom: 1em
+                font-family: $header-font
+                text-transform: uppercase
+            p
+                margin: 1em
+        
+        img
+            width: 100%
+            object-fit: cover
+
+        .bot
+            padding: 1em
+            background: #fff
+
+            .team-based-list
+                text-align: center
+
+                .team-item
+                    gap: 1em
+                    display: flex
+                    margin: 2em 0
+                    align-items: center
+
+                    i
+                        font-size: 3rem
+                        color: $primary-color
+
+                    .content
+                        text-align: initial
+
+                        h3
+                            font-weight: 800
+                            text-transform: uppercase
+                            font-family: $header-font
+        
+    .educ-outcome-section
+
+        .image-frame::before
+            top: 0
+            left: 0            
+            content: ''     
+            width: 100%
+            height: 100%
+            position: absolute
+            background-image: linear-gradient(to bottom, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))            
+        
+        .image-frame
+            position: relative
+
+            img
+                width: 100%
+                height: 250px
+                object-fit: cover
+
+            i
+                left: 50%
+                display: grid
+                color: #fff
+                bottom: -1.5em
+                aspect-ratio: 1
+                font-size: 2rem
+                min-width: 100px
+                background: #fff
+                position: absolute
+                place-items: center
+                border-radius: 1000px
+                border: 10px solid #fff
+                background: $primary-color
+                transform: translateX(-50%)
+
+        .content
+            padding: 1em
+            text-align: center
+            margin: 2.5em 0 1em 0
+            h2
+                font-weight: 800
+                font-family: $header-font
+                text-transform: uppercase
+            p
+                margin: 1em 0
+
+    .faculty-involve-section
+        .top::before
+            @include horizontal-line-style-top(#fff, 12px)
+
+        .top
+            padding: 2em
+            text-align: center
+            position: relative
+            background: $bg-black
+
+            h2
+                color: #fff
+                z-index: 900
+                position: relative
+                margin-bottom: 1em
+                font-family: $header-font
+                text-transform: uppercase
+                
+            img 
+                width: 90%
+                z-index: 900
+                position: relative
+                box-shadow: $drop-shadow
+                border-radius: $border-radius-5
+
+        .bot
+            text-align: center
+
+            .info-group
+                padding: 1em
+                margin-bottom: 1em
+
+                h3
+                    margin-bottom: .5em
+                    color: $primary-color
+                    text-transform: uppercase
+                    font-family: $header-font
+
+// Faculty Page    
+#faculty-content
+    .hero-section::before
+        @include color-overlay(rgba(0,0,0,0.2))
+        
+    .hero-section
+        @include hero-styles(60vh, $placeholder)
+        @include bg-image-format("../assets/images/bg-university-grounds.jpg")
+
+        .page-header
+            top: 50%
+            left: 50%
+            color: #fff
+            z-index: 400
+            font-size: 6rem
+            font-weight: 800
+            position: absolute
+            font-family: $header-font
+            text-transform: uppercase
+            transform: translate(-50%, -50%)
+
+        .faculty-list
+            bottom: 0
+            width: 100%
+            height: 15em
+            display: flex
+            position: absolute
+            list-style-type: none
+            justify-content: center
+
+            .faculty-item:hover .faculty-name
+                opacity: 1
+                z-index: 1000
+
+            .faculty-item:hover img
+                z-index: 1000
+                transform: scale(1.1)
+
+            .faculty-item
+                flex: 1
+                min-width: 5%
+                aspect-ratio: 1
+                cursor: pointer
+                position: relative
+                
+                .faculty-image
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    overflow: visible
+                    vertical-align: bottom
+                    transition: transform 0.3s ease
+
+                .faculty-name
+                    top: 0
+                    left: 50%
+                    opacity: 0
+                    color: #fff
+                    z-index: 1000
+                    min-width: 75%
+                    font-size: .5rem
+                    padding: 5px 10px
+                    border-radius: 3px
+                    text-align: center
+                    position: absolute
+                    transform: translateX(-50%)
+                    transition: opacity 0.3s ease
+                    background-color: rgba(0, 0, 0, 0.8)
+            
+            // Image Stacking Order
+            #romeo 
+                z-index: 800
+            #eva
+                z-index: 700
+            #jocelyn
+                z-index: 600   
+            #analyza
+                z-index: 500             
+            #edwin
+                z-index: 1000 
+            #shilrose
+                z-index: 500  
+            #vien 
+                z-index: 600
+            #darwiza 
+                z-index: 700
+            #rizaldy 
+                z-index: 800
+
+    .mission-vision-section
+        background: $primary-color
+
+        .layout-container::before
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 2em
+            display: block
+            background: #fff
+            position: absolute
+            box-shadow: $drop-shadow
+            
+
+        .layout-container
+            color: #fff
+            display: grid
+            text-align: center
+            position: relative
+            grid-template-columns: repeat(4, 1fr)
+
+            h2
+                text-transform: uppercase
+                font-family: $header-font
+
+            .content
+                grid-column: 1 / span 3
+                background-position: left
+                background-size: auto 100%
+                background-repeat: no-repeat
+                background-image: url("../assets/images/ecg-line-vertical.svg")
+
+                div
+                    padding: 1em
+                    margin-left: 5em
+                
+                .mission
+                    margin-top: 2em
+
+            .logo-group
+                display: flex
+                grid-column: 4
+                grid-row: 1/ span 2
+                align-items: center
+                background: $bg-black
+                justify-content: center
+                
+                img
+                    width: 100px
+                    aspect-ratio: 1
+            
+    .college-message-section
+        background: $bg-light-gray
+        
+        .layout-container
+            padding: 2em 1em
+            text-align: center
+            h2
+                font-weight: 800
+                color: $primary-color
+                font-family: $header-font
+                text-transform: uppercase
+            
+            .content
+                margin-top: 7em
+                padding: 1em 2em
+                min-height: 10em
+                position: relative
+                background-size:  10%
+                background-color: #fff
+                box-shadow: $drop-shadow
+                background-repeat: no-repeat
+                background-position: 5% center
+                border-radius: $border-radius-5
+                background-image: url("../assets/images/quote-gray.svg")
+                
+                .message-img
+                    left: 50%
+                    top: -5em
+                    width: 60%
+                    height: 150px
+                    object-fit: cover
+                    position: absolute
+                    box-shadow: $drop-shadow
+                    transform: translate(-50%)
+                    border-radius: $border-radius-5
+                p
+                    margin-top: 5em
+                    font-weight: 500
+
+    .org-chart-section
+        .intro::before
+            @include vertical-line-style-left(#fff,12px)
+        
+        .intro
+            color: #fff
+            padding: 1em 2em
+            position: relative
+            background: $bg-black
+
+            h2
+                font-weight: 800
+                text-transform: uppercase
+                font-family: $header-font
+            p
+                margin: 1em 0
+        
+        .chart-container
+            height: 30em
+            @include bg-image-format("../assets/images/bg-medical.svg")
+            
+    .quotes-section
+        padding: 2em
+        .quotes-container
+            color: #fff
+            position: relative
+            @include slider-btn(0,0,$tertiary-color)
+
+            .fa-arrow-left, .fa-arrow-right
+                color: #fff
+                background: $primary-color
+
+            .fa-arrow-left
+                left: 0px
+            
+            .fa-arrow-right
+                right: 0px
+
+            .quotes-card
+                display: grid
+                margin: 0 1em
+                background-size: 8%
+                box-shadow: $drop-shadow
+                background-position: 3% 5%
+                background-color: $bg-black
+                background-repeat: no-repeat
+                border-radius: $border-radius-5
+                grid-template-rows: 10px 2fr 10px
+                grid-template-columns: 1em repeat(4, 2fr)
+                background-image: url("../assets/images/quote-white.svg")
+                grid-template-areas: ". . . . img" ". content content content img" ". . . . img"
+             
+                .text-group
+                    grid-area: content
+                    align-self: center
+                    margin: 2em 1em 1em 1em
+
+                    .title
+                        margin-top: 1em
+
+                .image-frame
+                    grid-area: img
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+
+    .lecturers-section
+        padding: 1em 0 0 0
+        background: $bg-light-gray
+
+        .header
+            display: flex
+            align-items: center
+            justify-content: center
+
+            h2
+                color: #fff
+                padding: .5em 1em
+                background: $bg-black
+                font-family: $header-font
+                text-transform: uppercase
+                border-radius: $border-radius-5
+
+        .lecturer-list
+            padding: 1em
+            list-style-type: none
+                
+            .lecturer-item
+                max-width: 80%
+                margin: 2em auto
+                background: #fff
+                box-shadow: $drop-shadow
+                @include img-hover-effect()
+                border-radius: $border-radius-10
+                
+                
+                .image-box
+                    position: relative
+                    @include img-box-styles()
+                       
+                    img
+                        width: 100%
+                        max-height: 320px
+                        object-fit: cover
+                        transition: $img-trans-effect
+                        border-top-left-radius: $border-radius-10
+                        border-top-right-radius: $border-radius-10
+
+                .content
+                    padding: 1em
+                    min-height: 10em
+                    position: relative
+
+                    .title
+                        color: #fff
+                        padding: .5em
+                        border-radius: 5px
+                        display: inline-block
+                        background: $bg-black
+                        font-family: $header-font
+                    p
+                        padding: .5em
+
+                .content::before
+                    right: 0
+                    bottom: 0
+                    width: 6em
+                    content: ''
+                    height: 10px
+                    position: absolute
+                    margin-bottom: 1em
+                    background: $secondary-color
+
+        .bottom-img
+            width: 100%
+            height: 15em
+            z-index: 900
+            object-fit: cover
+            position: relative       
+
+// About Page    
+#about-content
+    .hero-section
+        background: $primary-color
+
+        .layout-container::before
+            @include horizontal-line-style-top(#fff, 6em)
+
+        .layout-container::after
+            @include vertical-line-style-left(#fff, 12px)
+                     
+        .layout-container
+            position: relative
+            text-align: center
+            padding: 7em 1em 1em 1em
+
+            h1
+                margin: .5em
+                color: #fff
+                font-weight: 800
+                font-family: $header-font
+                text-transform: uppercase
+            
+            .hero-content
+                width: 75%
+                padding: 1em
+                margin: 0 auto
+                background: #fff
+                box-shadow: $drop-shadow
+                border-radius: $border-radius-5
+
+                img
+                    object-fit: cover
+                    border-radius: $border-radius-5
+                h2
+                    margin: 1em 0
+                    font-weight: 600
+                    font-family: $header-font
+                    text-transform: capitalize
+                    
+    .acknowledge-section
+        padding: 1em
+        text-align: center
+        background: $bg-light-biege
+
+        .header
+            padding: .5em
+            background: $bg-black
+            border-radius: $border-radius-5
+            
+            h2
+                color: #fff
+                font-size: .9rem
+                font-family: $header-font
+                text-transform: uppercase
+        
+        .benefactor-list
+            list-style-type: none
+        
+            .benefactor-item:last-of-type
+                margin: 8em auto 1em auto
+
+            .benefactor-item::before
+                left: 50%
+                width: 70%
+                content: ''
+                height: 35%
+                bottom: 100%
+                z-index: 200
+                display: block
+                position: absolute
+                transform: translate(-50%)
+                background: $tertiary-color
+                border-top-left-radius: $border-radius-5
+                border-top-right-radius: $border-radius-5                    
+
+            .benefactor-item
+                width: 80%
+                z-index: 400
+                display: grid
+                margin: 8em auto
+                min-height: 20em
+                background: #fff
+                position: relative
+                box-shadow: $drop-shadow
+                border-radius: $border-radius-5
+                grid-template-rows: repeat(5, 1fr)
+                
+                img
+                    left: 50%
+                    top: -30%
+                    width: 60%
+                    z-index: 500
+                    max-height: 200px
+                    object-fit: cover
+                    position: absolute   
+                    box-shadow: $drop-shadow
+                    transform: translate(-50%)
+                    border-radius: $border-radius-5
+                    
+                .content
+                    padding: 1em
+                    grid-row: 3 / span 5
+                    border-bottom-left-radius: $border-radius-5
+                    border-bottom-right-radius: $border-radius-5
+
+                    p
+                        margin: 1em 0
+
+    .core-values-section
+        color: #fff
+        text-align: center
+        background: $primary-color
+
+        .layout-container::before
+            @include horizontal-line-style-top(#fff, 12px)
+            
+        .layout-container
+            padding: 1em
+            position: relative
+
+            img
+                width: 80%  
+                margin: 1em
+                object-fit: cover
+                box-shadow: $drop-shadow
+                border-radius: $border-radius-5
+            
+            .content
+                width: 90%
+                padding: 1.5em
+                margin: 2em auto
+                position: relative
+                border: 3px solid #fff
+                border-radius: $border-radius-5
+
+                h2
+                    top: -1em
+                    left: -15px
+                    color: #fff
+                    padding: .3em .5em
+                    position: absolute
+                    background: $bg-black
+                    text-transform: uppercase
+                    font-family: $header-font
+                    border-radius: $border-radius-5
+                    
+    .history-section
+        background: $bg-light-gray
+
+        .layout-container
+            padding: 8em 1em 2em 1em
+
+            .content
+                width: 80%
+                padding: 1em
+                margin: 0 auto
+                min-height: 15em
+                background: #fff
+                position: relative
+                text-align: center
+                box-shadow: $drop-shadow
+                border-radius: $border-radius-5
+
+                img
+                    top: -5em
+                    left: 50%
+                    width: 80%
+                    max-height: 150px
+                    object-fit: cover
+                    position: absolute
+                    box-shadow: $drop-shadow
+                    transform: translate(-50%)
+                    border-radius: $border-radius-5
+            
+                .text-group
+                    margin-top: 5em
+
+                    h2
+                        margin: 1em
+                        font-size: 1rem
+                        font-weight: 800
+                        text-transform: uppercase
+                        font-family: $header-font
+                    
+                    p
+                        margin: 1em 0
+
+// Alumni Page    
+#alumni-content
+    .hero-section::before
+        @include color-overlay(linear-gradient(to top, #000, transparent))
+
+    .hero-section
+        @include hero-styles(60vh, $placeholder)
+        @include bg-image-format("../assets/images/bg-university-grounds.jpg")
+
+        .hero-overlay
+            @include hero-overlay()
+            width: 95%
+            text-align: center
+            font-family: $header-font
+            text-transform: capitalize
+            h1
+                color: #fff
+                font-size: 4rem
+            p
+                font-weight: 200
+    
+    .search-section
+        color: #fff
+        padding: 1em 2em
+        background: $bg-black
+
+        .form-group
+            .label-group
+                line-height: 5px
+                margin: 1em 0 1.5em 0
+                
+                label
+                    margin: 1em 0
+                    display: block
+                    font-weight: 400
+                    font-size: 1.125rem
+                    font-family: $header-font
+                    text-transform: capitalize
+                    
+                em
+                    font-weight: 100
+                    font-size: .8rem
+                    font-family: $header-font
+
+            .search-wrapper
+                gap: 1em
+                display: flex
+                position: relative
+                justify-content: space-between
+
+                .field-group
+                    flex-grow: 1
+                    display: flex
+                    align-items: center
+
+                    .fa-magnifying-glass
+                        height: 100%
+                        color: #000
+                        padding: 5px
+                        display: grid
+                        background: #fff
+                        font-size: 1.125rem
+                        place-items: center
+                    
+                    input::placeholder
+                        text-indent: .5em
+
+                    input
+                        flex-grow: 1
+                        height: 100%
+                        border: none
+                        box-shadow: $drop-shadow
+
+                button
+                    @include global-btn()
+                    gap: 1em
+                    display: flex
+                    font-weight: 200
+                    border-radius: 0
+                    align-items: center
+                    box-shadow: $drop-shadow
+                    text-transform: capitalize
+                    
+    .spotlight-section
+        padding: 1em
+        background: $bg-light-biege
+
+        .spotlight-card
+            width: 80%
+            margin: 0 auto
+            background: #fff
+
+            h2
+                color: #fff
+                padding: 5px 0
+                text-align: center
+                box-shadow: $drop-shadow
+                text-transform: uppercase
+                font-family: $header-font
+                background: $tertiary-color
+                
+            .content
+                gap: 1em
+                display: flex
+                padding: 1em 2em
+                box-shadow: $drop-shadow
+
+                img
+                    min-width: 30%
+                    max-height: 150px
+                    object-fit: cover
+                    border-radius: $border-radius-3
+                
+                .text-group
+                    h3
+                        margin-bottom: .5em
+                        font-family: $header-font
+                        text-transform: uppercase
+                    p
+                        font-weight: 500
+
+    .memories-section
+        color: #fff
+        padding: 1em
+        background: $bg-black
+
+        .intro
+            h2
+                font-family: $header-font
+                text-transform: uppercase
+            p
+                margin: 1em 0
+        
+        .gallery
+            @include expand-btn(#fff, rgba(255,255,255,.5), 200)
+
+            .img-container
+                gap: 1em
+                display: grid
+                grid-template-areas: "img-1 img-2 img-3" "img-4 img-4 img-5"
+                @include img-hover-effect()       
+
+                .image-box
+                    @include img-box-styles()
+                    border-radius: $border-radius-3
+
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        box-shadow: $drop-shadow
+                        transition: $img-trans-effect
+                        border-radius: $border-radius-3
+
+                .image-box:nth-child(1)
+                    grid-area: img-1
+
+                .image-box:nth-child(2)
+                    grid-area: img-2
+
+                .image-box:nth-child(3)
+                    grid-area: img-3
+
+                .image-box:nth-child(4)
+                    grid-area: img-4
+
+                .image-box:nth-child(5)
+                    grid-area: img-5
+
+    .alumni-info-section
+        padding: 1em
+        background: $bg-light-biege
+
+        .card-container
+            @include slider-btn(0,0, $secondary-color)
+            .slider-btn
+                color: #fff
+                background: $primary-color        
+
+            .alumni-card
+                width: 90%
+                margin: 10px auto
+                position: relative
+                background: #fff
+                box-shadow: $drop-shadow
+
+                .container
+                    .header
+                        color: #fff
+                        padding: .5em 0
+                        text-align: center
+                        font-family: $header-font
+                        background: $tertiary-color
+
+                    .image-frame
+                        width: 80%
+                        margin: 1em auto
+
+                        img
+                            width: 100%
+                            height: 220px
+                            object-fit: cover
+                            box-shadow: $drop-shadow
+                            border-radius: $border-radius-3
+                                                
+                    .info-group
+                        padding: 1em
+
+                        .info-list
+                            text-align: center
+                            list-style-type: none
+                            font-family: $header-font
+
+                            .info-item
+                                margin: 1em 0
+                                
+                                strong
+                                    font-size: 1.2rem
+                                
+    //  SideBar Styling
+    .sidebar
+        padding: 2em 0
+        background: $bg-light-biege
+
+        .news-group::before
+            @include sidebar-top-style()
+
+        .news-group
+            width: 90%
+            padding: 1em
+            margin: 0 auto
+            text-align: center
+            position: relative
+            background: #fff
+            box-shadow: $drop-shadow
+            @include expand-btn(#000, rgba(0,0,0,.5), 400)
+
+            img
+                margin: 1em auto
+                border-radius: $border-radius-3
+            
+            .text-group
+                h3
+                    margin: .5em 0
+                    text-transform: uppercase
+                    font-family: $header-font
+
+        .upcoming-events::before
+            @include sidebar-top-style()
+            
+        .upcoming-events
+            width: 90%
+            padding: 1em
+            margin: 2em auto
+            position: relative            
+            background: #fff
+            box-shadow: $drop-shadow
+            @include expand-btn(#000, rgba(0,0,0,.5), 400)
+            
+            h2
+                font-size: 2rem
+                font-weight: 700
+                margin: 1em auto
+                text-align: center
+                font-family: $header-font
+                text-transform: uppercase
+                
+            .event-list
+                list-style-type: none
+
+                .event-item
+                    gap: 1em
+                    display: flex
+                    margin: 1em auto
+                    font-family: $header-font
+
+                    .date-box
+                        color: #fff
+                        display: grid
+                        min-width: 25%
+                        font-weight: 600
+                        place-items: center
+                        background: $bg-black
+                        font-family: $header-font
+                        border-radius: $border-radius-3
+
+                        .date
+                            font-size: 1.2rem
+                            text-align: center
+
+                            span
+                                display: block
+                                font-size: 2.5rem
+                    
+                    .text-group
+                        .name
+                            margin-bottom: 5px
+                            color: $primary-color
+                            text-transform: uppercase
+                            
+                        .time
+                            margin-top: 5px
+                            font-weight: 300
+
+// Subcontents    
+#scholarship-aid-subcontent
+    .intro-section
+        color: #fff
+        background: $primary-color
+
+        img
+            width: 100%
+            height: 60vh
+            object-fit: cover
+
+        .intro-content::before
+            @include vertical-line-style-right(#fff, 12px )
+
+        .intro-content::after
+            @include horizontal-line-style-top(#fff, 12px)        
+            
+        .intro-content
+            padding: 1em
+            text-align: center
+            position: relative
+
+            h1
+                margin: 1em
+                font-size: 600
+                font-family: $header-font
+                text-transform: uppercase
+    
+    .general-info-section
+        .general-content
+            padding: 1em
+            text-align: center
+
+            h2
+                margin: 1em
+                font-weight: 800
+                color: $primary-color
+                font-family: $header-font
+                text-transform: uppercase
+            
+            .applicant-list
+                margin-top: 1.5em
+                text-align: initial
+                list-style-type: none
+                
+                .applicant-item
+                    gap: 1em
+                    margin: 1em
+                    display: flex
+                    align-items: center
+                
+                i
+                    color: #fff
+                    padding: 1em
+                    background: $primary-color
+                    border-radius: $border-radius-3
+
+                h3
+                    font-weight: 500
+                    font-family: $header-font
+                    text-transform: uppercase
+
+            .estimated-aid-content
+                h2
+                    margin-top: 2.5em
+
+        .priority-filing-dates
+            text-align: center
+
+            h2
+                margin: 2em
+                color: #fff
+                padding: .5em
+                background: $bg-black
+                font-family: $header-font
+                text-transform: uppercase
+                border-radius: $border-radius-3
+
+            .table-frame
+                margin: 3em
+                display: block
+                text-align: center
+
+                .table-side-tag
+                    color: #fff
+                    padding: .5em
+                    display: block
+                    font-weight: 700
+                    text-transform: uppercase
+                    font-family: $header-font
+                    background: $tertiary-color
+                    border-top-left-radius: $border-radius-10
+                    border-top-right-radius: $border-radius-10
+
+                .filing-date-table
+                    width: 100%
+                    border-width: 1px
+                    position: relative
+                    box-shadow: $drop-shadow
+                    border-collapse: collapse
+                    
+                    thead
+                        color: $primary-color
+                        background: $bg-light-red
+                        font-family: $header-font
+                        border-top-left-radius: $border-radius-10
+                        th
+                            padding: .5em
+                            font-weight: 400
+                            text-transform: uppercase
+
+                        th:first-of-type
+                            border-right: 1px solid rgb(0,0,0,.5)
+                
+                    tbody
+                        tr
+                            background: #fff
+                            td:first-child
+                                border-right: 1px solid rgb(0,0,0,.5)
+                            td
+                                padding: .5em                    
+
+#year-event-subcontent
+    .top-content
+        color: #fff
+        margin-top: 4em
+        font-family: $header-font
+        background: $secondary-color
+
+        .layout-container::before
+            @include vertical-line-style-left(#fff,12px)
+            
+        .layout-container::after
+            @include horizontal-line-style-top(#fff,12px) 
+
+        .layout-container
+            padding: 1em 0
+            position: relative
+
+            h1
+                padding: 1em 0 0 1em
+                text-transform: uppercase
+            p
+                margin-left: 2em
+                font-weight: 700
+                font-family: $header-font
+                text-transform: uppercase
+
+            .slider-container
+                margin: 1em 4em
+                position: relative
+                @include slider-btn(_,_,$bg-light-gray)
+               
+                .slide
+                    @include slide-styles()
+                    img
+                        object-fit: cover
+                        @include slide-styles()
+                        box-shadow: $drop-shadow
+    
+    .bot-content
+        padding: 1em
+        min-height: 50vh
+
+        .layout-container
+            text-align: center
+            h2
+                color: #fff
+                padding: .2em .5em
+                margin-bottom: .5em
+                display: inline-block
+                background: $bg-black
+                text-transform: uppercase
+                font-family: $header-font
+                border-radius: $border-radius-3
+            p
+                margin: 1em
+
+#general-detail-subcontent
+    .top::before
+        @include horizontal-line-style-top(#fff, 12px)
+        
+    .top
+        padding: 2em
+        margin-top: 4em
+        position: relative
+        text-align: center
+        background: $bg-black
+        
+        h1
+            color: #fff
+            font-size: 2rem
+            margin-bottom: 1em
+            font-family: $header-font
+            text-transform: uppercase
+        i       
+            left: 50%
+            width: 80px
+            bottom: -1em
+            color: #fff
+            display: grid
+            aspect-ratio: 1
+            font-size: 2.5rem
+            position: absolute
+            place-items: center
+            border-radius: 100px  
+            border: 5px solid #fff
+            transform: translateX(-50%)
+            background: $secondary-color
+
+    .bot
+        padding: 2em
+        text-align: center
+        h2
+            margin-top: 1em
+            color: $primary-color
+            text-transform: uppercase
+            font-family: $header-font
+        p
+            margin: 1em 0
+
+#pay-subcontent
+    .main-section
+        .top::before
+            @include horizontal-line-style-top(#fff, 12px)
+
+        .top
+            padding: 1em
+            color: #fff
+            margin-top: 4em
+            text-align: center
+            position: relative
+            background: $secondary-color
+
+            h1
+                margin: 1em
+                font-family: $header-font
+                text-transform: uppercase
+        
+        .bot
+            min-height: 80vh
+            .method-list
+                list-style-type: none
+
+                .method-item
+                    margin: 1em
+                    padding: 1em
+                    text-align: center
+                    box-shadow: $drop-shadow
+                    border-radius: $border-radius-5
+                    i
+                        margin: .2em 0
+                        font-size: 5rem
+                        color: $primary-color
+                        
+                    .pay-btn
+                        margin: 1em
+                        @include global-btn()
+            
+
+// **Desktop Styling**        
+@media (min-width: 920px)
+    body
+        font-size: 1.125rem
+
+    // Navigation
+    #navbar
+        .nav-menu
+            gap: 1em
+            display: flex
+            list-style-type: none
+            
+            .nav-item
+                .nav-link
+                    color: #fff
+                    font-weight: 700
+                    font-size: 1.125rem
+                    text-decoration: none
+                    font-family: $header-font
+
+                .nav-link:hover
+                    color: $bg-yellow
+                    
+            .nav-item:last-of-type
+                i
+                    margin-right: .5em
+                                
+        .hamburger
+            display: none
+
+    // Footer
+    #footer
+        .footer-nav
+            gap: 1em
+            display: flex
+            align-items: flex-start
+            justify-content: space-between
+
+            .footer-menu
+                .row-1, .row-2
+                    gap: 3em
+                    display: flex
+                    align-items: center
+                    list-style-type: none
+                    justify-content: center
+
+                    .footer-item
+                        margin: 0
+
+                        .footer-link
+                            font-size: 1.5rem
+                
+                .row-2
+                    margin-top: 1em
+        
+        .contact-copyright-info
+            display: flex
+            align-items: flex-end
+            justify-content: space-between
+
+            .bot-left-group
+                display: flex
+                .footer-logo
+                    order: 1
+                    border-bottom: none
+                    line-height: initial
+                    border-right: 2px solid #fff   
+
+                .address-group
+                    order: 2
+                    align-self: center
+
+                    .address-item
+                        margin-left: 1em
+                        justify-content: flex-start
+                        i, p
+                            font-size: .8rem
+
+            .copyright-info
+                order: 3
+                margin: 0
+                align-self: flex-end
+                
+            .social-media-links
+                order: 4
+                h3
+                    font-size: 1rem
+                i
+                    font-size: 1.5rem                
+
+    // Home
+    #home-content
+        .hero-section
+            .bg-video
+                height: 100vh
+
+            .hero-overlay
+                width: 45em
+        
+        .banner-image
+            margin-top: -25%
+
+        .announcement-section
+            .siren-icon
+                top: -7em
+                width: 250px        
+        
+        .event-section
+            .layout-container
+                .card-container
+                    gap: 1em
+                    display: flex                    
+
+        .publication-section
+            .bento-container
+                gap: 1em
+                display: grid
+                grid-template-rows: repeat(2, 1fr)
+                grid-template-columns: repeat(3,1fr)
+                grid-template-areas: "wide wide tall" "sml-1 sml-2 tall"
+                
+                .bento-box:nth-child(1)
+                    grid-area: wide
+                .bento-box:nth-child(2)
+                    grid-area: tall
+                .bento-box:nth-child(3)
+                    grid-area: sml-1
+                .bento-box:nth-child(4)
+                    grid-area: sml-2
+
+        .testimonial-section
+            .card-container
+                display: flex
+                flex-direction: column
+
+                .testimonial-card
+                    gap: 1em
+                    padding: 2em
+                    display: flex
+                    max-width: 80vw
+                    align-items: center
+                    justify-content: center
+                    
+                    img
+                        width: 200px
+                        aspect-ratio: 1
+
+                    p
+                        font-size: 1.5rem
+
+                .testimonial-card:nth-child(2)
+                    align-self: flex-end
+
+                    img
+                        order: 2
+
+    // Admission
+    #admission-content
+        .hero-section
+            height: 80vh
+
+            .hero-overlay
+                max-width: 28em
+
+                .pulse-icon
+                    right: -5em
+                    width: 220px
+                    aspect-ratio: 1
+
+                .page-header
+                    font-size: 4rem
+
+                .hero-cta
+                    font-weight: 700
+                    font-size: 1.3rem
+                    padding: .5em 1.5em
+                    
+        .process-section
+            .layout-container::before
+                @include vertical-line-style-right(#fff, 20px)
+                
+            .layout-container
+                .macro-btn-container
+                    .admission-menu
+                        flex-direction: row
+
+                .section-header::before
+                    top: 1.5em
+                        
+                .section-header
+                    padding: 5em 2em 0 1.5em
+            
+                .content-container
+                    padding: 1em
+                    flex-direction: row
+                    
+                    .grid-content
+                        order: 1
+                        display: grid
+                        grid-template-columns: repeat(2, 1fr)
+                    
+                    .process-image
+                        width: 400px
+                        aspect-ratio: 1
+
+        .requirement-section
+            .require-list
+                gap: 1em
+                display: grid
+                align-items: start
+                grid-template-columns: repeat(2, 1fr)
+
+                .require-item:not(:first-of-type)
+                    margin: 0
+
+        .payment-fee-section
+            padding: 0
+
+            .layout-container
+                display: flex
+
+                .section-header
+                    padding: 1em
+
+                p
+                    margin: 0 1em
+                    padding: 0 1em
+                
+                .payment-cta
+                    font-size: 1.3rem
+                    
+                .sub-heading
+                    margin-left: 3.5em
+
+                .payment-group
+                    gap: 2em
+                    margin: 0 4em
+                    flex-direction: row
+
+                    .payment-item
+                        min-height: 7em
+                
+                .image-frame
+                    margin: 0
+                    min-width: 40%
+                    i
+                        top: 50%
+                        left: -1.5em
+                        transform: translateY(-50%)
+                    img
+                        height: 100%
+
+        .scholarship-section             
+            .top
+                .layout-container::before
+                    @include vertical-line-style-right(#fff, 20px)
+
+                .layout-container
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    
+                    .section-header
+                        font-size: 3rem
+                        margin-left: 10em                     
+
+            .bottom
+                padding: 5em
+                .overview-container
+                    left: 7%
+                    max-width:23em
+                    min-height: 40em
+                    transform: translateX(0)
+
+                    .overview-heading
+                        font-weight: 800
+                        font-size: 1.3rem
+
+                    .overview-btn
+                        margin-top: 1em 
+                        margin-bottom: 0
+                        font-size: 1.2rem
+                
+                .aid-app-group
+                    gap: 1em
+                    padding: 0
+                    display: grid
+                    grid-template-columns: auto repeat(3, 1fr) auto
+                    
+                    div
+                        margin-left: 5em
+                        grid-column: 3 / span 2
+
+                        .sub-heading
+                            font-weight: 800
+                            font-size: 1.5rem
+                            margin: -2em 0 .5em 0
+
+        .year-highlight-section
+            .layout-container::before
+                @include vertical-line-style-right(#fff, 20px)
+
+            .section-header
+                font-size: 3rem
+
+            .intro-group
+                i
+                    font-size: 18rem
+
+            .highlight-event-container
+                .month-group
+                    margin-top: -8em
+
+                    .month-events
+                        position: relative
+
+                        h4
+                            margin-left: 2em
+                            font-size: 1.8rem
+
+                        .event-list
+                            gap: 5em
+                            margin: 3em
+                            display: flex
+                            justify-content: flex-start
+
+                            .event-item     
+                                margin: 0
+                                max-width: 300px
+
+    // Simulation
+    #simulation-content
+        .hero-section
+            height: 100vh
+
+            .hero-overlay
+                width: auto
+                max-width: 28em
+
+                .pulse-icon
+                    right: -5em
+                    width: 220px
+                    aspect-ratio: 1
+
+                .page-header
+                    font-size: 4rem
+
+        .facility-section
+            .layout-container
+                display: flex
+
+                .first::before
+                    @include vertical-line-style-left(#fff, 20px)
+
+                .first::after
+                    @include horizontal-line-style-top(#fff, 20px)  
+
+                .first
+                    padding: 2em
+                    text-align: initial
+                    border-bottom-right-radius: $border-radius-10
+
+                    video
+                        width: 80%
+                        display: block
+                        margin: 1em auto                                                
+                    
+                    h2, p
+                        margin-left: 1em
+
+                .second
+                    align-self: center
+
+        .sim-lab-section
+            .layout-container
+                padding-bottom: 1em
+                background-position: left
+                background-size: auto 100%
+                background-image: url("../assets/images/side-boxes-left.svg")
+
+                .header
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    
+                    h2
+                        margin: 1em 0 0 0
+                        font-size: 2.5rem
+                        padding: .5em 1em
+                
+                .wrapper
+                    display: grid
+                    grid-template-columns: repeat(5, 1fr)
+
+                    .collage-container
+                        order: 2
+                        min-width: 25em
+                        place-self: center
+                        grid-column: 4 / span 2
+
+                        .image-wrapper
+                            img:nth-child(1)
+                                width: 300px
+                                height: 250px
+
+                            img:nth-child(2)
+                                width: 150px
+
+                            img:nth-child(3)
+                                right: -20px
+                                width: 110px
+
+                        // Right - Big
+                        .style-block:nth-child(2)
+                            right: 20px                                
+                    
+                        // Bottom
+                        .style-block:nth-child(3)
+                            left: 6em
+                            bottom: -20px
+                            
+                        // Right - Small
+                        .style-block:nth-child(5)
+                            right: 25px
+
+                    .text-content
+                        place-self: center
+                        grid-column: 2 /span 2
+                        border-radius: $border-radius-10
+
+        .sim-mannequins-section
+            .mannequin-list
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .mannequin-item
+                    .image-frame
+                       max-width: 220px
+                       max-height: 300px
+
+        .task-trainers-section
+            .layout-container
+                padding: 3em
+                background-position: right
+                background-size: auto 100%
+                background-image: url("../assets/images/side-boxes-right.svg")
+
+                .header
+                    display: flex
+                    align-items: center
+                    justify-content: flex-start
+
+                    h2
+                        margin: 0 0 1em 0
+                        padding: .5em 1.5em
+                
+                .trainer-list
+                    gap: 1em
+                    display: grid
+                    grid-template-rows: repeat(2, 230px)
+                    grid-template-columns: repeat(4, 1fr)
+                    grid-template-areas: "sam birth adult-child matt" "cpr breast breast matt"
+
+                    .trainer-item
+                        margin: 0
+                        width: auto
+                        height: auto
+                        
+                    .sam
+                        grid-area: sam
+                    .birth
+                        grid-area: birth
+                    .adult-child
+                        grid-area: adult-child
+                    .cpr
+                        grid-area: cpr
+                    .breast
+                        grid-area: breast                                                                                          
+                    .matt
+                        grid-area: matt
+
+        .team-based-section
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            img
+                height: 100%
+
+        .educ-outcome-section
+            .layout-container
+                display: grid
+                grid-template-areas: "text img"
+
+                .image-frame::before
+                    right: 0
+                    background-image: linear-gradient(to left, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))    
+                
+                .image-frame,.content
+                    min-height: 20em
+
+                .image-frame
+                    grid-area: img
+                    
+                    img
+                        height: 100%
+                    
+                    i
+                        top: 50%
+                        left: -1.5em
+                        bottom: initial
+                        transform: translateY(-50%)
+                        
+                .content
+                    margin: 0
+                    padding: 2em
+                    display: flex
+                    grid-area: text
+                    text-align: initial
+                    align-items: center
+                    justify-content: center
+                    flex-flow: column nowrap
+
+        .faculty-involve-section
+            .top::before
+                @include horizontal-line-style-top(#fff, 20px)
+
+            .top
+                padding: 3em
+                text-align: initial
+
+                .layout-container
+                    display: grid
+                    position: relative
+                    grid-template-columns: 1fr 2fr
+
+                    h2
+                        margin: 0
+                        grid-column: 2
+                        font-size: 2.5rem
+                    img
+                        left: 3em
+                        width: 300px
+                        height: 350px
+                        bottom: -16em
+                        object-fit: cover
+                        position: absolute
+            
+            .bot
+                min-height: 20em
+                text-align: initial
+
+                .layout-container
+                    display: grid
+                    grid-template-columns: 1fr 2fr
+
+                    .info-group
+                        grid-column: 2
+
+    // Faculty
+    #faculty-content
+        .hero-section
+            height: 100vh
+
+            .page-header
+                font-size: 12rem
+        
+        .mission-vision-section
+            .layout-container::before
+                z-index: 600
+
+            .layout-container
+                display: flex
+
+                .content
+                    padding: 1em
+                    h2
+                        font-weight: 800
+
+                .logo-group
+                    display: flex
+                    min-width: 30%
+                    justify-content: flex-end
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 46% 100%)
+
+                    img
+                        width: 200px
+                        margin-right: 10%
+
+        .college-message-section
+            .layout-container
+                h2
+                    font-size: 1.8rem
+                .content
+                    width: 70%
+                    display: grid
+                    margin: 1em auto
+                    min-height: 15em
+                    background-size:  15%
+                    background-position: 5% 5%                                        
+                    grid-template-columns: repeat(4, 1fr)
+
+                    p
+                        margin: 0                                                
+                        font-size: 1.5rem
+                        align-self: center
+                        grid-column: 1 / span 3
+
+                    .message-img                        
+                        top: 50%                        
+                        width: 35%
+                        right: -8em
+                        height: 220px
+                        left: initial
+                        transform: translateY(-50%)
+
+        .quotes-section
+            .quotes-container
+                .fa-arrow-left, .fa-arrow-right
+                    font-size: 1.5rem
+ 
+                .quotes-card
+                    max-height: 18em
+                    background-size: 6%
+
+                    .text-group
+                        font-size: 1.5rem
+
+        .lecturers-section
+            .lecturer-list
+                gap: 1em
+                display: flex
+                justify-content: center
+
+                .lecturer-item
+                    flex: 1
+                    margin: 0
+                    max-width: 300px
+
+                    .image-box
+                        img
+                            max-height: 250px
+
+    // About
+    #about-content
+        .hero-section
+            .layout-container::before
+                @include horizontal-line-style-top(#fff, 5em)
+
+            .layout-container::after
+                @include vertical-line-style-left(#fff, 20px)
+
+            .layout-container
+                .hero-content
+                    gap: 1em
+                    display: flex
+
+                    img
+                        width: 50%
+                        max-height: 300px
+                    
+                    .text-group
+                        h2
+                            font-weight: 700
+
+        .acknowledge-section
+            .header
+                width: 80%
+                margin: 0 auto
+
+                h2
+                    font-size: 1.5rem
+
+            .benefactor-list
+                .benefactor-item:last-of-type
+                    margin: 2em auto
+
+                .benefactor-item::before
+                    top: 50%
+                    width: 18%
+                    height: 90%
+                    right: 100%
+                    left: initial
+                    bottom: initial
+                    border-top-right-radius: 0
+                    transform: translateY(-50%)
+                    border-top-left-radius: $border-radius-10
+                    border-bottom-left-radius: $border-radius-10
+
+                .benefactor-item
+                    width: 60%
+                    margin: 2em auto
+                    border-radius: $border-radius-10
+                    grid-template-rows:  repeat(3, auto)
+                    grid-template-columns: 1em repeat(4, 1fr) 1em
+                
+                    img
+                        top: 50%
+                        left: -15%
+                        width: 35%
+                        max-height: 280px
+                        transform: translateY(-50%)
+                        border-radius: $border-radius-10
+                    
+                    .content
+                        grid-row: 2
+                        text-align: initial
+                        grid-column: 3 / span 3
+
+        .core-values-section
+
+            .layout-container::before
+                @include vertical-line-style-left(#fff, 20px)
+
+            .layout-container
+                gap: 1em
+                display: flex
+                padding: 1em 2em
+                align-items: center
+
+                img
+                    width: 30%
+                    height: 300px
+                
+                .content
+                    width: auto
+                    padding: 2em
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    flex-flow: column nowrap
+
+        .history-section
+            .layout-container
+                padding: 2em
+
+                .content
+                    display: grid
+                    place-items: center
+                    grid-template-columns: 1em repeat(4, 1fr) 1em
+
+                    img
+                        top: 50%
+                        right: -5em
+                        width: 350px
+                        left: initial
+                        max-height: 80%
+                        transform: translateY(-50%)
+                    
+                    .text-group
+                        margin: 0
+                        grid-column: 2 / span 3
+
+                        h2
+                            margin: 1em 0
+                            font-size: 1.5rem
+
+    // Alumni
+    #alumni-content
+        background: $bg-light-biege
+
+        .hero-section
+            height: 100vh
+
+            .hero-overlay
+                h1
+                    font-size: 6rem
+                p
+                    font-size: 1.7rem
+
+        .search-section
+            .form-group
+                width: 80%
+                margin: 0 auto
+
+                .label-group
+                    label
+                        font-size: 2rem
+                    em
+                        font-size: 1rem
+                
+                .search-wrapper
+                    height: 2.5em
+
+                    .field-group
+                        .fa-magnifying-glass
+                            padding: 10px
+
+                        input::placeholder
+                            font-size: 1.2rem
+
+                    button
+                        font-size: 1.125rem
+
+        .grid-section-group
+            padding: 1em
+            display: grid
+            background: $bg-light-biege
+            grid-template-columns: 30% 70%
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: "sidebar spotlight" "sidebar memories" "sidebar alum-info"
+
+            .spotlight-section
+                padding: 1em 0
+                grid-area: spotlight
+
+                .spotlight-card
+                    margin: 0
+                    width: 100%
+
+                    .content
+                        img
+                            max-height: 250px
+
+                        .text-group
+                            align-self: center
+            
+            .memories-section
+                grid-area: memories
+                box-shadow: $drop-shadow
+
+                .gallery
+                    .img-container
+                        grid-template-rows: repeat(2, 200px)
+
+            .alumni-info-section
+                grid-area: alum-info
+
+                .card-container
+                    .slider-btn
+                        width: 65px
+                        font-size: 1.5rem
+
+                    .alumni-card
+                        .container
+                            display: grid
+                            grid-template-rows: 15% 85%
+                            grid-template-columns: repeat(5, 1fr)
+
+                            .header
+                                grid-row: 1
+                                grid-column: 3 / span 3
+                        
+                            .image-frame
+                                margin: 0
+                                width: 100%
+                                grid-row: 1 / span 2
+                                grid-column: 1 / span 2
+
+                                img
+                                    height: 100%
+                                    max-height: 100%
+                                    border-radius: 0
+                                    
+                            .info-group
+                                padding: 0
+                                grid-column: 3 / span 3
+
+                                .info-list
+                                    margin: 0 1em
+                                    text-align: initial
+
+            .sidebar
+                padding: 1em 0
+                grid-area: sidebar                          
+
+    // Subcontents
+    #scholarship-aid-subcontent            
+        .intro-section
+            margin-top: 3.5em
+
+            .intro-content::before
+                @include vertical-line-style-right(#fff, 20px )
+
+            .intro-content::after
+                @include horizontal-line-style-top(#fff, 20px)
+
+            .layout-container
+                display: flex
+
+                img
+                    height: 250px
+
+                .intro-content
+                    padding: 2em
+                    text-align: initial
+
+                    h1
+                        margin: 1em 0
+                        text-align: initial
+        
+        .general-info-section
+            .layout-container
+                display: grid
+                grid-template-columns: 2fr 1fr
+
+                .general-content
+                    text-align: initial
+                    > p
+                        margin-left: 1.5em
+
+                    .estimated-aid-content
+                        > p
+                            margin-left: 1.5em
+                            
+                .priority-filing-dates
+                    h2
+                        font-size: 1.5rem
+    
+    #year-event-subcontent
+        .top-content
+            margin-top: 3em
+            background: none
+
+            .layout-container::before
+                z-index: 600
+                @include vertical-line-style-left(#fff, 20px)
+                
+            .layout-container::after
+                z-index: 600
+                @include horizontal-line-style-top(#fff, 20px) 
+
+            .layout-container
+                padding: 0
+
+                .content::before
+                    top: 0
+                    left: 0
+                    width: 50%                    
+                    content: ''
+                    height: 100%
+                    position: absolute
+                    background: $secondary-color
+                    border-bottom-right-radius: $border-radius-10
+
+                .content
+                    height: 40em
+                    h1, p
+                        z-index: 900
+                        position: relative
+                    h1
+                        margin-left: 8%                     
+                    p
+                        margin-left: 25%
+                        font-size: 1.8rem
+                        
+                    .slider-container
+                        width: 50em
+                        margin: 1em auto
+        
+        .bot-content
+            .layout-container
+                p
+                   text-align: initial
+
+    #general-detail-subcontent
+        .info-section
+            display: grid
+            min-height: 80vh
+            grid-template-columns: repeat(4, 1fr)
+
+            .top::before
+                @include horizontal-line-style-top(#fff, 20px)
+
+            .top
+                padding: 0
+                display: grid
+                margin-top: 3em
+                place-items: center
+                text-align: initial
+
+                h1             
+                    margin: 0       
+                    grid-row: 1
+                    transform: rotate(270deg)
+                i
+                    top: 50%
+                    right: -1em
+                    left: initial
+                    bottom: initial
+                    transform: translateY(-50%)
+
+            .bot::before
+                @include horizontal-line-style-top(#000, 20px)
+                
+            .bot
+                padding: 3em
+                margin-top: 3em
+                position: relative
+                text-align: initial
+                grid-column: 2 / span 3
+
+    #pay-subcontent
+        .main-section
+            .top::before
+                @include horizontal-line-style-top(#fff, 20px)
+
+            .top::after
+                @include vertical-line-style-right(#fff, 20px)
+
+            .top
+                margin-top: 3em
+                text-align: initial
+                h1
+                    margin: 1em 0
+            .bot
+                .method-list
+                    display: flex
+                    .method-item
+                        flex: 1
+
+
+// Breakpoints
+ 
+// 'Footer' Breaks
+@media (min-width: 920px) and (max-width: 970px)
+    #footer
+        .footer-nav
+            .footer-menu
+                .footer-link
+                    font-size: 1rem
+
+            .newsletter-container
+                h2
+                    font-size: 1.5rem
+                    text-align: center
+
+                form
+                    .newsletter-btn
+                        padding: 10px
+                        font-size: 1rem
+
+// 'Navbar' & 'Home Page' Breaks
+@media (min-width: 920px) and (max-width: 1020px)
+    #navbar
+        .logo-group
+            font-size: 1rem
+
+            .logo-text
+                .primary
+                    font-size: 1.2rem
+
+        .nav-menu
+            .nav-item
+                .nav-link
+                    font-size: 1rem
+
+    #home-content
+        .publication-section
+            .bento-container
+                display: flex
+
+                .bento-box
+                    .image-box
+                        height: 350px
+
+                        img
+                            height: 100%
+
+// 'Admission Page' Breaks
+@media (min-width: 320px) and (max-width: 380px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 33em 2em 2em 2em
+
+@media (min-width: 380px) and (max-width: 400px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .aid-app-group
+                    padding: 31em 2em 2em 2em
+
+@media (min-width: 400px) and (max-width: 480px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 29em 2em 2em 2em                    
+
+@media (min-width: 840px) and (max-width: 919px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 30em 2em 2em 2em
+
+@media (min-width: 1390px) and (max-width: 1550px)
+    #admission-content
+        .scholarship-section
+            .top
+                .layout-container
+                    display: grid
+                    grid-template-columns: repeat(8, 1fr) 1em
+
+                    .section-header
+                        padding: 0
+                        margin: 0 1em
+                        grid-column: 4 / span 5
+
+// 'Admission' & 'Simulation Page' Breaks    
+@media (min-width: 920px) and (max-width: 1200px)
+    #admission-content
+        .process-section
+            .content-container
+                .grid-content
+                    .process-item
+                        p
+                            margin-top: 1.5em
+
+        .payment-fee-section
+            .layout-container
+                div
+                    width: 70%
+
+                .payment-group
+                    margin: 1em 4em
+
+        .scholarship-section
+            .top
+                .layout-container
+                    display: grid
+                    grid-template-columns: repeat(6, 1fr) 1em
+
+                    .section-header
+                        padding: 0
+                        margin: 0 12px
+                        grid-column: 4 / span 3
+
+            .bottom
+                padding: 5em 1em
+
+                .overview-container
+                    width: 40%
+
+                .aid-app-group
+                    grid-template-columns: repeat(6, 1fr)
+
+                    div
+                        margin: 0
+                        grid-column: 4 / span 3
+
+    #simulation-content
+        .faculty-involve-section
+            .top
+                .layout-container
+                    img
+                        width: 250px
+                        height: 300px
+                        left: initial
+
+// 'Faculty Page' Breaks     
+@media (min-width: 320px) and (max-width: 600px)
+    #faculty-content
+        .hero-section
+            .page-header
+                font-size: 4rem
+                
+            .faculty-list
+                height: 8em
+
+        .mission-vision-section
+            .layout-container
+                .content
+                    background-image: none
+
+                    div
+                        margin: 1em
+
+// 'About' & 'Alumni Page' Breaks
+@media (min-width: 320px) and (max-width: 350px)
+    #about-content
+        .acknowledge-section
+            .layout-container
+                .benefactor-list
+                    .benefactor-item::before
+                        height: 20%
+
+                    .benefactor-item
+                        grid-template-rows: repeat(6, 1fr)
+
+                        img
+                            top: -15%
+                        
+                        .content
+                            grid-row: 3 / span 5
+
+    #alumni-content
+        .search-section
+            .form-group
+                .label-group
+                    line-height: initial
+
+                .search-wrapper
+                    button
+                        p
+                            display: none
+
+        .spotlight-section
+            .spotlight-card
+                .content
+                    flex-direction: column
+
+@media (min-width: 351px) and (max-width: 444px)
+    #about-content
+        .acknowledge-section
+            .layout-container
+                .benefactor-list
+                    .benefactor-item::before
+                        height: 20%
+
+                    .benefactor-item
+                        grid-template-rows: repeat(6, 1fr)
+
+                        img
+                            top: -15%
+                        
+                        .content
+                            margin-top: 1em
+                            grid-row: 3 / span 5
+    
+@media (min-width: 920px) and (max-width: 1050px)
+    #about-content
+        .history-section
+            .layout-container
+                .content
+                    grid-template-columns: 1em repeat(8, 1fr) 1em
+
+                    .text-group
+                        margin-right: .5em
+                        grid-column: 2 / span 5
+
+@media (min-width: 1051px) and (max-width: 1250px)
+    #about-content
+        .history-section
+            .layout-container
+                .content
+                    grid-template-columns: 1em repeat(6, 1fr) 1em
+
+                    .text-group
+                        grid-column: 2 / span 4
+
