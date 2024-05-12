@@ -1,27 +1,16 @@
-// Asset Imports
-import studentImageOne from '../assets/images/student-1.jpg'
-import studentImageTwo from '../assets/images/student-4.jpg'
-import studentImageThree from '../assets/images/student-3.jpg'
-
-const testaments = [
-    {
-        image: studentImageOne,
-        name: "Taylor F. Swift",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus animi illo facilis similique dolorem maiores quis rem excepturi sapiente?"
-    },
-    {
-        image: studentImageTwo,
-        name: "Avril R. Lavigne",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus animi illo facilis similique dolorem maiores quis rem excepturi sapiente?"
-    },
-    {
-        image: studentImageThree,
-        name: "Tom H. Hanks",
-        content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus delectus animi illo facilis similique dolorem maiores quis rem excepturi sapiente?"
-    },
-]
+import { useState, useEffect } from 'react'
+import { API_BASE_URL } from "../api"
+import axios from "axios"
 
 const Testimonials = () => {
+    const [testaments, setTestaments] = useState([])
+
+    useEffect(() => {
+        axios.get(`${API_BASE_URL}/home/testimonials`)
+        .then(res => {
+            setTestaments(res.data)
+        })
+    }, [])
   return (
     <section className="testimonial-section">
         <div className="layout-container">

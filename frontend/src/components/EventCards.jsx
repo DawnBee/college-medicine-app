@@ -1,8 +1,8 @@
-import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-import axios from 'axios'
 import { useState, useEffect } from 'react'
+import Carousel from 'react-multi-carousel'
 import { API_BASE_URL } from '../api'
+import axios from 'axios'
 
 const responsive = {
   superLargeDesktop: {
@@ -24,15 +24,14 @@ const responsive = {
 }
 
 const EventCards = () => {
-    const [events, setEvents] = useState([]);
+    const [events, setEvents] = useState([])
 
     useEffect(() => {
       axios.get(`${API_BASE_URL}/home/events`)
         .then(res => {
-          console.log(res)
-          setEvents(res.data);
-        });
-    }, []);
+          setEvents(res.data)
+        })
+    }, [])
   
     const CustomLeftArrow = ({ onClick }) => (
       <i id="prev" className="slider-btn fa-solid fa-chevron-left" onClick={onClick}></i>
