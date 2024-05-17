@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from home.views import (
+from .views import (
     AnnouncementViewSet, 
     EventViewSet,
     PublicationViewSet,
