@@ -1,5 +1,6 @@
-import uuid
+from django.core.exceptions import ValidationError
 from django.db import models
+import uuid
 
 class Announcements(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -48,12 +49,21 @@ class Publications(models.Model):
 
 class Testimonials(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	content = models.CharField(max_length=200)
 	image = models.ImageField(default="default.png", upload_to="testimonials", null=True, blank=True)
 	name = models.CharField(max_length=40, unique=True)
+	content = models.TextField()
 
 	def __str__(self):
 		return self.name
+
+	def clean(self):
+		super().clean()
+		if len(self.content) > 250:
+			raise ValidationError({'content': 'maximum length is 250 characters.'})
+
+	def save(self, *args, **kwargs):
+		self.full_clean()
+		super().save(*args, **kwargs)
 
 	class Meta:
 		verbose_name = "Testimonial"
