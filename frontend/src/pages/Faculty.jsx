@@ -9,7 +9,7 @@ import vienImage from '../assets/images/faculty/vien.svg'
 import darwizaImage from '../assets/images/faculty/darwiza.svg'
 import rizaldyImage from '../assets/images/faculty/rizaldy.svg'
 import logoOutline from '../assets/images/com-outline.svg'
-import collegeGrounds from '../assets/images/bg-university-grounds.jpg'
+import collegeGrounds from '../assets/images/library-building.jpg'
 
 // Components
 import Quotes from '../components/Quotes'

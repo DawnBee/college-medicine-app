@@ -6,7 +6,7 @@ import ecgLine from '../assets/images/ecg-line-white.svg'
 import yearEventImageOne from '../assets/images/event-1.jpg'
 import yearEventImageTwo from '../assets/images/event-2.jfif'
 import yearEventImageThree from '../assets/images/event-3.jpg'
-import bottomImage from '../assets/images/bg-university-grounds.jpg'
+import bottomImage from '../assets/images/library-2.jpg'
 import bottomCrossImage from '../assets/images/white-crosses.svg'
 
 // Components
