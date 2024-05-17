@@ -7,7 +7,7 @@ import rizaldyBgRed from '../assets/images/faculty/rizaldy-bg-red.svg'
 import shilroseBgRed from '../assets/images/faculty/shilrose-bg-red.svg'
 import romeoBgRed from '../assets/images/faculty/romeo-bg-red.svg'
 import vienBgRed from '../assets/images/faculty/vien-bg-red.svg'
-import bottomImage from '../assets/images/bg-university-grounds.jpg'
+import bottomImage from '../assets/images/infirm-building.jpg'
 
 const Lecturers = () => {
     const lecturers = [

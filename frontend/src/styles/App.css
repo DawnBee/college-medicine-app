@@ -632,7 +632,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-university-grounds.jpg");
+  background-image: url("../assets/images/infirm-building.jpg");
 }
 #home-content .testimonial-section .testimonial-card {
   margin: 1em;
@@ -675,7 +675,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-admission.jpg");
+  background-image: url("../assets/images/admission.jpg");
 }
 #admission-content .hero-section .hero-overlay {
   padding: 1em;
@@ -1777,7 +1777,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-university-grounds.jpg");
+  background-image: url("../assets/images/library-2.jpg");
 }
 #faculty-content .hero-section .page-header {
   top: 50%;
