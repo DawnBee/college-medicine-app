@@ -15,6 +15,7 @@ const Process = () => {
             setProcesses(res.data)
         })
     }, [])
+    
   return (
     <>
         <h2 className="section-header">Admission Process</h2>

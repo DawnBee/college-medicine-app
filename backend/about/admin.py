@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Benefactors, Values
 
-# Register your models here.
+admin.site.register(Benefactors)
+admin.site.register(Values)

@@ -1,22 +1,16 @@
-// Asset Imports
-import benefactorImageOne from '../assets/images/faculty/eva-bg-red.svg'
-import benefactorImageTwo from '../assets/images/faculty/romeo-bg-red.svg'
+import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../api'
+import axios from 'axios'
 
 const Benefactors = () => {
-    const benefactors = [
-        {
-            image: benefactorImageOne,
-            name: "Senator Pia Cayetano",
-            profession: "Chairwoman of the Blue Ribbon Comittee",
-            content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In alias iste quo odio itaque ipsam? Dignissimos, praesentium provident."
-        },
-        {
-            image: benefactorImageTwo,
-            name: "Ched De Vera",
-            profession: "CHED (Comission On Higher Education) President",
-            content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. In alias iste quo odio itaque ipsam? Dignissimos, praesentium provident."
-        },        
-    ]
+    const [benefactors, setBenefactors] = useState([])
+
+    useEffect(() => {
+        axios.get(`${API_BASE_URL}/about/benefactors`)
+            .then(res => {
+                setBenefactors(res.data)
+            })
+    }, [])
 
   return (
     <section className="acknowledge-section">
@@ -25,12 +19,12 @@ const Benefactors = () => {
                 <h2>The college expresses gratitude to the following:</h2>
             </div>
             <ul className="benefactor-list">
-                {benefactors.map((benefactor, index)=> (
-                    <li key={index} className="benefactor-item">
+                {benefactors.map((benefactor)=> (
+                    <li key={benefactor.id} className="benefactor-item">
                         <img src={benefactor.image} alt="benefactor image" />
                         <div className="content">
                             <h3>{benefactor.name}</h3>
-                            <em className="titles">{benefactor.profession}</em>
+                            <em className="titles">{benefactor.position}</em>
                             <p>{benefactor.content}</p>                                
                         </div>
                     </li>

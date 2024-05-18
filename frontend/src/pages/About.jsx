@@ -4,6 +4,7 @@ import coreValueImage from '../assets/images/sim-1.jpg'
 
 // Components
 import Benefactors from '../components/Benefactors'
+import Values from '../components/Values'
 
 const About = () => {
   return (
@@ -25,20 +26,7 @@ const About = () => {
             </div>
         </section>
         <Benefactors />
-        <section className="core-values-section">
-            <div className="layout-container">
-                <img src={coreValueImage} alt="core values image" />
-                <div className="content">
-                    <h2>Core Values</h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Quos minima, laborum consequuntur similique veniam temporibus id 
-                        eaque eius quasi a debitis doloremque molestias soluta aliquam voluptatem,
-                        cupiditate quisquam nesciunt. Iure?
-                    </p>
-                </div>
-            </div>
-        </section>
+        <Values />
         <section className="history-section">
             <div className="layout-container">
                 <div className="content">

@@ -3847,7 +3847,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
   #about-content .core-values-section .layout-container img {
     width: 30%;
-    height: 300px;
+    height: 80vh;
   }
   #about-content .core-values-section .layout-container .content {
     width: auto;
