@@ -9,11 +9,13 @@ import vienImage from '../assets/images/faculty/vien.svg'
 import darwizaImage from '../assets/images/faculty/darwiza.svg'
 import rizaldyImage from '../assets/images/faculty/rizaldy.svg'
 import logoOutline from '../assets/images/com-outline.svg'
-import collegeGrounds from '../assets/images/library-building.jpg'
 
 // Components
+import Message from '../components/Message'
+import OrgChart from '../components/OrgChart'
 import Quotes from '../components/Quotes'
 import Lecturers from '../components/Lecturers'
+
 
 const Faculty = () => {
   return (
@@ -86,38 +88,8 @@ const Faculty = () => {
                 </div>
             </div>
         </section>
-        <section className="college-message-section">
-            <div className="layout-container">
-                <h2>Message from the College</h2>
-                <div className="content">
-                    <img className="message-img" src={collegeGrounds} alt="message image" />
-                    <p>
-                        We, from the Mindanao State University – General Santos City College of Medicine
-                        is committed to advancing healthcare, nurturing future medical professionals, and 
-                        promoting cutting-edge research...
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section className="org-chart-section">
-            <div className="intro">
-                <div className="layout-container">
-                    <h2>Organizational Chart</h2>
-                    <p>
-                        Welcome to the organizational heart of the College of Medicine!
-                        Our college is led by Dr. Edwin C. Alconcel, a visionary leader 
-                        who sets the collective endeavors and guides the college towards 
-                        our shared goals. From this central point, lines of communication
-                        and collaboration extend outward, connecting departments, units, and
-                        personnel in a dynamic web of interaction and synergy. Together, we strive
-                        to push the boundaries of knowledge, break down barriers, and create a future
-                        where health and wellness are accessible to all.
-                    </p>
-                </div>
-            </div>
-            <div className="chart-container">
-            </div>
-        </section>
+        <Message />
+        <OrgChart />
         <Quotes />
         <Lecturers />
     </main>

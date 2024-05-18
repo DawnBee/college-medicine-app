@@ -1858,8 +1858,15 @@ header.scrolled #navbar
                 margin: 1em 0
         
         .chart-container
-            height: 30em
+            height: 100%
+            display: grid
+            place-items: center
             @include bg-image-format("../assets/images/bg-medical.svg")
+
+            img
+                height: 90%
+                aspect-ratio: 1
+                border: 15px solid $primary-color
             
     .quotes-section
         padding: 2em
