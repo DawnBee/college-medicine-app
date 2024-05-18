@@ -1984,11 +1984,18 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   margin: 1em 0;
 }
 #faculty-content .org-chart-section .chart-container {
-  height: 30em;
+  height: 100%;
+  display: grid;
+  place-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../assets/images/bg-medical.svg");
+}
+#faculty-content .org-chart-section .chart-container img {
+  height: 90%;
+  aspect-ratio: 1;
+  border: 15px solid #9E2828;
 }
 #faculty-content .quotes-section {
   padding: 2em;

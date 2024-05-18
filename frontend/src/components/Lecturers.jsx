@@ -1,57 +1,19 @@
+import { useState, useEffect } from 'react'
+import { API_BASE_URL } from '../api'
+import axios from 'axios'
+
 // Asset Imports
-import evaBgRed from '../assets/images/faculty/eva-bg-red.svg'
-import analyzaBgRed from '../assets/images/faculty/analyza-bg-red.svg'
-import jocelynBgRed from '../assets/images/faculty/jocelyn-bg-red.svg'
-import darwizaBgRed from '../assets/images/faculty/darwiza-bg-red.svg'
-import rizaldyBgRed from '../assets/images/faculty/rizaldy-bg-red.svg'
-import shilroseBgRed from '../assets/images/faculty/shilrose-bg-red.svg'
-import romeoBgRed from '../assets/images/faculty/romeo-bg-red.svg'
-import vienBgRed from '../assets/images/faculty/vien-bg-red.svg'
 import bottomImage from '../assets/images/infirm-building.jpg'
 
 const Lecturers = () => {
-    const lecturers = [
-        {
-            image: evaBgRed,
-            name: "Eva Hormigos",
-            content: "Section Head, Family and Community Medicine"
-        },
-        {
-            image: analyzaBgRed,
-            name: "Analyza Galia-Gabuay",
-            content: "Associate Dean"
-        },
-        {
-            image: jocelynBgRed,
-            name: "Jocelyn Frial",
-            content: "Chairperson, Clinical Sciences"
-        },
-        {
-            image: darwizaBgRed,
-            name: "Darwiza Guiomala",
-            content: "Section Head, OB-Gyne"
-        },
-        {
-            image: rizaldyBgRed,
-            name: "Rizaldy Nolasco",
-            content: "Section Head, Surgery"
-        },
-        {
-            image: shilroseBgRed,
-            name: "Shilrose Dy",
-            content: "Chairperson, Basic Sciences"
-        },
-        {
-            image: romeoBgRed,
-            name: "Romeo Teves",
-            content: "Section Head, Pathology"
-        },
-        {
-            image: vienBgRed,
-            name: "Vivien Mina",
-            content: "Head, Medical Education Unit"
-        },                                                                       
-    ]
+    const [lecturers, setLecturers] = useState([])
+
+    useEffect(() => {
+        axios.get(`${API_BASE_URL}/faculty/faculties`)
+        .then(res => {
+            setLecturers(res.data)
+        })
+    }, [])
 
     const itemsPerList = 4
 
@@ -80,7 +42,7 @@ const Lecturers = () => {
                                 </div>
                                 <div className="content">
                                     <p className="title">Dr. {lecturer.name}</p>
-                                    <p>{lecturer.content}</p>
+                                    <p>{lecturer.position}</p>
                                 </div>
                             </li>
                         ))}
