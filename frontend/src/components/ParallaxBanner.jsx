@@ -4,7 +4,7 @@ import { Parallax, Background } from 'react-parallax'
 // Asset Imports
 import heroVideo from '../assets/videos/msu-video.mp4'
 import overlayLogo from '../assets/images/overlay-logo.svg'
-import bannerImage from '../assets/images/banner-img.png'
+import bannerImage from '../assets/images/banner-image.png'
 
 const ParallaxBanner = () => {
   const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 920px)').matches)
@@ -35,10 +35,14 @@ const ParallaxBanner = () => {
                 </video>
                 <img className="hero-overlay" src={overlayLogo} alt="hero image" />
               </Background>
-              <div className="bg-placeholder" draggable="false" style={{ height: '120vh', background: 'transparent' }}></div>
+              <div className="bg-placeholder" draggable="false" style={{ height: '110vh', background: 'transparent' }}></div>
             </Parallax>
           </section>
           <div className="banner-container">
+            <div className="header-box">
+              <h1 className="primary">College of Medicine</h1>
+              <h2 className="secondary">Dalubhasang Doktor; Makataong Doktor</h2>              
+            </div>
             <img className="banner-image" src={bannerImage} alt="banner image" draggable="false" />
           </div>
         </>
@@ -54,6 +58,10 @@ const ParallaxBanner = () => {
             <img className="hero-overlay" src={overlayLogo} alt="hero image"/>
           </section>
           <div className="banner-container">
+            <div className="header-box">
+              <h1 className="primary">College of Medicine</h1>
+              <h2 className="secondary">Dalubhasang Doktor; Makataong Doktor</h2>              
+            </div>
             <img className="banner-image" src={bannerImage} alt="banner image" draggable="false" />
           </div>
         </>
