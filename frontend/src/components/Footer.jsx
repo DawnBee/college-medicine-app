@@ -4,6 +4,9 @@ const Footer = () => {
     <footer id="footer">
         <span className="broad-style" aria-hidden="true"></span>
         <span className="narrow-style" aria-hidden="true"></span>
+        <section className="footer-slogan">
+            <span className="slogan">"Dalubhasang Doktor; Makataong Doktor"</span>
+        </section>
         <section className="contact-copyright-info">
             <div className="social-media-links">
                 <h3>Connect with us</h3>
