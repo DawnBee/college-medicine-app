@@ -520,16 +520,16 @@ header.scrolled #navbar
     .announcement-section
         position: relative
 
+        .siren-icon::selection
+            background: transparent            
+
         .siren-icon
             top: -5em
             left: -1.5em
             z-index: 850
             width: 150px
             aspect-ratio: 1
-            position: absolute
-        
-        .siren-icon::selection
-            background: transparent
+            position: absolute        
 
         .carousel-container
             height: 90vh
@@ -614,14 +614,20 @@ header.scrolled #navbar
                         border-bottom-left-radius: $border-radius-10
                         border-bottom-right-radius: $border-radius-10
                         
+                        .card-title:hover
+                            color: $bg-yellow
+                            transition: color 1s ease
+
                         .card-title
                             color: #fff
                             padding: .5em
                             border-radius: 5px
                             text-align: center
                             display: inline-block
+                            text-decoration: none
                             font-family: $header-font
                             background: $secondary-color
+
                         p
                             padding: .5em
 
