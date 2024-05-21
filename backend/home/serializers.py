@@ -5,12 +5,12 @@ from .models import Announcements, Events, Publications, Testimonials
 class AnnouncementSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Announcements
-		fields = ['id','title','image','description']
+		fields = '__all__'
 
 class EventSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Events
-		fields = ['id','title','image','description']
+		fields = '__all__'
 
 class PublicationSerializer(serializers.ModelSerializer):
 	class Meta:

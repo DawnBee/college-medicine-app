@@ -1,6 +1,7 @@
 import 'react-multi-carousel/lib/styles.css'
 import { useState, useEffect } from 'react'
 import Carousel from 'react-multi-carousel'
+import { Link } from 'react-router-dom'
 import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
@@ -61,7 +62,10 @@ const EventCards = () => {
                       <img className="event-img" src={event.image} alt="event image" />
                     </div>
                     <div className="content">
-                      <h3 className="card-title">{truncatedTitle}</h3>
+                      <Link to={`/events/${event.id}`} className="card-title">
+                        <h3>{truncatedTitle}</h3>
+                      </Link>
+
                       <p>{truncatedDescription}</p>
                     </div>
                   </div>
@@ -71,7 +75,6 @@ const EventCards = () => {
         </div>
       </section>
     )      
-    
   }
-
+  
   export default EventCards

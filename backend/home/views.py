@@ -21,5 +21,4 @@ class PublicationViewSet(viewsets.ModelViewSet):
 
 class TestimonialViewSet(viewsets.ModelViewSet):
 	queryset = Testimonials.objects.all()
-	serializer_class = TestimonialSerializer	
-		
+	serializer_class = TestimonialSerializer
