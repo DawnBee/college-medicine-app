@@ -18,7 +18,6 @@ const EventList = () => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(dateString).toLocaleDateString(undefined, options)
     }
-    
   return (
     <aside className="list-sidebar">
         <h3 className="sidebar-title">Recent Events</h3>

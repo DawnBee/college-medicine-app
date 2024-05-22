@@ -420,6 +420,10 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+#home-content .event-section .layout-container .card-container .event-card .content .card-title:hover {
+  color: #FFF800;
+  transition: color 1s ease;
+}
 #home-content .event-section .layout-container .card-container .event-card .content .card-title {
   color: #fff;
   padding: 0.5em;
@@ -4086,6 +4090,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   border-radius: 3px;
+  font-size: clamp(1rem, 1vw + 1rem, 1.125rem);
 }
 #detail-content .list-sidebar .detail-list {
   padding: 1em;
@@ -4098,7 +4103,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   align-items: center;
 }
 #detail-content .list-sidebar .detail-list .list-item img {
-  width: 100px;
+  width: 80px;
   aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
@@ -4122,7 +4127,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   font-size: clamp(1rem, 1vw + 1rem, 1.125rem);
 }
 #detail-content .list-sidebar .detail-list .list-item .content em {
-  font-size: 1rem;
+  font-size: clamp(0.6rem, 1vw + 0.6rem, 1rem);
 }
 
 @media (min-width: 920px) {
@@ -4179,12 +4184,5 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
     padding: 1.5em;
     margin-top: 4.5em;
     grid-area: "sidebar";
-  }
-  #detail-content .list-sidebar .sidebar-title {
-    font-size: 1.5rem;
-  }
-  #detail-content .list-sidebar .detail-list .list-item img {
-    width: 80px;
-    aspect-ratio: 1;
   }
 }/*# sourceMappingURL=Detail.css.map */
