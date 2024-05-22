@@ -16,7 +16,9 @@ import Faculty from './pages/Faculty'
 import Alumni from './pages/Alumni'
 import About from './pages/About'
 
+// Detail Pages
 import EventDetail from './components/EventDetail'
+import AnnouncementDetail from './components/AnnouncementDetail'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,7 +32,8 @@ const router = createBrowserRouter(
         <Route path='/About' element={<About />} />
       </Route>
       <Route path='/' element={<DetailLayout />}>
-        <Route path="/Events/:id" element={<EventDetail/>} />
+        <Route path="/Events/:id" element={<EventDetail />} />
+        <Route path="/Announcements/:id" element={<AnnouncementDetail />} />
       </Route>    
     </>
   )

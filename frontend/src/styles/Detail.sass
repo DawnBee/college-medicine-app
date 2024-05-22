@@ -65,6 +65,7 @@
             text-transform: uppercase
             font-family: $header-font
             border-radius: $border-radius-3
+            font-size: clamp(1rem, 1vw + 1rem, 1.125rem)
 
         .detail-list
             padding: 1em
@@ -77,7 +78,7 @@
                 align-items: center
                 
                 img 
-                    width: 100px
+                    width: 80px
                     aspect-ratio: 1
                     object-fit: cover
                     box-shadow: $drop-shadow
@@ -99,9 +100,9 @@
                         text-decoration: underline
                         font-size: clamp(1rem, 1vw + 1rem, 1.125rem)                        
                     em
-                        font-size: 1rem
+                        font-size: clamp(.6rem, 1vw + .6rem, 1rem)
 
-// Desktop                        
+// **Desktop**                        
 @media (min-width: 920px)
     #detail-content
         display: grid
@@ -149,12 +150,3 @@
             padding: 1.5em
             margin-top: 4.5em
             grid-area: "sidebar"
-
-            .sidebar-title
-                font-size: 1.5rem
-            
-            .detail-list
-                .list-item
-                    img
-                        width: 80px
-                        aspect-ratio: 1

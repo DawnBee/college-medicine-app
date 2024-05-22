@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
@@ -36,17 +37,19 @@ return (
     <img className="siren-icon" src={sirenIcon} alt="siren icon" />
     <div className="carousel-container">
       {sliderImages.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`carousel-slide ${currentSlide === index ? 'active' : ''}`}
-          style={{transform: `translateX(-${currentSlide * 100}%)` }}
-        >
-          <img
-              className={`slide-${index + 1}`}
-              src={slide.image}
-              alt={`Slide ${index + 1}`}
-          />
-        </div>
+          <div
+            key={slide.id}
+            className={`carousel-slide ${currentSlide === index ? 'active' : ''}`}
+            style={{transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            <Link to={`/announcements/${slide.id}`} className="item-title">                
+              <img
+                  className={`slide-${index + 1}`}
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+              />
+            </Link>              
+          </div>
       ))}
       <div className="carousel-navigation">
         {Array.from({ length: totalSlides }).map((_, index) => (
