@@ -10,6 +10,9 @@ const Requirements = () => {
             .then(res => {
                 setRequirements(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching requirements', err)
+            })            
     }, [])
 
   return (

@@ -10,7 +10,10 @@ const Publications = () => {
         axios.get(`${API_BASE_URL}/home/publications`)
         .then(res => {
             setPublications(res.data)
-        }) 
+        })
+        .catch(err => {
+            console.error('Error fetching publications', err)
+        })         
     }, [])
 
     return (

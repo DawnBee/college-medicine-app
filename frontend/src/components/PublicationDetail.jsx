@@ -1,6 +1,5 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import styled from 'styled-components'
 import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
@@ -19,7 +18,7 @@ const PublicationDetail = () => {
         setLoading(false)
       })
       .catch(err => {
-        console.error('Error fetching event:', err)
+        console.error('Error fetching publication:', err)
         setLoading(false)
       })
   }, [id])

@@ -11,6 +11,9 @@ const AnnouncementList = () => {
             .then(res => {
                 setAnnouncements(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching announcements', err)
+            })              
     }, [])
 
     const formatDate = (dateString) => {

@@ -15,6 +15,9 @@ const Announcements = () => {
     .then(res => {
       setSliderImages(res.data)
     })
+    .catch(err => {
+      console.error('Error fetching announcements', err)
+    })
   }, [])
   
   const totalSlides = sliderImages.length

@@ -13,8 +13,8 @@ const Values = () => {
             .then(res => {
                 setValues(res.data)
             })
-            .catch(error => {
-                console.error(`Error fetching: ${error}`)
+            .catch(err => {
+                console.error('Error fetching values', err)
             })
     }, [])
   return (

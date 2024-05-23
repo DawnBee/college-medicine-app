@@ -12,6 +12,9 @@ const PublicationList = () => {
             .then(res => {
                 setPublications(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching publications', err)
+            })              
     }, [])
 
   return (

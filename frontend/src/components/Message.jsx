@@ -10,6 +10,9 @@ const Message = () => {
             .then(res => {
                 setMessages(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching message:', err)
+            })            
     }, [])
   return (
     <section className="college-message-section">

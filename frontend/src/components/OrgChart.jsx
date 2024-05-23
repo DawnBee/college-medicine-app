@@ -10,6 +10,9 @@ const OrgChart = () => {
             .then(res => {
                 setOrgChart(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching orgchart:', err)
+            })            
     }, [])
 
   return (
