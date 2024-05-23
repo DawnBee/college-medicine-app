@@ -38,6 +38,7 @@ class Publications(models.Model):
 	title = models.CharField(max_length=50, unique=True)
 	image = models.ImageField(default="default.png", upload_to="publications", null=True, blank=True)
 	description = models.TextField()
+	pdf = models.FileField(upload_to='publications/pdfs/', null=True, blank=True)
 
 	def __str__(self):
 		return self.title

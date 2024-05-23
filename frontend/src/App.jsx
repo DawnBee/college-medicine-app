@@ -19,6 +19,7 @@ import About from './pages/About'
 // Detail Pages
 import EventDetail from './components/EventDetail'
 import AnnouncementDetail from './components/AnnouncementDetail'
+import PublicationDetail from './components/PublicationDetail'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -34,6 +35,7 @@ const router = createBrowserRouter(
       <Route path='/' element={<DetailLayout />}>
         <Route path="/Events/:id" element={<EventDetail />} />
         <Route path="/Announcements/:id" element={<AnnouncementDetail />} />
+        <Route path="/Publications/:id" element={<PublicationDetail />} />
       </Route>    
     </>
   )

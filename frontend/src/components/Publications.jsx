@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { API_BASE_URL } from "../api"
 import axios from "axios"
 
@@ -24,12 +25,14 @@ const Publications = () => {
                         return (
                             <div key={publication.id} className="bento-box">
                                 <div className="image-box">
-                                    <img src={publication.image} alt={`research image ${index + 1}`}/>
+                                    <Link to={`publications/${publication.id}`} className="bento-link">
+                                        <img src={publication.image} alt={`research image ${index + 1}`}/>
+                                    </Link>
                                 </div>
                                 <div className="content">
                                     <h3 className="bento-title">{truncatedTitle}</h3>
                                     <p>{truncatedDescription}</p>
-                                </div>
+                                </div>  
                             </div>
                         )
                     })}
