@@ -33,8 +33,30 @@
         
         .lower
             padding: 1em
+
             p
-                text-indent: 2rem
+                text-indent: 2rem            
+
+            .lower-header
+                gap: 1em
+                display: flex
+                margin-bottom: 1em
+                
+                a
+                    text-decoration: none
+
+                    button:hover
+                        background: #0F63BD
+
+                    button
+                        gap: 5px
+                        border: none
+                        color: #fff
+                        display: flex                        
+                        cursor: pointer
+                        padding: .5em 1em
+                        background: #007BFF
+                        border-radius: $border-radius-3                      
 
     .list-sidebar::before
         top: 0
@@ -116,7 +138,7 @@
             
         .main-section
             margin: 0
-            grid-area: "main"
+            grid-area: main
             position: relative
 
             .upper::before
@@ -149,4 +171,4 @@
         .list-sidebar
             padding: 1.5em
             margin-top: 4.5em
-            grid-area: "sidebar"
+            grid-area: sidebar
