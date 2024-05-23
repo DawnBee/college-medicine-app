@@ -12,6 +12,9 @@ const EventList = () => {
             .then(res => {
                 setEvents(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching events:', err)
+            })                
     }, [])
 
     const formatDate = (dateString) => {

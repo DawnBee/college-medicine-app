@@ -32,6 +32,9 @@ const EventCards = () => {
         .then(res => {
           setEvents(res.data)
         })
+        .catch(err => {
+          console.error('Error fetching events:', err)
+        })            
     }, [])
   
     const CustomLeftArrow = ({ onClick }) => (

@@ -13,6 +13,9 @@ const Lecturers = () => {
         .then(res => {
             setLecturers(res.data)
         })
+        .catch(err => {
+            console.error('Error fetching lecturers:', err)
+        })           
     }, [])
 
     const itemsPerList = 4

@@ -10,6 +10,9 @@ const Benefactors = () => {
             .then(res => {
                 setBenefactors(res.data)
             })
+            .catch(err => {
+                console.error('Error fetching benefactors', err)
+            })              
     }, [])
 
   return (

@@ -14,6 +14,9 @@ const Process = () => {
         .then(res => {
             setProcesses(res.data)
         })
+        .catch(err => {
+            console.error('Error fetching processes:', err)
+        })
     }, [])
     
   return (

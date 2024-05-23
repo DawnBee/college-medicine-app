@@ -10,6 +10,9 @@ const Testimonials = () => {
         .then(res => {
             setTestaments(res.data)
         })
+        .catch(err => {
+            console.error('Error fetching testimonials', err)
+        })        
     }, [])
   return (
     <section className="testimonial-section">
