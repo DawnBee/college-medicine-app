@@ -3042,10 +3042,10 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   #home-content .testimonial-section .card-container .testimonial-card p {
     font-size: 1.5rem;
   }
-  #home-content .testimonial-section .card-container .testimonial-card:nth-child(2) {
+  #home-content .testimonial-section .card-container .testimonial-card:nth-child(even) {
     align-self: flex-end;
   }
-  #home-content .testimonial-section .card-container .testimonial-card:nth-child(2) img {
+  #home-content .testimonial-section .card-container .testimonial-card:nth-child(even) img {
     order: 2;
   }
   #admission-content .hero-section {
