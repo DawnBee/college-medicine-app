@@ -38,13 +38,29 @@ const Admission = () => {
         <Requirements />
         <section className="payment-fee-section">
             <div className="layout-container">
-                <div>
+                <div className="content-container">
                     <h2 className="section-header">Payment and Fee</h2>
-                    <p>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Dignissimos, reiciendis natus aliquam iure iste doloribus
-                        ad dolor consectetur ut incidunt hic, officia odio in dolore?
-                    </p>                  
+                    <div className="content">
+                        <p>
+                            The College of Medicine does not process payments directly. 
+                            All payments related to admissions and other fees are managed 
+                            by the University's cashier office. This office is located at 
+                            the Mindanao State University (MSU) General Santos City's main 
+                            campus in Barangay Fatima.
+                        </p>
+                        <p>
+                            During the enrollment period, the cashier office dispatches
+                            its personnel to the college grounds to directly collect payments.
+                            This is to ensure that students can settle their financial obligations
+                            without the need to travel to the main campus.
+                        </p>
+                        <p>
+                            For your convenience, you may visit the cashier's office during their 
+                            operating hours to settle any financial obligations. Please ensure to 
+                            bring all necessary documents and references related to your payment to 
+                            facilitate a smooth transaction.
+                        </p>
+                    </div>
                 </div>
                 <div className="image-frame">
                     <i className="fa-solid fa-money-bill"></i>
