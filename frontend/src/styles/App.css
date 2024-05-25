@@ -1972,9 +1972,19 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   transform: translate(-50%);
   border-radius: 5px;
 }
-#faculty-content .college-message-section .layout-container .content p {
+#faculty-content .college-message-section .layout-container .content .text {
   margin-top: 5em;
   font-weight: 500;
+}
+#faculty-content .college-message-section .layout-container .content .text .show-more:focus, #faculty-content .college-message-section .layout-container .content .text .show-more:hover {
+  text-decoration: underline;
+}
+#faculty-content .college-message-section .layout-container .content .text .show-more {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #0C4F3B;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
 }
 #faculty-content .org-chart-section .intro::before {
   top: 0;
@@ -3387,7 +3397,7 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
     background-position: 5% 5%;
     grid-template-columns: repeat(4, 1fr);
   }
-  #faculty-content .college-message-section .layout-container .content p {
+  #faculty-content .college-message-section .layout-container .content .text {
     margin: 0;
     font-size: 1.5rem;
     align-self: center;
