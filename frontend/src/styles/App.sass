@@ -909,44 +909,10 @@ header.scrolled #navbar
             margin-bottom: 1em
             font-family: $header-font
             text-transform: uppercase
-
-        .payment-cta
-            margin: 1em
-            padding: .5em 1.5em
-            @include global-btn()      
-
-        .sub-heading
-            margin: 1em
-            text-align: initial
-            color: $primary-color
-            text-transform: uppercase
-            font-family: $header-font
-            
-        .payment-group
-            gap: 1em
-            margin: 1em
-            display: flex
-            align-items: center
-            list-style-type: none
-            flex-direction: column
-            justify-content: center
-            
-            .payment-item
-                flex: 1
-                padding: 1em
-                min-width: 10em
-                text-align: center
-                background: $bg-light-red
-                border-radius: $border-radius-5
-
-                i
-                    font-size: 1.8rem
-                    margin-bottom: .5em
-                    color: $primary-color
-
-                p
-                    font-weight: 600
-                    font-family: $header-font
+        
+        .content
+            p
+                margin: 1em
 
         .image-frame
             margin-top: 5em
@@ -2707,26 +2673,17 @@ header.scrolled #navbar
                 display: flex
 
                 .section-header
-                    padding: 1em
-
-                p
-                    margin: 0 1em
-                    padding: 0 1em
+                    padding: .5em
+                    font-size: 2.5rem
                 
-                .payment-cta
-                    font-size: 1.3rem
-                    
-                .sub-heading
-                    margin-left: 3.5em
+                .content
+                    margin: 1em 2em
+                    align-self: center
 
-                .payment-group
-                    gap: 2em
-                    margin: 0 4em
-                    flex-direction: row
+                    p
+                        text-indent: 2rem
+                        text-align: initial
 
-                    .payment-item
-                        min-height: 7em
-                
                 .image-frame
                     margin: 0
                     min-width: 40%
@@ -3439,21 +3396,6 @@ header.scrolled #navbar
 // 'Admission' & 'Simulation Page' Breaks    
 @media (min-width: 920px) and (max-width: 1200px)
     #admission-content
-        .process-section
-            .content-container
-                .grid-content
-                    .process-item
-                        p
-                            margin-top: 1.5em
-
-        .payment-fee-section
-            .layout-container
-                div
-                    width: 70%
-
-                .payment-group
-                    margin: 1em 4em
-
         .scholarship-section
             .top
                 .layout-container

@@ -917,51 +917,8 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-#admission-content .payment-fee-section .payment-cta {
+#admission-content .payment-fee-section .content p {
   margin: 1em;
-  padding: 0.5em 1.5em;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 600;
-  padding: 0.5em 1em;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  background: #CD1919;
-  border-radius: 3px;
-}
-#admission-content .payment-fee-section .sub-heading {
-  margin: 1em;
-  text-align: initial;
-  color: #9E2828;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-#admission-content .payment-fee-section .payment-group {
-  gap: 1em;
-  margin: 1em;
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-  flex-direction: column;
-  justify-content: center;
-}
-#admission-content .payment-fee-section .payment-group .payment-item {
-  flex: 1;
-  padding: 1em;
-  min-width: 10em;
-  text-align: center;
-  background: #F0E1E1;
-  border-radius: 5px;
-}
-#admission-content .payment-fee-section .payment-group .payment-item i {
-  font-size: 1.8rem;
-  margin-bottom: 0.5em;
-  color: #9E2828;
-}
-#admission-content .payment-fee-section .payment-group .payment-item p {
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
 }
 #admission-content .payment-fee-section .image-frame {
   margin-top: 5em;
@@ -3001,25 +2958,16 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
     display: flex;
   }
   #admission-content .payment-fee-section .layout-container .section-header {
-    padding: 1em;
+    padding: 0.5em;
+    font-size: 2.5rem;
   }
-  #admission-content .payment-fee-section .layout-container p {
-    margin: 0 1em;
-    padding: 0 1em;
+  #admission-content .payment-fee-section .layout-container .content {
+    margin: 1em 2em;
+    align-self: center;
   }
-  #admission-content .payment-fee-section .layout-container .payment-cta {
-    font-size: 1.3rem;
-  }
-  #admission-content .payment-fee-section .layout-container .sub-heading {
-    margin-left: 3.5em;
-  }
-  #admission-content .payment-fee-section .layout-container .payment-group {
-    gap: 2em;
-    margin: 0 4em;
-    flex-direction: row;
-  }
-  #admission-content .payment-fee-section .layout-container .payment-group .payment-item {
-    min-height: 7em;
+  #admission-content .payment-fee-section .layout-container .content p {
+    text-indent: 2rem;
+    text-align: initial;
   }
   #admission-content .payment-fee-section .layout-container .image-frame {
     margin: 0;
@@ -3725,15 +3673,6 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
 }
 @media (min-width: 920px) and (max-width: 1200px) {
-  #admission-content .process-section .content-container .grid-content .process-item p {
-    margin-top: 1.5em;
-  }
-  #admission-content .payment-fee-section .layout-container div {
-    width: 70%;
-  }
-  #admission-content .payment-fee-section .layout-container .payment-group {
-    margin: 1em 4em;
-  }
   #admission-content .scholarship-section .top .layout-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr) 1em;
