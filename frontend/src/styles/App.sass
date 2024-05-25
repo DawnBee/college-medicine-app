@@ -2459,7 +2459,7 @@ header.scrolled #navbar
                             margin-top: 5px
                             font-weight: 300
 
-    
+
 // **Desktop Styling**        
 @media (min-width: 920px)
     body
@@ -3501,3 +3501,25 @@ header.scrolled #navbar
             .spotlight-card
                 .content
                     flex-direction: column
+
+// 'About Page' Breaks    
+@media (min-width: 920px) and (max-width: 1050px)
+    #about-content
+        .history-section
+            .layout-container
+                .content
+                    grid-template-columns: 1em repeat(8, 1fr) 1em
+
+                    .text-group
+                        margin-right: .5em
+                        grid-column: 2 / span 5
+
+@media (min-width: 1051px) and (max-width: 1250px)
+    #about-content
+        .history-section
+            .layout-container
+                .content
+                    grid-template-columns: 1em repeat(6, 1fr) 1em
+
+                    .text-group
+                        grid-column: 2 / span 4                        
