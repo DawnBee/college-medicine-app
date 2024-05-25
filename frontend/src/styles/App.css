@@ -3768,4 +3768,21 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   #alumni-content .spotlight-section .spotlight-card .content {
     flex-direction: column;
   }
+}
+@media (min-width: 920px) and (max-width: 1050px) {
+  #about-content .history-section .layout-container .content {
+    grid-template-columns: 1em repeat(8, 1fr) 1em;
+  }
+  #about-content .history-section .layout-container .content .text-group {
+    margin-right: 0.5em;
+    grid-column: 2/span 5;
+  }
+}
+@media (min-width: 1051px) and (max-width: 1250px) {
+  #about-content .history-section .layout-container .content {
+    grid-template-columns: 1em repeat(6, 1fr) 1em;
+  }
+  #about-content .history-section .layout-container .content .text-group {
+    grid-column: 2/span 4;
+  }
 }/*# sourceMappingURL=App.css.map */
