@@ -1844,9 +1844,20 @@ header.scrolled #navbar
                     box-shadow: $drop-shadow
                     transform: translate(-50%)
                     border-radius: $border-radius-5
-                p
+
+                .text
                     margin-top: 5em
                     font-weight: 500
+
+                    .show-more:focus, .show-more:hover
+                        text-decoration: underline
+
+                    .show-more
+                        font-size: 1rem
+                        cursor: pointer
+                        color: $bg-dark-green
+                        font-family: $header-font
+                        text-transform: capitalize                        
 
     .org-chart-section
         .intro::before
@@ -3062,6 +3073,7 @@ header.scrolled #navbar
             .layout-container
                 h2
                     font-size: 1.8rem
+
                 .content
                     width: 70%
                     display: grid
@@ -3071,7 +3083,7 @@ header.scrolled #navbar
                     background-position: 5% 5%                                        
                     grid-template-columns: repeat(4, 1fr)
 
-                    p
+                    .text
                         margin: 0                                                
                         font-size: 1.5rem
                         align-self: center
