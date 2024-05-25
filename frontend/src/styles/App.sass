@@ -2053,57 +2053,28 @@ header.scrolled #navbar
                 text-transform: uppercase
         
         .benefactor-list
-            list-style-type: none
-        
-            .benefactor-item:last-of-type
-                margin: 8em auto 1em auto
-
-            .benefactor-item::before
-                left: 50%
-                width: 70%
-                content: ''
-                height: 35%
-                bottom: 100%
-                z-index: 200
-                display: block
-                position: absolute
-                transform: translate(-50%)
-                background: $tertiary-color
-                border-top-left-radius: $border-radius-5
-                border-top-right-radius: $border-radius-5                    
+            list-style-type: none                
 
             .benefactor-item
                 width: 80%
-                z-index: 400
-                display: grid
-                margin: 8em auto
-                min-height: 20em
+                padding: 1.5em
+                margin: 1.2em auto
                 background: #fff
-                position: relative
                 box-shadow: $drop-shadow
                 border-radius: $border-radius-5
-                grid-template-rows: repeat(5, 1fr)
                 
                 img
-                    left: 50%
-                    top: -30%
                     width: 60%
-                    z-index: 500
                     max-height: 200px
                     object-fit: cover
-                    position: absolute   
                     box-shadow: $drop-shadow
-                    transform: translate(-50%)
                     border-radius: $border-radius-5
+                    border: 15px solid $secondary-color
                     
                 .content
-                    padding: 1em
-                    grid-row: 3 / span 5
-                    border-bottom-left-radius: $border-radius-5
-                    border-bottom-right-radius: $border-radius-5
-
+                    margin-top: 1em
                     p
-                        margin: 1em 0
+                        margin: 1em 0 0 0
 
     .core-values-section
         color: #fff
@@ -2488,63 +2459,7 @@ header.scrolled #navbar
                             margin-top: 5px
                             font-weight: 300
 
-// Subcontents    
-#year-event-subcontent
-    .top-content
-        color: #fff
-        margin-top: 4em
-        font-family: $header-font
-        background: $secondary-color
-
-        .layout-container::before
-            @include vertical-line-style-left(#fff,12px)
-            
-        .layout-container::after
-            @include horizontal-line-style-top(#fff,12px) 
-
-        .layout-container
-            padding: 1em 0
-            position: relative
-
-            h1
-                padding: 1em 0 0 1em
-                text-transform: uppercase
-            p
-                margin-left: 2em
-                font-weight: 700
-                font-family: $header-font
-                text-transform: uppercase
-
-            .slider-container
-                margin: 1em 4em
-                position: relative
-                @include slider-btn(_,_,$bg-light-gray)
-               
-                .slide
-                    @include slide-styles()
-                    img
-                        object-fit: cover
-                        @include slide-styles()
-                        box-shadow: $drop-shadow
     
-    .bot-content
-        padding: 1em
-        min-height: 50vh
-
-        .layout-container
-            text-align: center
-            h2
-                color: #fff
-                padding: .2em .5em
-                margin-bottom: .5em
-                display: inline-block
-                background: $bg-black
-                text-transform: uppercase
-                font-family: $header-font
-                border-radius: $border-radius-3
-            p
-                margin: 1em
-
 // **Desktop Styling**        
 @media (min-width: 920px)
     body
@@ -3228,40 +3143,21 @@ header.scrolled #navbar
                     font-size: 1.5rem
 
             .benefactor-list
-                .benefactor-item:last-of-type
-                    margin: 2em auto
-
-                .benefactor-item::before
-                    top: 50%
-                    width: 18%
-                    height: 90%
-                    right: 100%
-                    left: initial
-                    bottom: initial
-                    border-top-right-radius: 0
-                    transform: translateY(-50%)
-                    border-top-left-radius: $border-radius-10
-                    border-bottom-left-radius: $border-radius-10
-
                 .benefactor-item
-                    width: 60%
-                    margin: 2em auto
+                    gap: 1em
+                    display: flex
+                    align-items: center
                     border-radius: $border-radius-10
-                    grid-template-rows:  repeat(3, auto)
-                    grid-template-columns: 1em repeat(4, 1fr) 1em
-                
+
                     img
-                        top: 50%
-                        left: -15%
-                        width: 35%
-                        max-height: 280px
-                        transform: translateY(-50%)
+                        min-width: 30%
                         border-radius: $border-radius-10
                     
                     .content
-                        grid-row: 2
                         text-align: initial
-                        grid-column: 3 / span 3
+
+                        h3
+                            font-size: 1.5rem
 
         .core-values-section
 
@@ -3419,53 +3315,6 @@ header.scrolled #navbar
             .sidebar
                 padding: 1em 0
                 grid-area: sidebar                          
-
-    // Subcontents
-    #year-event-subcontent
-        .top-content
-            margin-top: 3em
-            background: none
-
-            .layout-container::before
-                z-index: 600
-                @include vertical-line-style-left(#fff, 20px)
-                
-            .layout-container::after
-                z-index: 600
-                @include horizontal-line-style-top(#fff, 20px) 
-
-            .layout-container
-                padding: 0
-
-                .content::before
-                    top: 0
-                    left: 0
-                    width: 50%                    
-                    content: ''
-                    height: 100%
-                    position: absolute
-                    background: $secondary-color
-                    border-bottom-right-radius: $border-radius-10
-
-                .content
-                    height: 40em
-                    h1, p
-                        z-index: 900
-                        position: relative
-                    h1
-                        margin-left: 8%                     
-                    p
-                        margin-left: 25%
-                        font-size: 1.8rem
-                        
-                    .slider-container
-                        width: 50em
-                        margin: 1em auto
-        
-        .bot-content
-            .layout-container
-                p
-                   text-align: initial
 
 
 // **Breakpoints**
@@ -3635,24 +3484,8 @@ header.scrolled #navbar
                     div
                         margin: 1em
 
-// 'About' & 'Alumni Page' Breaks
+// 'Alumni Page' Breaks
 @media (min-width: 320px) and (max-width: 350px)
-    #about-content
-        .acknowledge-section
-            .layout-container
-                .benefactor-list
-                    .benefactor-item::before
-                        height: 20%
-
-                    .benefactor-item
-                        grid-template-rows: repeat(6, 1fr)
-
-                        img
-                            top: -15%
-                        
-                        .content
-                            grid-row: 3 / span 5
-
     #alumni-content
         .search-section
             .form-group
@@ -3668,43 +3501,3 @@ header.scrolled #navbar
             .spotlight-card
                 .content
                     flex-direction: column
-
-@media (min-width: 351px) and (max-width: 444px)
-    #about-content
-        .acknowledge-section
-            .layout-container
-                .benefactor-list
-                    .benefactor-item::before
-                        height: 20%
-
-                    .benefactor-item
-                        grid-template-rows: repeat(6, 1fr)
-
-                        img
-                            top: -15%
-                        
-                        .content
-                            margin-top: 1em
-                            grid-row: 3 / span 5
-    
-@media (min-width: 920px) and (max-width: 1050px)
-    #about-content
-        .history-section
-            .layout-container
-                .content
-                    grid-template-columns: 1em repeat(8, 1fr) 1em
-
-                    .text-group
-                        margin-right: .5em
-                        grid-column: 2 / span 5
-
-@media (min-width: 1051px) and (max-width: 1250px)
-    #about-content
-        .history-section
-            .layout-container
-                .content
-                    grid-template-columns: 1em repeat(6, 1fr) 1em
-
-                    .text-group
-                        grid-column: 2 / span 4
-
