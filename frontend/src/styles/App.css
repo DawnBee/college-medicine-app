@@ -2240,56 +2240,28 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
 #about-content .acknowledge-section .benefactor-list {
   list-style-type: none;
 }
-#about-content .acknowledge-section .benefactor-list .benefactor-item:last-of-type {
-  margin: 8em auto 1em auto;
-}
-#about-content .acknowledge-section .benefactor-list .benefactor-item::before {
-  left: 50%;
-  width: 70%;
-  content: "";
-  height: 35%;
-  bottom: 100%;
-  z-index: 200;
-  display: block;
-  position: absolute;
-  transform: translate(-50%);
-  background: #CD1919;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
 #about-content .acknowledge-section .benefactor-list .benefactor-item {
   width: 80%;
-  z-index: 400;
-  display: grid;
-  margin: 8em auto;
-  min-height: 20em;
+  padding: 1.5em;
+  margin: 1.2em auto;
   background: #fff;
-  position: relative;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  grid-template-rows: repeat(5, 1fr);
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item img {
-  left: 50%;
-  top: -30%;
   width: 60%;
-  z-index: 500;
   max-height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  transform: translate(-50%);
   border-radius: 5px;
+  border: 15px solid #C02121;
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
-  padding: 1em;
-  grid-row: 3/span 5;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  margin-top: 1em;
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item .content p {
-  margin: 1em 0;
+  margin: 1em 0 0 0;
 }
 #about-content .core-values-section {
   color: #fff;
@@ -2792,105 +2764,6 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
 #alumni-content .sidebar .upcoming-events .event-list .event-item .text-group .time {
   margin-top: 5px;
   font-weight: 300;
-}
-
-#year-event-subcontent .top-content {
-  color: #fff;
-  margin-top: 4em;
-  font-family: "Montserrat", sans-serif;
-  background: #C02121;
-}
-#year-event-subcontent .top-content .layout-container::before {
-  top: 0;
-  width: 3px;
-  content: "";
-  height: 100%;
-  left: 12px;
-  position: absolute;
-  background: #fff;
-}
-#year-event-subcontent .top-content .layout-container::after {
-  left: 0;
-  height: 3px;
-  width: 100%;
-  content: "";
-  top: 12px;
-  position: absolute;
-  background: #fff;
-}
-#year-event-subcontent .top-content .layout-container {
-  padding: 1em 0;
-  position: relative;
-}
-#year-event-subcontent .top-content .layout-container h1 {
-  padding: 1em 0 0 1em;
-  text-transform: uppercase;
-}
-#year-event-subcontent .top-content .layout-container p {
-  margin-left: 2em;
-  font-weight: 700;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-#year-event-subcontent .top-content .layout-container .slider-container {
-  margin: 1em 4em;
-  position: relative;
-}
-#year-event-subcontent .top-content .layout-container .slider-container .slider-btn:hover {
-  background: #F4F4F4;
-}
-#year-event-subcontent .top-content .layout-container .slider-container .slider-btn {
-  top: 50%;
-  width: 50px;
-  z-index: 700;
-  display: grid;
-  cursor: pointer;
-  aspect-ratio: 1;
-  background: #fff;
-  position: absolute;
-  place-items: center;
-  border-radius: 100px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  color: rgba(0, 0, 0, 0.8);
-  transform: translateY(-50%);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-#year-event-subcontent .top-content .layout-container .slider-container .fa-chevron-left {
-  left: _;
-}
-#year-event-subcontent .top-content .layout-container .slider-container .fa-chevron-right {
-  right: _;
-}
-#year-event-subcontent .top-content .layout-container .slider-container .slide {
-  width: 100%;
-  border-radius: 10px;
-}
-#year-event-subcontent .top-content .layout-container .slider-container .slide img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-}
-#year-event-subcontent .bot-content {
-  padding: 1em;
-  min-height: 50vh;
-}
-#year-event-subcontent .bot-content .layout-container {
-  text-align: center;
-}
-#year-event-subcontent .bot-content .layout-container h2 {
-  color: #fff;
-  padding: 0.2em 0.5em;
-  margin-bottom: 0.5em;
-  display: inline-block;
-  background: #272727;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  border-radius: 3px;
-}
-#year-event-subcontent .bot-content .layout-container p {
-  margin: 1em;
 }
 
 @media (min-width: 920px) {
@@ -3587,40 +3460,21 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   #about-content .acknowledge-section .header h2 {
     font-size: 1.5rem;
   }
-  #about-content .acknowledge-section .benefactor-list .benefactor-item:last-of-type {
-    margin: 2em auto;
-  }
-  #about-content .acknowledge-section .benefactor-list .benefactor-item::before {
-    top: 50%;
-    width: 18%;
-    height: 90%;
-    right: 100%;
-    left: initial;
-    bottom: initial;
-    border-top-right-radius: 0;
-    transform: translateY(-50%);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
   #about-content .acknowledge-section .benefactor-list .benefactor-item {
-    width: 60%;
-    margin: 2em auto;
+    gap: 1em;
+    display: flex;
+    align-items: center;
     border-radius: 10px;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: 1em repeat(4, 1fr) 1em;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item img {
-    top: 50%;
-    left: -15%;
-    width: 35%;
-    max-height: 280px;
-    transform: translateY(-50%);
+    min-width: 30%;
     border-radius: 10px;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
-    grid-row: 2;
     text-align: initial;
-    grid-column: 3/span 3;
+  }
+  #about-content .acknowledge-section .benefactor-list .benefactor-item .content h3 {
+    font-size: 1.5rem;
   }
   #about-content .core-values-section .layout-container::before {
     top: 0;
@@ -3778,64 +3632,6 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
     padding: 1em 0;
     grid-area: sidebar;
   }
-  #year-event-subcontent .top-content {
-    margin-top: 3em;
-    background: none;
-  }
-  #year-event-subcontent .top-content .layout-container::before {
-    z-index: 600;
-    top: 0;
-    width: 3px;
-    content: "";
-    height: 100%;
-    left: 20px;
-    position: absolute;
-    background: #fff;
-  }
-  #year-event-subcontent .top-content .layout-container::after {
-    z-index: 600;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    content: "";
-    top: 20px;
-    position: absolute;
-    background: #fff;
-  }
-  #year-event-subcontent .top-content .layout-container {
-    padding: 0;
-  }
-  #year-event-subcontent .top-content .layout-container .content::before {
-    top: 0;
-    left: 0;
-    width: 50%;
-    content: "";
-    height: 100%;
-    position: absolute;
-    background: #C02121;
-    border-bottom-right-radius: 10px;
-  }
-  #year-event-subcontent .top-content .layout-container .content {
-    height: 40em;
-  }
-  #year-event-subcontent .top-content .layout-container .content h1, #year-event-subcontent .top-content .layout-container .content p {
-    z-index: 900;
-    position: relative;
-  }
-  #year-event-subcontent .top-content .layout-container .content h1 {
-    margin-left: 8%;
-  }
-  #year-event-subcontent .top-content .layout-container .content p {
-    margin-left: 25%;
-    font-size: 1.8rem;
-  }
-  #year-event-subcontent .top-content .layout-container .content .slider-container {
-    width: 50em;
-    margin: 1em auto;
-  }
-  #year-event-subcontent .bot-content .layout-container p {
-    text-align: initial;
-  }
 }
 @media (min-width: 920px) and (max-width: 970px) {
   #footer .footer-nav .footer-menu .footer-link {
@@ -3963,18 +3759,6 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
 }
 @media (min-width: 320px) and (max-width: 350px) {
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item::before {
-    height: 20%;
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item {
-    grid-template-rows: repeat(6, 1fr);
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item img {
-    top: -15%;
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item .content {
-    grid-row: 3/span 5;
-  }
   #alumni-content .search-section .form-group .label-group {
     line-height: initial;
   }
@@ -3983,37 +3767,5 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
   #alumni-content .spotlight-section .spotlight-card .content {
     flex-direction: column;
-  }
-}
-@media (min-width: 351px) and (max-width: 444px) {
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item::before {
-    height: 20%;
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item {
-    grid-template-rows: repeat(6, 1fr);
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item img {
-    top: -15%;
-  }
-  #about-content .acknowledge-section .layout-container .benefactor-list .benefactor-item .content {
-    margin-top: 1em;
-    grid-row: 3/span 5;
-  }
-}
-@media (min-width: 920px) and (max-width: 1050px) {
-  #about-content .history-section .layout-container .content {
-    grid-template-columns: 1em repeat(8, 1fr) 1em;
-  }
-  #about-content .history-section .layout-container .content .text-group {
-    margin-right: 0.5em;
-    grid-column: 2/span 5;
-  }
-}
-@media (min-width: 1051px) and (max-width: 1250px) {
-  #about-content .history-section .layout-container .content {
-    grid-template-columns: 1em repeat(6, 1fr) 1em;
-  }
-  #about-content .history-section .layout-container .content .text-group {
-    grid-column: 2/span 4;
   }
 }/*# sourceMappingURL=App.css.map */
