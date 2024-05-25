@@ -2087,6 +2087,10 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
 #faculty-content .quotes-section .quotes-container .quotes-card .text-group .title {
   margin-top: 1em;
 }
+#faculty-content .quotes-section .quotes-container .quotes-card .text-group .title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.2rem, 2vw + 1.2rem, 1.8rem);
+}
 #faculty-content .quotes-section .quotes-container .quotes-card .image-frame {
   grid-area: img;
 }
@@ -3420,6 +3424,10 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
   #faculty-content .quotes-section .quotes-container .quotes-card .text-group {
     font-size: 1.5rem;
+  }
+  #faculty-content .quotes-section .quotes-container .quotes-card .text-group .title p {
+    font-weight: 700;
+    font-size: clamp(1.6rem, 2vw + 1.6rem, 3rem);
   }
   #faculty-content .lecturers-section .lecturer-list {
     gap: 1em;

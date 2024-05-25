@@ -13,7 +13,7 @@ const responsive = {
     },
     desktop: {
       breakpoint: { max: 3000, min: 920 },
-      items: 1
+      items: 1,
     },
     tablet: {
       breakpoint: { max: 919, min: 464 },
@@ -23,27 +23,24 @@ const responsive = {
       breakpoint: { max: 464, min: 0 },
       items: 1
     }
-  }
-  
+}
+
 const Quotes = () => {
     const quotes = [
         {
             image: analyzaImage,
             name: "Analyza Galia-Gabuay",
-            position: "Associate Dean",
-            content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores rem commodi ab sed animi."
+            position: "Associate Dean"
         },
         {
             image: romeoImage,
-            name: "Romeo Teves",
-            position: "Faculty Head",
-            content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores rem commodi ab sed animi."
+            name: "Romeo C. Teves",
+            position: "Section Head, Pathology"
         },
         {
             image: jocelynImage,
-            name: "Jocelyn Frial",
-            position: "Faculty Member",
-            content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora asperiores rem commodi ab sed animi."
+            name: "Jocelyn S. Frial",
+            position: "Chairperson, Clinical Sciences"
         },                
     ]
 
@@ -59,15 +56,17 @@ const Quotes = () => {
     <section className="quotes-section">
         <div className="layout-container">
             <Carousel
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}            
                 responsive={responsive}
                 containerClass="quotes-container"
                 customLeftArrow={<CustomLeftArrow />}
-                customRightArrow={<CustomRightArrow />}                
+                customRightArrow={<CustomRightArrow />}
             >
                 {quotes.map(( quote, index )=> (
                     <div key={index} className="quotes-card">
                         <div className="text-group">
-                            <p>{quote.content}</p>
                             <div className="title">
                                 <p>Dr. {quote.name}</p>
                                 <em>{quote.position}</em>
