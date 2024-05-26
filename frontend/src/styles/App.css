@@ -2770,6 +2770,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
   #navbar .nav-menu .nav-item .drop-arrow:hover .dropdown-menu {
     opacity: 1;
+    visibility: visible;
   }
   #navbar .nav-menu .nav-item .drop-arrow {
     width: 0;
@@ -2785,8 +2786,8 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     left: 30%;
     opacity: 0;
     padding: 0.5em;
-    margin-top: 0.5em;
     position: absolute;
+    visibility: hidden;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
     background: rgba(192, 33, 33, 0.8);
     border-radius: 3px;
