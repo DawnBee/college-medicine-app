@@ -29,14 +29,14 @@ const Admission = () => {
                 <button className="hero-cta">Contact us</button>
             </div>
         </section>
-        <section className="process-section">
+        <section id="process" className="process-section">
             <div className="layout-container">
                 <MacroButtons />
                 <Process />
             </div>
         </section>
         <Requirements />
-        <section className="payment-fee-section">
+        <section id="payment" className="payment-fee-section">
             <div className="layout-container">
                 <div className="content-container">
                     <h2 className="section-header">Payment and Fee</h2>
@@ -68,7 +68,7 @@ const Admission = () => {
                 </div>
             </div>
         </section>
-        <section id="scholarship-section" className="scholarship-section">
+        <section id="scholarship" className="scholarship-section">
             <div className="top">
                 <div className="layout-container">
                     <h2 className="section-header">Scholarship and Financial Aid</h2>
@@ -121,7 +121,7 @@ const Admission = () => {
                 </div>
             </div>
         </section>
-        <section id="year-highlight-section" className="year-highlight-section">
+        <section id="month-act" className="year-highlight-section">
             <div className="layout-container">
                 <h2 className="section-header">Monthly Activities</h2>
                 <div className="intro-group">

@@ -16,7 +16,7 @@ const Message = () => {
             })            
     }, [])
   return (
-    <section className="college-message-section">
+    <section id="message" className="college-message-section">
         <div className="layout-container">
             {messages.map((message) => (
                 <div key={message.id}>

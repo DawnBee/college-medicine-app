@@ -31,7 +31,7 @@ const Simulation = () => {
                 </p>
             </div>
         </section>
-        <section className="facility-section">
+        <section id="facility" className="facility-section">
             <div className="layout-container">
                 <div className="first">
                     <video className="bg-video" autoPlay muted loop>
@@ -65,7 +65,7 @@ const Simulation = () => {
                 </div>
             </div>
         </section>
-        <section className="sim-lab-section">
+        <section id="center" className="sim-lab-section">
             <div className="layout-container">
                 <div className="header">
                     <h2>Simulation Lab</h2>
@@ -117,7 +117,7 @@ const Simulation = () => {
             </div>
         </section>
         <MannequinCards />
-        <section className="task-trainers-section">
+        <section id="trainers" className="task-trainers-section">
             <div className="layout-container">
                 <div className="header">
                     <h2>Task Trainers</h2>
@@ -152,7 +152,7 @@ const Simulation = () => {
                 </ul>
             </div>
         </section>
-        <section className="team-based-section layout-container">
+        <section id="team-based" className="team-based-section layout-container">
             <div className="top">
                 <h2>Team Based Simulation</h2>
                 <p>
@@ -198,7 +198,7 @@ const Simulation = () => {
                 </ul>
             </div>
         </section>
-        <section className="educ-outcome-section">
+        <section id="outcomes" className="educ-outcome-section">
             <div className="layout-container">
                 <div className="image-frame">
                     <i className="fa-solid fa-trophy"></i>
@@ -218,7 +218,7 @@ const Simulation = () => {
                 </div>
             </div>
         </section>
-        <section className="faculty-involve-section">
+        <section id="faculty-involve" className="faculty-involve-section">
             <div className="top">
                 <div className="layout-container">
                     <h2>Faculty Involvement</h2>

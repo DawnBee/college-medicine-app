@@ -45,7 +45,7 @@ const MannequinCards = () => {
     }
 
     return (
-        <section className="sim-mannequins-section">
+        <section id="mannequins" className="sim-mannequins-section">
             <div className="layout-container">
                 <h2>Simulation Mannequins</h2>
                 <ul className="mannequin-list">

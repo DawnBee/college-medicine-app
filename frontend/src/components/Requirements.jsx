@@ -16,7 +16,7 @@ const Requirements = () => {
     }, [])
 
   return (
-    <section id="requirement-section" className="requirement-section">
+    <section id="requirements" className="requirement-section">
         <div className="layout-container">
             <h2 className="section-header">Admission Requirements</h2>
             <ul className="require-list">
