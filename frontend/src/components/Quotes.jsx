@@ -53,7 +53,7 @@ const Quotes = () => {
     )
 
   return (
-    <section className="quotes-section">
+    <section id="highlights" className="quotes-section">
         <div className="layout-container">
             <Carousel
                 infinite={true}

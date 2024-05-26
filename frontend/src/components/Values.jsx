@@ -18,7 +18,7 @@ const Values = () => {
             })
     }, [])
   return (
-    <section className="core-values-section">
+    <section id="values" className="core-values-section">
         <div className="layout-container">
             <img src={coreValueImage} alt="core values image" />
             <div className="values-container">

@@ -31,7 +31,7 @@ const Lecturers = () => {
     })
 
     return (
-        <section className="lecturers-section">
+        <section id="faculties" className="lecturers-section">
             <div className="layout-container">
                 <div className="header">
                     <h2>Our Faculties</h2>

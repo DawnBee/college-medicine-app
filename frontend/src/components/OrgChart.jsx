@@ -16,7 +16,7 @@ const OrgChart = () => {
     }, [])
 
   return (
-    <section className="org-chart-section">
+    <section id="org-chart" className="org-chart-section">
         <div className="intro">
             <div className="layout-container">
                 <h2>Organizational Chart</h2>

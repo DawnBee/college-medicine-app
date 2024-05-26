@@ -61,6 +61,15 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link:hover {
 header.scrolled #navbar .nav-menu .nav-item .nav-link {
   color: #000;
 }
+header.scrolled #navbar .nav-menu .nav-item .drop-arrow {
+  border-top: 6px solid #000;
+}
+header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu {
+  background: #fff;
+}
+header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
+  color: #000;
+}
 
 #navbar {
   top: 0;
@@ -2746,6 +2755,9 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
     display: flex;
     list-style-type: none;
   }
+  #navbar .nav-menu .nav-item {
+    position: relative;
+  }
   #navbar .nav-menu .nav-item .nav-link {
     color: #fff;
     font-weight: 700;
@@ -2755,6 +2767,39 @@ header.scrolled #navbar .nav-menu .nav-item .nav-link {
   }
   #navbar .nav-menu .nav-item .nav-link:hover {
     color: #FFF800;
+  }
+  #navbar .nav-menu .nav-item .drop-arrow:hover .dropdown-menu {
+    opacity: 1;
+  }
+  #navbar .nav-menu .nav-item .drop-arrow {
+    width: 0;
+    height: 0;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    border-top: 6px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+  #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu {
+    left: 30%;
+    opacity: 0;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    position: absolute;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    background: rgba(192, 33, 33, 0.8);
+    border-radius: 3px;
+    transition: opacity 0.8s ease-out;
+  }
+  #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a:hover {
+    text-decoration: underline;
+  }
+  #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
+    display: block;
+    font-weight: 200;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
   }
   #navbar .nav-menu .nav-item:last-of-type i {
     margin-right: 0.5em;

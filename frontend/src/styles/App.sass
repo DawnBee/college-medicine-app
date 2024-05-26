@@ -316,6 +316,14 @@ header.scrolled #navbar
             .nav-link
                 color: #000
 
+            .drop-arrow
+                border-top: 6px solid #000
+                .dropdown-menu
+                    background: #fff
+                    a
+                        color: #000
+
+
 // **Mobile Styling**
 
 // Navigation
@@ -2454,6 +2462,8 @@ header.scrolled #navbar
             list-style-type: none
             
             .nav-item
+                position: relative
+
                 .nav-link
                     color: #fff
                     font-weight: 700
@@ -2463,7 +2473,42 @@ header.scrolled #navbar
 
                 .nav-link:hover
                     color: $bg-yellow
-                    
+
+                .drop-arrow:hover .dropdown-menu
+                    opacity: 1
+
+                .drop-arrow
+                    width: 0
+                    height: 0
+                    cursor: pointer
+                    display: inline-block
+                    vertical-align: middle
+                    border-top: 6px solid #fff
+                    border-left: 6px solid transparent
+                    border-right: 6px solid transparent
+
+                    .dropdown-menu
+                        left: 30%
+                        opacity: 0
+                        padding: .5em
+                        margin-top: .5em
+                        position: absolute
+                        box-shadow: $drop-shadow
+                        background: rgba(192,33,33,.8)
+                        border-radius: $border-radius-3
+                        transition: opacity .8s ease-out
+
+                        a:hover
+                            text-decoration: underline
+                        a
+                            display: block
+                            font-weight: 200
+                            text-align: center
+                            font-family: $header-font
+                            
+
+
+
             .nav-item:last-of-type
                 i
                     margin-right: .5em

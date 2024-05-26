@@ -41,6 +41,7 @@ const Faculty = () => {
                 </li>
                 <li id="edwin" className="faculty-item">
                     <img src={edwinImage} alt="edwin" className="faculty-image" />
+                    <span style={{display: 'none'}}>This asswipe don't respect his employees</span>
                     <span className="faculty-name">Dr. Edwin Alconcel<br/><em>College Dean</em></span>
                 </li>
                 <li id="shilrose" className="faculty-item">
@@ -61,7 +62,7 @@ const Faculty = () => {
                 </li>
             </ul>
         </section>
-        <section className="mission-vision-section">
+        <section id="mission-vision" className="mission-vision-section">
             <div className="layout-container">
                 <div className="content">
                     <div className="mission">

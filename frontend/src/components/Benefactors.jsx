@@ -16,7 +16,7 @@ const Benefactors = () => {
     }, [])
 
   return (
-    <section className="acknowledge-section">
+    <section id="benefactors" className="acknowledge-section">
         <div className="layout-container">
             <div className="header">
                 <h2>The college expresses gratitude to the following:</h2>

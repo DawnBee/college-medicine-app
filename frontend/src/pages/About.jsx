@@ -1,6 +1,5 @@
 // Asset Imports
 import collegeGrounds from '../assets/images/bg-university-grounds.jpg'
-import coreValueImage from '../assets/images/sim-1.jpg'
 
 // Components
 import Benefactors from '../components/Benefactors'
@@ -27,7 +26,7 @@ const About = () => {
         </section>
         <Benefactors />
         <Values />
-        <section className="history-section">
+        <section id="history" className="history-section">
             <div className="layout-container">
                 <div className="content">
                     <img src={collegeGrounds} alt="college history image" />
