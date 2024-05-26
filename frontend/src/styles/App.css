@@ -2785,6 +2785,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu {
     left: 30%;
     opacity: 0;
+    z-index: 100;
     padding: 0.5em;
     position: absolute;
     visibility: hidden;
