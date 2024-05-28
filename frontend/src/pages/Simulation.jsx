@@ -25,9 +25,9 @@ const Simulation = () => {
                 <img className="pulse-icon" src={pulseImage} alt="pulse icon" draggable="false" />
                 <h1 className="page-header">Simulation</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-                    purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+                    The Mindanao State University, General Santos City Simulation Center is a 
+                    cutting-edge healthcare and medicine facility. Equipped with advanced 
+                    simulation technology.
                 </p>
             </div>
         </section>
@@ -37,17 +37,17 @@ const Simulation = () => {
                     <video className="bg-video" autoPlay muted loop>
                         <source src={facilityVideo} type="video/mp4" />
                     </video>
-                    <h2>Simulation Facilities</h2>
+                    <h2>Simulation Center</h2>
                     <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                        Dolorem dicta doloribus inventore dolores fugiat praesentium, 
-                        quibusdam deserunt porro debitis eveniet!
+                        Currently located at the CETD Campus, 2nd Floor of the Library Building, 
+                        the center serves as a practical training ground for students and allows them to engage in 
+                        hands-on experience and preparedness for real-world healthcare settings.
                     </p>
                 </div>
                 <div className="second">
                     <ul className="facility-list">
                         <li className="facility-item">
-                            <h3>Clinical Skills Lab</h3>
+                            <h3>Simulation Lab</h3>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
                                 Magnam ut tempora natus animi quam voluptate quibusdam labore
@@ -55,7 +55,7 @@ const Simulation = () => {
                             </p>
                         </li>
                         <li className="facility-item">
-                            <h3>Simulation Center</h3>
+                            <h3>Clinical Skills Lab</h3>
                             <p>
                                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                                 Architecto, autem necessitatibus!
@@ -68,7 +68,7 @@ const Simulation = () => {
         <section id="center" className="sim-lab-section">
             <div className="layout-container">
                 <div className="header">
-                    <h2>Simulation Lab</h2>
+                    <h2>Simulation-Based Education</h2>
                 </div>
                 <div className="wrapper">
                     <div className="collage-container">
@@ -120,7 +120,7 @@ const Simulation = () => {
         <section id="trainers" className="task-trainers-section">
             <div className="layout-container">
                 <div className="header">
-                    <h2>Task Trainers</h2>
+                    <h2>Advanced Task Trainers</h2>
                 </div>
                 <ul className="trainer-list">
                     <li className="trainer-item sam">
@@ -147,81 +147,71 @@ const Simulation = () => {
                         <img src={trainerMATT} alt="" className="trainer-img" />
                         <h3>MATT - Auscultation</h3>
                     </li>
-
-
                 </ul>
             </div>
         </section>
-        <section id="team-based" className="team-based-section layout-container">
-            <div className="top">
-                <h2>Team Based Simulation</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                    Vitae cupiditate dolore accusantium, 
-                    mollitia aut temporibus expedita fuga aliquam dignissimos similique eum dolorem.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Id distinctio quibusdam laborum iste nulla corporis at? Odio deleniti illum itaque.
-                </p>
-            </div>
-            <img src={simImageFour} alt="team sim image" />
-            <div className="bot">
-                <ul className="team-based-list">
-                    <li className="team-item">
-                        <i className="fa-solid fa-hand-holding-heart"></i>
-                        <div className="content">
-                            <h3>Challenge 1</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque.
-                            </p>                                    
-                        </div>
-                    </li>
-                    <li className="team-item">
-                        <i className="fa-regular fa-face-kiss-wink-heart"></i>
-                        <div className="content">
-                            <h3>Challenge 2</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque.
-                            </p>                                    
-                        </div>
-                    </li>
-                    <li className="team-item">
-                        <i className="fa-solid fa-face-grin-hearts"></i>
-                        <div className="content">
-                            <h3>Challenge 3</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, eaque.
-                            </p>                                    
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="outcomes" className="educ-outcome-section">
+        <section id="sim-training" className="simbased-training-section">
             <div className="layout-container">
-                <div className="image-frame">
-                    <i className="fa-solid fa-trophy"></i>
-                    <img src={bgImage} alt="educ outcome image"/>
+                <div className="intro-group">
+                    <h2>Simulation-Based Education (SBE): Training</h2>
+                    <p>
+                        "Optimizing Simulation-Based Education (SBE): Training,
+                        Collaboration, and Research - A focus on Technology-Driven 
+                        Teaching and Learning Strategies." 
+                    </p>
                 </div>
                 <div className="content">
-                    <h2>Educational Outcomes</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Cum repellat rem enim eius. Vel vero commodi ullam rem, doloremque animi.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                        Doloremque, vitae consectetur molestias dolores numquam iusto 
-                        dolore ullam qui deserunt magnam nostrum fuga nesciunt. Exercitationem, sequi?
-                    </p>
+                    <ul class="training-list">
+                        <li class="training-item">
+                            <img src={simImageOne} alt="training image" />
+                            <div className="text-group">
+                                <h3>Training to Adelaide 2023</h3>
+                                <em>Adelaide, Australia</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Maecenas porttitor congue massa. Fusce posuere, magna
+                                    sed pulvinar ultricies, purus lectus malesuada libero, 
+                                    sit amet commodo magna eros quis urna. Nunc viverra 
+                                    imperdiet enim. Fusce est. Vivamus a tellus.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="training-item">
+                            <img src={simImageTwo} alt="training image" />
+                            <div className="text-group">
+                                <h3>Training to Singapore 2024</h3>
+                                <em>Singapore</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Maecenas porttitor congue massa. Fusce posuere, magna
+                                    sed pulvinar ultricies, purus lectus malesuada libero, 
+                                    sit amet commodo magna eros quis urna. Nunc viverra 
+                                    imperdiet enim. Fusce est. Vivamus a tellus.
+                                </p>                            
+                            </div>
+                        </li>
+                        <li class="training-item">
+                            <img src={simImageThree} alt="training image" />
+                            <div className="text-group">
+                                <h3>Training to Singapore 2024</h3>
+                                <em>Singapore</em>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                                    Maecenas porttitor congue massa. Fusce posuere, magna
+                                    sed pulvinar ultricies, purus lectus malesuada libero, 
+                                    sit amet commodo magna eros quis urna. Nunc viverra 
+                                    imperdiet enim. Fusce est. Vivamus a tellus.
+                                </p>                            
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
         <section id="faculty-involve" className="faculty-involve-section">
             <div className="top">
                 <div className="layout-container">
-                    <h2>Faculty Involvement</h2>
+                    <h2>Faculty Training</h2>
                     <img src={simImageOne} alt="top image" />
                 </div>
             </div>

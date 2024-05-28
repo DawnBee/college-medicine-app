@@ -1454,9 +1454,7 @@ header.scrolled #navbar
                                     color: #fff
                                     font-size: 1.2rem
                                     text-decoration: none
-                                    text-transform: capitalize                                   
-
-                             
+                                    text-transform: capitalize                                                               
 
     .task-trainers-section
         .layout-container
@@ -1490,7 +1488,7 @@ header.scrolled #navbar
                     cursor: pointer
                     overflow: hidden
                     position: relative
-                    border-radius: $border-radius-10
+                    border-radius: $border-radius-5
                     
                     img
                         width: 100%
@@ -1498,7 +1496,7 @@ header.scrolled #navbar
                         object-fit: cover
                         box-shadow: $drop-shadow
                         transition: $img-trans-effect
-                        border-radius: $border-radius-10
+                        border-radius: $border-radius-5
 
                     h3
                         left: 0
@@ -1511,99 +1509,52 @@ header.scrolled #navbar
                         position: absolute
                         font-family: $header-font
                         background: rgba(0, 0, 0, .5)
-                        border-bottom-left-radius: $border-radius-10
-                        border-bottom-right-radius: $border-radius-10
+                        border-bottom-left-radius: $border-radius-5
+                        border-bottom-right-radius: $border-radius-5
                         
-    .team-based-section
-        @include bg-image-format("../assets/images/bg-medical.svg")
-
-        .top
+    .simbased-training-section
+        .intro-group
+            padding: 1em
             color: #fff
             text-align: center
-            padding: 1em
+            background: $bg-black
 
             h2
-                margin-bottom: 1em
                 font-family: $header-font
-                text-transform: uppercase
-            p
-                margin: 1em
-        
-        img
-            width: 100%
-            object-fit: cover
+                text-decoration: underline
 
-        .bot
-            padding: 1em
-            background: #fff
-
-            .team-based-list
-                text-align: center
-
-                .team-item
-                    gap: 1em
-                    display: flex
-                    margin: 2em 0
-                    align-items: center
-
-                    i
-                        font-size: 3rem
-                        color: $primary-color
-
-                    .content
-                        text-align: initial
-
-                        h3
-                            font-weight: 800
-                            text-transform: uppercase
-                            font-family: $header-font
-        
-    .educ-outcome-section
-
-        .image-frame::before
-            top: 0
-            left: 0            
-            content: ''     
-            width: 100%
-            height: 100%
-            position: absolute
-            background-image: linear-gradient(to bottom, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))            
-        
-        .image-frame
-            position: relative
-
-            img
-                width: 100%
-                height: 250px
-                object-fit: cover
-
-            i
-                left: 50%
-                display: grid
-                color: #fff
-                bottom: -1.5em
-                aspect-ratio: 1
-                font-size: 2rem
-                min-width: 100px
-                background: #fff
-                position: absolute
-                place-items: center
-                border-radius: 1000px
-                border: 10px solid #fff
-                background: $primary-color
-                transform: translateX(-50%)
-
-        .content
-            padding: 1em
-            text-align: center
-            margin: 2.5em 0 1em 0
-            h2
-                font-weight: 800
-                font-family: $header-font
-                text-transform: uppercase
             p
                 margin: 1em 0
+        
+        .content
+            .training-list
+                list-style-type: none
 
+                .training-item
+                    padding: 1em
+                    text-align: center
+
+                    img
+                        width: 80%
+                        margin: 0 auto
+                        display: block
+                        object-fit: cover
+                        max-height: 250px
+                        box-shadow: $drop-shadow
+                        border-radius: $border-radius-3
+
+                    .text-group
+                        h3, em
+                            line-height: 1.5
+                            font-family: $header-font
+                        
+                        h3, p
+                            margin-top: 1rem
+                            
+                .training-item:nth-child(even)
+                    color: #fff
+                    background: $bg-black
+            
     .faculty-involve-section
         .top::before
             @include horizontal-line-style-top(#fff, 12px)
@@ -1612,7 +1563,7 @@ header.scrolled #navbar
             padding: 2em
             text-align: center
             position: relative
-            background: $bg-black
+            background: $primary-color
 
             h2
                 color: #fff
@@ -1637,8 +1588,8 @@ header.scrolled #navbar
                 margin-bottom: 1em
 
                 h3
+                    color: #000
                     margin-bottom: .5em
-                    color: $primary-color
                     text-transform: uppercase
                     font-family: $header-font
 
@@ -2838,7 +2789,8 @@ header.scrolled #navbar
 
         .facility-section
             .layout-container
-                display: flex
+                display: grid
+                grid-template-columns: repeat(2, 50%)
 
                 .first::before
                     @include vertical-line-style-left(#fff, 20px)
@@ -2876,7 +2828,7 @@ header.scrolled #navbar
                     
                     h2
                         margin: 1em 0 0 0
-                        font-size: 2.5rem
+                        font-size: 1.8rem
                         padding: .5em 1em
                 
                 .wrapper
@@ -2971,45 +2923,34 @@ header.scrolled #navbar
                     .matt
                         grid-area: matt
 
-        .team-based-section
-            display: grid
-            grid-template-columns: repeat(3, 1fr)
-            img
-                height: 100%
-
-        .educ-outcome-section
-            .layout-container
-                display: grid
-                grid-template-areas: "text img"
-
-                .image-frame::before
-                    right: 0
-                    background-image: linear-gradient(to left, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))    
-                
-                .image-frame,.content
-                    min-height: 20em
-
-                .image-frame
-                    grid-area: img
-                    
-                    img
-                        height: 100%
-                    
-                    i
-                        top: 50%
-                        left: -1.5em
-                        bottom: initial
-                        transform: translateY(-50%)
-                        
-                .content
-                    margin: 0
-                    padding: 2em
-                    display: flex
-                    grid-area: text
+        .simbased-training-section
+            .intro-group
+                padding: 1.5em
+                h2
+                    font-size: 2rem
+                p
+                    text-indent: 2rem
                     text-align: initial
-                    align-items: center
-                    justify-content: center
-                    flex-flow: column nowrap
+            
+            .content
+                .training-list
+                    .training-item
+                        gap: 2em
+                        display: flex
+                        padding: 1.2em
+                        
+                        .text-group
+                            text-align: initial
+                            
+                            h3
+                                font-size: 1.5rem
+                    
+                    .training-item:nth-child(odd)
+                        img
+                            order: 2
+                        .text-group
+                            order: 1
+                            text-align: right
 
         .faculty-involve-section
             .top::before

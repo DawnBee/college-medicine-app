@@ -47,7 +47,7 @@ const MannequinCards = () => {
     return (
         <section id="mannequins" className="sim-mannequins-section">
             <div className="layout-container">
-                <h2>Simulation Mannequins</h2>
+                <h2>High-Fidelity Simulation Mannequins</h2>
                 <ul className="mannequin-list">
                     {mannequins.map((mannequin, index) => (
                         <li key={index} className="mannequin-item">

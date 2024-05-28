@@ -1577,7 +1577,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   cursor: pointer;
   overflow: hidden;
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 #simulation-content .task-trainers-section .layout-container .trainer-list .trainer-item img {
   width: 100%;
@@ -1586,7 +1586,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
      object-fit: cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 #simulation-content .task-trainers-section .layout-container .trainer-list .trainer-item h3 {
   left: 0;
@@ -1599,104 +1599,49 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   background: rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-#simulation-content .team-based-section {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-medical.svg");
-}
-#simulation-content .team-based-section .top {
+#simulation-content .simbased-training-section .intro-group {
+  padding: 1em;
   color: #fff;
   text-align: center;
-  padding: 1em;
+  background: #272727;
 }
-#simulation-content .team-based-section .top h2 {
-  margin-bottom: 1em;
+#simulation-content .simbased-training-section .intro-group h2 {
   font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
+  text-decoration: underline;
 }
-#simulation-content .team-based-section .top p {
-  margin: 1em;
-}
-#simulation-content .team-based-section img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#simulation-content .team-based-section .bot {
-  padding: 1em;
-  background: #fff;
-}
-#simulation-content .team-based-section .bot .team-based-list {
-  text-align: center;
-}
-#simulation-content .team-based-section .bot .team-based-list .team-item {
-  gap: 1em;
-  display: flex;
-  margin: 2em 0;
-  align-items: center;
-}
-#simulation-content .team-based-section .bot .team-based-list .team-item i {
-  font-size: 3rem;
-  color: #9E2828;
-}
-#simulation-content .team-based-section .bot .team-based-list .team-item .content {
-  text-align: initial;
-}
-#simulation-content .team-based-section .bot .team-based-list .team-item .content h3 {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-}
-#simulation-content .educ-outcome-section .image-frame::before {
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-image: linear-gradient(to bottom, rgb(158, 40, 40), rgba(158, 40, 40, 0));
-}
-#simulation-content .educ-outcome-section .image-frame {
-  position: relative;
-}
-#simulation-content .educ-outcome-section .image-frame img {
-  width: 100%;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-#simulation-content .educ-outcome-section .image-frame i {
-  left: 50%;
-  display: grid;
-  color: #fff;
-  bottom: -1.5em;
-  aspect-ratio: 1;
-  font-size: 2rem;
-  min-width: 100px;
-  background: #fff;
-  position: absolute;
-  place-items: center;
-  border-radius: 1000px;
-  border: 10px solid #fff;
-  background: #9E2828;
-  transform: translateX(-50%);
-}
-#simulation-content .educ-outcome-section .content {
-  padding: 1em;
-  text-align: center;
-  margin: 2.5em 0 1em 0;
-}
-#simulation-content .educ-outcome-section .content h2 {
-  font-weight: 800;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
-#simulation-content .educ-outcome-section .content p {
+#simulation-content .simbased-training-section .intro-group p {
   margin: 1em 0;
+}
+#simulation-content .simbased-training-section .content .training-list {
+  list-style-type: none;
+}
+#simulation-content .simbased-training-section .content .training-list .training-item {
+  padding: 1em;
+  text-align: center;
+}
+#simulation-content .simbased-training-section .content .training-list .training-item img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+#simulation-content .simbased-training-section .content .training-list .training-item .text-group h3, #simulation-content .simbased-training-section .content .training-list .training-item .text-group em {
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+#simulation-content .simbased-training-section .content .training-list .training-item .text-group h3, #simulation-content .simbased-training-section .content .training-list .training-item .text-group p {
+  margin-top: 1rem;
+}
+#simulation-content .simbased-training-section .content .training-list .training-item:nth-child(even) {
+  color: #fff;
+  background: #272727;
 }
 #simulation-content .faculty-involve-section .top::before {
   left: 0;
@@ -1711,7 +1656,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   padding: 2em;
   text-align: center;
   position: relative;
-  background: #272727;
+  background: #9E2828;
 }
 #simulation-content .faculty-involve-section .top h2 {
   color: #fff;
@@ -1736,8 +1681,8 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   margin-bottom: 1em;
 }
 #simulation-content .faculty-involve-section .bot .info-group h3 {
+  color: #000;
   margin-bottom: 0.5em;
-  color: #9E2828;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
@@ -3130,7 +3075,8 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     font-size: 4rem;
   }
   #simulation-content .facility-section .layout-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
   #simulation-content .facility-section .layout-container .first::before {
     top: 0;
@@ -3179,7 +3125,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
   #simulation-content .sim-lab-section .layout-container .header h2 {
     margin: 1em 0 0 0;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     padding: 0.5em 1em;
   }
   #simulation-content .sim-lab-section .layout-container .wrapper {
@@ -3272,45 +3218,33 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #simulation-content .task-trainers-section .layout-container .trainer-list .matt {
     grid-area: matt;
   }
-  #simulation-content .team-based-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  #simulation-content .simbased-training-section .intro-group {
+    padding: 1.5em;
   }
-  #simulation-content .team-based-section img {
-    height: 100%;
+  #simulation-content .simbased-training-section .intro-group h2 {
+    font-size: 2rem;
   }
-  #simulation-content .educ-outcome-section .layout-container {
-    display: grid;
-    grid-template-areas: "text img";
-  }
-  #simulation-content .educ-outcome-section .layout-container .image-frame::before {
-    right: 0;
-    background-image: linear-gradient(to left, rgb(158, 40, 40), rgba(158, 40, 40, 0));
-  }
-  #simulation-content .educ-outcome-section .layout-container .image-frame, #simulation-content .educ-outcome-section .layout-container .content {
-    min-height: 20em;
-  }
-  #simulation-content .educ-outcome-section .layout-container .image-frame {
-    grid-area: img;
-  }
-  #simulation-content .educ-outcome-section .layout-container .image-frame img {
-    height: 100%;
-  }
-  #simulation-content .educ-outcome-section .layout-container .image-frame i {
-    top: 50%;
-    left: -1.5em;
-    bottom: initial;
-    transform: translateY(-50%);
-  }
-  #simulation-content .educ-outcome-section .layout-container .content {
-    margin: 0;
-    padding: 2em;
-    display: flex;
-    grid-area: text;
+  #simulation-content .simbased-training-section .intro-group p {
+    text-indent: 2rem;
     text-align: initial;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+  }
+  #simulation-content .simbased-training-section .content .training-list .training-item {
+    gap: 2em;
+    display: flex;
+    padding: 1.2em;
+  }
+  #simulation-content .simbased-training-section .content .training-list .training-item .text-group {
+    text-align: initial;
+  }
+  #simulation-content .simbased-training-section .content .training-list .training-item .text-group h3 {
+    font-size: 1.5rem;
+  }
+  #simulation-content .simbased-training-section .content .training-list .training-item:nth-child(odd) img {
+    order: 2;
+  }
+  #simulation-content .simbased-training-section .content .training-list .training-item:nth-child(odd) .text-group {
+    order: 1;
+    text-align: right;
   }
   #simulation-content .faculty-involve-section .top::before {
     left: 0;
