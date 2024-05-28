@@ -29,7 +29,7 @@ class Process(models.Model):
 
 class Requirements(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	name = models.CharField(max_length=35)
+	name = models.CharField(max_length=80)
 	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
