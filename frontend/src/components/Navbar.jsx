@@ -80,10 +80,10 @@ const Navbar = ({currentPage}) => {
                         <span className="drop-arrow" style={inlineArrowStyles}>
                             <div className="dropdown-menu">
                                 <CustomALink to="facility">Facilities</CustomALink>
-                                <CustomALink to="center">Center</CustomALink>
+                                <CustomALink to="center">SimBased Educ..</CustomALink>
                                 <CustomALink to="mannequins">Mannequins</CustomALink>
                                 <CustomALink to="trainers">Task Trainers</CustomALink>
-                                <CustomALink to="team-based">Team Based</CustomALink>
+                                <CustomALink to="team-based">TeamBased Sim..</CustomALink>
                                 <CustomALink to="outcomes">Outcomes</CustomALink>
                                 <CustomALink to="faculty-involve">Faculty Involvement</CustomALink>                                         
                             </div>
