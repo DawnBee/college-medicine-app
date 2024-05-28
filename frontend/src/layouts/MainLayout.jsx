@@ -1,5 +1,8 @@
 import { Outlet } from 'react-router-dom'
 
+// Styles
+import '../styles/Main.sass'
+
 // Components
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'

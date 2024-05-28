@@ -1,0 +1,52 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap')    
+    
+// Custom Variables
+$primary-color: #9E2828
+$secondary-color: #C02121
+$tertiary-color: #CD1919
+$placeholder: #C6C6C6
+$bg-black: #272727
+$bg-yellow: #FFF800
+$bg-dark-green: #0C4F3B
+$bg-light-red: #F0E1E1
+$bg-light-biege: #F9F6EF
+$bg-light-gray: #F4F4F4
+$bg-light-gray-2: #D8D8D8
+$bg-glassmorph: rgba(255, 255, 255, .3)
+$backdrop-fill: blur(10px)
+$header-font: "Montserrat", sans-serif
+$content-font: "Lora", serif
+$border-radius-3: 3px
+$border-radius-5: 5px
+$border-radius-10: 10px
+$drop-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4)
+$img-trans-effect: transform 0.3s ease
+$linear-glassmorph: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.08) 50%, rgba(255, 255, 255, 0.03) 100%)
+
+// CSS Resets    
+*, *::before, *::after
+    box-sizing: border-box
+
+::selection
+    color: #000
+    background: $bg-yellow        
+
+body
+    margin: 0
+    padding: 0
+    height: 100%
+    font-family: $content-font
+
+img
+    max-width: 100%
+    vertical-align: bottom
+
+h1, h2, h3, h4, ul, p
+    margin: 0
+    padding: 0   
+
+.layout-container
+    margin: 0 auto
+    max-width: 2000px
