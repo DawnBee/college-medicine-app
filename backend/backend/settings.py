@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_cleanup.apps.CleanupConfig',
     'home.apps.HomeConfig',
     'admission.apps.AdmissionConfig',
     'simulation.apps.SimulationConfig',
