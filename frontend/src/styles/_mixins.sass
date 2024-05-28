@@ -1,0 +1,237 @@
+// Mixins
+@mixin header-strokes($weight, $color)
+    text-shadow: $weight -$weight 0 $color, -$weight  $weight 0 $color, $weight  $weight 0 $color
+        
+@mixin bento-box-transparent-content()
+    padding: 0
+    position: relative
+    @include img-hover-effect()
+
+    .image-box
+        width: 100%
+        height: 100%
+        position: relative
+        @include img-box-styles()
+        border-radius: $border-radius-3
+        
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: $img-trans-effect
+    
+    .content
+        left: 0
+        bottom: 0
+        width: 100%
+        z-index: 100
+        padding: 1em
+        position: absolute
+
+@mixin bento-box-solid-content($bg-color)
+    display: grid
+    grid-template-rows: 60% 40%
+
+    .image-box
+        @include img-box-styles()
+        border-top-left-radius: $border-radius-3
+        border-top-right-radius: $border-radius-3
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: $img-trans-effect
+
+    .content
+        position: relative
+        background: $bg-color
+        padding: 1.5em 1.5em 1.5em 2em
+        border-bottom-left-radius: $border-radius-3
+        border-bottom-right-radius: $border-radius-3
+
+    // Line Styles
+    .content::before
+        top: 0
+        left: 15px
+        width: 3px
+        content: ''
+        height: 100%
+        position: absolute
+        background: #fff
+
+    .content::after
+        left: 0
+        top: 15px
+        content: ''
+        height: 3px
+        width: 100%
+        position: absolute
+        background: #fff
+
+@mixin bg-image-format($bg-image)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url($bg-image)
+    
+@mixin testimonial-card()   
+    margin: 1em
+    padding: 1em
+    text-align: center
+    background: $bg-glassmorph
+    backdrop-filter: $backdrop-fill
+    border-radius: $border-radius-10
+
+    .student-img
+        width: 200px
+        aspect-ratio: 1
+        object-fit: cover
+        border-radius: 100px
+    
+    p
+        font-family: $header-font
+
+    .student-name
+        text-align: right
+        font-family: $content-font
+         
+@mixin hero-button()
+    border: none
+    color: #fff
+    margin-top: 1em
+    cursor: pointer
+    padding: .5em 1em
+    box-shadow: $drop-shadow
+    text-transform: uppercase
+    font-family: $content-font
+    background: $tertiary-color
+    border-radius: $border-radius-5
+
+@mixin global-btn()
+    border: none
+    color: #fff
+    cursor: pointer
+    font-weight: 600
+    padding: .5em 1em
+    text-transform: uppercase
+    font-family: $header-font
+    background: $tertiary-color
+    border-radius: $border-radius-3
+
+@mixin vertical-line-style-right($bg-color, $right-gap)
+    top: 0
+    width: 3px
+    content: ''
+    height: 100%
+    right: $right-gap
+    position: absolute
+    background: $bg-color
+
+@mixin vertical-line-style-left($bg-color, $left-gap)
+    top: 0
+    width: 3px
+    content: ''
+    height: 100%
+    left: $left-gap
+    position: absolute
+    background: $bg-color    
+
+@mixin horizontal-line-style-top($bg-color, $top-gap)
+    left: 0
+    height: 3px
+    width: 100%
+    content: ''
+    top: $top-gap
+    position: absolute
+    background: $bg-color
+    
+@mixin slider-btn($left-position:-30px, $right-position:-30px, $hov-bg-color)
+    .slider-btn:hover
+        background: $hov-bg-color
+
+    .slider-btn
+        top: 50%
+        width: 50px
+        z-index: 700
+        display: grid
+        cursor: pointer
+        aspect-ratio: 1
+        background: #fff
+        position: absolute
+        place-items: center
+        border-radius: 100px
+        box-shadow: $drop-shadow
+        color: rgba(0, 0, 0, .8)
+        transform: translateY(-50%)
+        border: 1px solid rgba(0, 0, 0, .1)
+
+    .fa-chevron-left
+        left: $left-position
+
+    .fa-chevron-right
+        right: $right-position
+
+@mixin slide-styles()
+    width: 100%
+    border-radius: $border-radius-10
+
+@mixin hero-styles($height, $bg-color)
+    height: $height
+    overflow: hidden
+    position: relative
+    background-color: $bg-color
+        
+@mixin hero-overlay()
+    top: 50%
+    left: 50%
+    width: 400px
+    color: #fff
+    position: absolute
+    transform: translate(-50%, -50%)                       
+
+@mixin color-overlay($bg-color)
+    top: 0
+    left: 0
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    background: $bg-color
+    
+@mixin expand-btn($btn-color, $hover-color, $font-weight)
+    .expand-btn:hover
+        color: $hover-color
+
+    .expand-btn
+        gap: 5px
+        border: none
+        display: flex
+        cursor: pointer
+        margin: 1em auto
+        color: $btn-color
+        align-items: center
+        background: transparent
+        text-transform: uppercase
+        font-family: $header-font
+        font-weight: $font-weight
+        
+@mixin sidebar-top-style()
+    top: 0
+    left: 0
+    height: 1em
+    width: 100%
+    content: ''
+    position: absolute
+    background: $tertiary-color
+
+@mixin img-hover-effect()
+    .image-box:hover img,
+    .image-box:focus-within img
+        transform: scale(1.1)
+
+@mixin img-box-styles()
+    cursor: pointer
+    overflow: hidden
+    border-top-left-radius: $border-radius-10
+    border-top-right-radius: $border-radius-10

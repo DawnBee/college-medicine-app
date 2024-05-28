@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #000;
+  background: #FFF800;
+}
+
+::selection {
+  color: #000;
+  background: #FFF800;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Lora", serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+h1, h2, h3, h4, ul, p {
+  margin: 0;
+  padding: 0;
+}
+
+.layout-container {
+  margin: 0 auto;
+  max-width: 2000px;
+}
+
+#not-found-content {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+#not-found-content .container {
+  width: 80%;
+  text-align: center;
+}
+#not-found-content .container img {
+  height: 300px;
+  aspect-ratio: 1;
+}
+#not-found-content .container h2 {
+  font-size: 3rem;
+}
+#not-found-content .container a:hover {
+  background: #9E2828;
+}
+#not-found-content .container a {
+  color: #fff;
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  display: inline-block;
+  text-decoration: none;
+  background: #0C4F3B;
+  border-radius: 3px;
+}/*# sourceMappingURL=404_Page.css.map */

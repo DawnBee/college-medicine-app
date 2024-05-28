@@ -1,0 +1,29 @@
+@import '_variables.sass'
+@import '_mixins.sass'
+
+#not-found-content
+    height: 100vh
+    display: grid
+    place-items: center
+
+    .container
+        width: 80%
+        text-align: center
+
+        img
+            height: 300px
+            aspect-ratio: 1
+
+        h2
+            font-size: 3rem
+
+        a:hover
+            background: $primary-color
+        a
+            color: #fff
+            margin-top: 1em
+            padding: .5em 1em
+            display: inline-block
+            text-decoration: none
+            background: $bg-dark-green
+            border-radius: $border-radius-3
