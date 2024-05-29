@@ -22,9 +22,7 @@ const Admission = () => {
                 <img className="pulse-icon" src={pulseImage} alt="pulse icon" draggable="false" />
                 <h1 className="page-header">Admission</h1>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                    Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies,
-                    purus lectus malesuada libero, sit amet commodo magna eros quis urna.
+                    Unlock Your Future: Explore Our Admission Pathways Today
                 </p>
                 <button className="hero-cta">Contact us</button>
             </div>

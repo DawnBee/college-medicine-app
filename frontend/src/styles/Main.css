@@ -781,12 +781,14 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   flex-direction: column;
   justify-content: center;
 }
+#admission-content .process-section .layout-container .macro-btn-container .admission-menu .anchor-link {
+  width: 100%;
+}
 #admission-content .process-section .layout-container .macro-btn-container .admission-menu .anchor-link .macro-btn:hover {
   transform: scale(1.05);
 }
 #admission-content .process-section .layout-container .macro-btn-container .admission-menu .anchor-link .macro-btn {
   gap: 1em;
-  width: 100%;
   padding: 1em;
   display: flex;
   cursor: pointer;
@@ -2914,6 +2916,9 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
   #admission-content .process-section .layout-container .macro-btn-container .admission-menu {
     flex-direction: row;
+  }
+  #admission-content .process-section .layout-container .macro-btn-container .admission-menu .anchor-link {
+    flex: 1;
   }
   #admission-content .process-section .layout-container .section-header::before {
     top: 1.5em;

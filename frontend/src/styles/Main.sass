@@ -484,14 +484,15 @@ header.scrolled #navbar
                     list-style-type: none
                     flex-direction: column
                     justify-content: center
-
+                    
                     .anchor-link
+                        width: 100%
+
                         .macro-btn:hover
                             transform: scale(1.05)
                         
                         .macro-btn
                             gap: 1em
-                            width: 100%
                             padding: 1em
                             display: flex
                             cursor: pointer
@@ -2346,6 +2347,9 @@ header.scrolled #navbar
                 .macro-btn-container
                     .admission-menu
                         flex-direction: row
+
+                        .anchor-link
+                            flex: 1
 
                 .section-header::before
                     top: 1.5em
