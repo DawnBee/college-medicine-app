@@ -1,7 +1,19 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import { API_BASE_URL } from "../api"
 import axios from "axios"
+
+const NoPublicationsFound = styled.div`
+  width: 100%;
+  display: grid;
+  min-height: 20em;
+  place-items: center;
+  & > p {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+`;
 
 const Publications = () => {
     const [publications, setPublications] = useState([])
@@ -12,7 +24,7 @@ const Publications = () => {
             setPublications(res.data)
         })
         .catch(err => {
-            console.error('Error fetching publications', err)
+            console.error('Error fetching publications:', err)
         })         
     }, [])
 
@@ -20,7 +32,8 @@ const Publications = () => {
         <section className="publication-section">
             <div className="layout-container">
                 <h2 className="publication-header">Research & Publications</h2>
-                <div className="bento-container">
+                {publications.length > 0 ? (
+                    <div className="bento-container">
                     {publications.map((publication, index) => {
                         let truncatedTitle = publication.title.length > 20 ? `${publication.title.substring(0, 20)}...` : publication.title
                         let truncatedDescription = publication.description.length > 90 ? `${publication.description.substring(0, 90)}...` : publication.description
@@ -40,6 +53,11 @@ const Publications = () => {
                         )
                     })}
                 </div>
+                ) : (
+                    <NoPublicationsFound>
+                        <p>No 'Publications' Found!</p>
+                    </NoPublicationsFound>
+                )}
             </div>
         </section>
     )

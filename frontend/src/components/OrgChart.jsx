@@ -1,6 +1,19 @@
 import { useState, useEffect } from "react"
+import styled from 'styled-components'
 import { API_BASE_URL } from "../api"
 import axios from "axios"
+
+const NoOrgChartFound = styled.div`
+  width: 100%;
+  display: grid;
+  min-height: 20em;
+  place-items: center;
+  & > p {
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+`;
 
 const OrgChart = () => {
     const [orgchart, setOrgChart] = useState([])
@@ -33,9 +46,15 @@ const OrgChart = () => {
             </div>
         </div>
         <div className="chart-container">
-            {orgchart.map((chart) => (
-                <img key={chart.id} alt="org chart" src={chart.image}></img>
-            ))}
+            {orgchart.length > 0 ? (
+                orgchart.map((chart) => (
+                    <img key={chart.id} alt="org chart" src={chart.image}></img>
+                ))
+            ) : (
+                <NoOrgChartFound>
+                    <p>Unable to show 'Organizational Chart'</p>
+                </NoOrgChartFound>
+            )}
         </div>
     </section>
   )
