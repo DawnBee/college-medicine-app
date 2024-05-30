@@ -429,10 +429,6 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
-#home-content .event-section .layout-container .card-container .event-card .content .card-title:hover {
-  color: #FFF800;
-  transition: color 1s ease;
-}
 #home-content .event-section .layout-container .card-container .event-card .content .card-title {
   color: #fff;
   padding: 0.5em;

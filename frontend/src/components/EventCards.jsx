@@ -2,6 +2,7 @@ import 'react-multi-carousel/lib/styles.css'
 import { useState, useEffect } from 'react'
 import Carousel from 'react-multi-carousel'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
@@ -23,6 +24,17 @@ const responsive = {
     items: 1
   }
 }
+
+const NoEventsFound = styled.div`
+  width: 100%;
+  display: grid;
+  min-height: 20em;
+  place-items: center;
+  & > p {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+`;
 
 const EventCards = () => {
     const [events, setEvents] = useState([])
@@ -49,6 +61,7 @@ const EventCards = () => {
       <section className="event-section">
         <div className="layout-container">
           <h2 className="event-header">Recent Events</h2>
+          {events.length > 0 ? (
             <Carousel 
               responsive={responsive}
               containerClass="card-container"
@@ -56,25 +69,29 @@ const EventCards = () => {
               customRightArrow={<CustomRightArrow />}
             >
               {events.map((event) => {
-                let truncatedTitle = event.title.length > 20 ? `${event.title.substring(0, 20)} ...` : event.title
-                let truncatedDescription = event.description.length > 90 ? `${event.description.substring(0, 90)} ...` : event.description
+                let truncatedTitle = event.title.length > 20 ? `${event.title.substring(0, 20)} ...` : event.title;
+                let truncatedDescription = event.description.length > 90 ? `${event.description.substring(0, 90)} ...` : event.description;
 
                 return (
                   <div key={event.id} className="event-card">
                     <div className="image-box">
-                      <img className="event-img" src={event.image} alt="event image" />
+                      <Link to={`/events/${event.id}`}>
+                        <img className="event-img" src={event.image} alt="event image" />
+                      </Link>  
                     </div>
                     <div className="content">
-                      <Link to={`/events/${event.id}`} className="card-title">
-                        <h3>{truncatedTitle}</h3>
-                      </Link>
-
+                      <h3 className="card-title">{truncatedTitle}</h3>
                       <p>{truncatedDescription}</p>
                     </div>
                   </div>
-                )
+                );
               })}
             </Carousel>
+          ) : (
+            <NoEventsFound>
+              <p>No 'Events' Found!</p>
+            </ NoEventsFound>
+          )}        
         </div>
       </section>
     )      
