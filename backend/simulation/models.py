@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 import uuid
 
 class Trainings(models.Model):
@@ -11,6 +12,17 @@ class Trainings(models.Model):
 
 	def __str__(self):
 		return f"{self.name} - {self.place}"
+
+	# Resizes Image Uploads
+	def save(self,*args,**kwargs):
+		super().save(*args,**kwargs)
+		if self.image:
+			img = Image.open(self.image.path)
+			max_size = 500
+
+			if img.height > max_size or img.width > max_size:
+				img.thumbnail((max_size, max_size), Image.LANCZOS)
+				img.save(self.image.path)		
 
 	class Meta:
 		verbose_name = "Training"
