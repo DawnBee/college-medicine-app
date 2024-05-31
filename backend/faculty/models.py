@@ -1,5 +1,6 @@
 from django.core.exceptions import ValidationError
 from django.db import models
+from PIL import Image
 import uuid
 
 # Class that allows only 1 instance to be created in a model
@@ -53,6 +54,17 @@ class Faculty(models.Model):
 
 	def __str__(self):
 		return f"{self.name} - {self.position}"
+
+	# Resizes Image Uploads
+	def save(self,*args,**kwargs):
+		super().save(*args,**kwargs)
+		if self.image:
+			img = Image.open(self.image.path)
+			max_size = 500
+
+			if img.height > max_size or img.width > max_size:
+				img.thumbnail((max_size, max_size), Image.LANCZOS)
+				img.save(self.image.path)
 
 	class Meta:
 		verbose_name = "Faculty"
