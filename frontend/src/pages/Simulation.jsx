@@ -15,7 +15,7 @@ import bgImage from '../assets/images/bg-img.jpg'
 
 // Components
 import MannequinCards from '../components/MannequinCards'
-
+import SimTraining from '../components/SimTraining'
 
 const Simulation = () => {
   return (
@@ -150,64 +150,7 @@ const Simulation = () => {
                 </ul>
             </div>
         </section>
-        <section id="sim-training" className="simbased-training-section">
-            <div className="layout-container">
-                <div className="intro-group">
-                    <h2>Simulation-Based Education (SBE): Training</h2>
-                    <p>
-                        "Optimizing Simulation-Based Education (SBE): Training,
-                        Collaboration, and Research - A focus on Technology-Driven 
-                        Teaching and Learning Strategies." 
-                    </p>
-                </div>
-                <div className="content">
-                    <ul class="training-list">
-                        <li class="training-item">
-                            <img src={simImageOne} alt="training image" />
-                            <div className="text-group">
-                                <h3>Training to Adelaide 2023</h3>
-                                <em>Adelaide, Australia</em>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    Maecenas porttitor congue massa. Fusce posuere, magna
-                                    sed pulvinar ultricies, purus lectus malesuada libero, 
-                                    sit amet commodo magna eros quis urna. Nunc viverra 
-                                    imperdiet enim. Fusce est. Vivamus a tellus.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="training-item">
-                            <img src={simImageTwo} alt="training image" />
-                            <div className="text-group">
-                                <h3>Training to Singapore 2024</h3>
-                                <em>Singapore</em>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    Maecenas porttitor congue massa. Fusce posuere, magna
-                                    sed pulvinar ultricies, purus lectus malesuada libero, 
-                                    sit amet commodo magna eros quis urna. Nunc viverra 
-                                    imperdiet enim. Fusce est. Vivamus a tellus.
-                                </p>                            
-                            </div>
-                        </li>
-                        <li class="training-item">
-                            <img src={simImageThree} alt="training image" />
-                            <div className="text-group">
-                                <h3>Training to Singapore 2024</h3>
-                                <em>Singapore</em>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                                    Maecenas porttitor congue massa. Fusce posuere, magna
-                                    sed pulvinar ultricies, purus lectus malesuada libero, 
-                                    sit amet commodo magna eros quis urna. Nunc viverra 
-                                    imperdiet enim. Fusce est. Vivamus a tellus.
-                                </p>                            
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <SimTraining />
         <section id="faculty-involve" className="faculty-involve-section">
             <div className="top">
                 <div className="layout-container">
