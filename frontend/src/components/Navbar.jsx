@@ -83,9 +83,8 @@ const Navbar = ({currentPage}) => {
                                 <CustomALink to="center">SimBased Educ..</CustomALink>
                                 <CustomALink to="mannequins">Mannequins</CustomALink>
                                 <CustomALink to="trainers">Task Trainers</CustomALink>
-                                <CustomALink to="team-based">TeamBased Sim..</CustomALink>
-                                <CustomALink to="outcomes">Outcomes</CustomALink>
-                                <CustomALink to="faculty-involve">Faculty Involvement</CustomALink>                                         
+                                <CustomALink to="sim-training">SimBased Trainings</CustomALink>
+                                <CustomALink to="faculty-involve">Faculty Training</CustomALink>                                         
                             </div>
                         </span>                    
                     </li>
