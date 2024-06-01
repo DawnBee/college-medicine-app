@@ -44,7 +44,7 @@ const PublicationDetail = () => {
                 <h3>Abstract</h3>
                 {publication.pdf && (
                     <a href={publication.pdf} target="_blank" rel="noopener noreferrer">
-                        <button><i class="fa-solid fa-eye"></i>View PDF</button>
+                        <button><i className="fa-solid fa-eye"></i>View PDF</button>
                     </a>
                 )}
               </div>

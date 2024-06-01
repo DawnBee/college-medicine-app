@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import { Link as ALink } from 'react-scroll';
+import { useState, useEffect, useRef } from 'react'
+import { Link as ALink } from 'react-scroll'
 
 // Asset Imports
 import logo from '../assets/images/com-logo.png'
@@ -8,8 +8,15 @@ import hamburgerIconWhite from '../assets/images/burger-menu-white.svg'
 import hamburgerIconBlack from '../assets/images/burger-menu-black.svg'
 
 const Navbar = ({currentPage}) => {
+    const navMenuRef = useRef(null)
     const [scrollY, setScrollY] = useState(0)
+    const [menuOpen, setMenuOpen] = useState(false)
     const pagesWithDifferentStyles = ['detailPage']
+
+    // Mobile Nav Toggle
+    const toggleMenu = () => {
+        setMenuOpen(prevMenuOpen => !prevMenuOpen)
+    }
 
     // Custom styles for other pages
     const getPageStyles = () => {
@@ -37,12 +44,24 @@ const Navbar = ({currentPage}) => {
     const inlineArrowStyles = getArrowStyles()
     const inlineStyles = getPageStyles()
 
+    // Close the menu when clicking outside
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (navMenuRef.current && !navMenuRef.current.contains(event.target)) {
+                setMenuOpen(false)
+            }
+        }
+        document.addEventListener('mousedown', handleClickOutside)
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+        }
+    }, [navMenuRef])
+
     // Changes styles when user scrolls
     useEffect(() => {
         const handleScroll = () => {
             setScrollY(window.scrollY)
         }
-
         window.addEventListener('scroll', handleScroll)
 
         // Clean-up event listener on component unmount
@@ -63,7 +82,7 @@ const Navbar = ({currentPage}) => {
                         </div>
                     </div>                    
                 </Link>                
-                <ul className="nav-menu">
+                <ul ref={navMenuRef} className={`nav-menu ${menuOpen ? 'open' : ''}`}>
                     {/* Admission */}
                     <li className="nav-item">
                         <Link to="/admission" className="nav-link" style={inlineStyles}> Admission </Link>
@@ -118,8 +137,8 @@ const Navbar = ({currentPage}) => {
                     <li className="nav-item"><i className="fa-solid fa-magnifying-glass"></i><Link to="#" className="nav-link" style={inlineStyles}> Search </Link></li>
                 </ul>
                 {pagesWithDifferentStyles.includes(currentPage) 
-                    ? <img className="hamburger" src={hamburgerIconBlack} alt="hamburger icon" /> 
-                    : <img className="hamburger" src={scrollY > 0 ? hamburgerIconBlack : hamburgerIconWhite} alt="hamburger icon" />
+                    ? <img className="hamburger" src={hamburgerIconBlack} alt="hamburger icon" onClick={toggleMenu}/> 
+                    : <img className="hamburger" src={scrollY > 0 ? hamburgerIconBlack : hamburgerIconWhite} alt="hamburger icon" onClick={toggleMenu}/>
                 }
             </nav>
         </header>    

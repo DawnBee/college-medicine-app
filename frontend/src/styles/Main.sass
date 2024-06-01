@@ -8,6 +8,9 @@
     100%
         transform: translateX(0)            
 
+
+// **Mobile Styling**
+
 // Interactive Styles
 header.scrolled #navbar
     color: #000
@@ -34,9 +37,6 @@ header.scrolled #navbar
                     background: #fff
                     a
                         color: #000
-
-
-// **Mobile Styling**
 
 // Navigation
 #navbar
@@ -87,8 +87,37 @@ header.scrolled #navbar
         .secondary
             font-size: .9rem
 
+    .nav-menu.open
+        transform: translateX(0)
+
     .nav-menu
-        display: none
+        top: 0
+        right: 0
+        width: 70%
+        height: 100vh
+        position: fixed
+        text-align: center
+        list-style-type: none
+        box-shadow: $drop-shadow
+        transform: translateX(100%) 
+        background: rgba(192,33,33,.9)
+        transition: transform .5s ease-out
+
+        .nav-item:first-of-type
+            margin-top: 3.2rem
+
+        .nav-item
+            margin: .5em
+            padding: .5em
+
+            a   
+                font-weight: 700
+                font-size: 1.3rem
+                font-family: $header-font
+                background: inherit !important
+
+            .drop-arrow
+                display: none
 
     .hamburger
         width: 50px
@@ -2118,10 +2147,24 @@ header.scrolled #navbar
     #navbar
         .nav-menu
             gap: 1em
+            width: auto
+            height: auto
+            top: initial
             display: flex
-            list-style-type: none
+            color: inherit
+            right: initial
+            position: relative
+            text-align: initial
+            background: transparent
+            transform: translateX(0)
+            box-shadow: 0px 0px 0px transparent
             
+            .nav-item:first-of-type
+                margin: 0
+
             .nav-item
+                margin: 0
+                padding: 0
                 position: relative
 
                 .nav-link
@@ -2168,9 +2211,6 @@ header.scrolled #navbar
                             text-align: center
                             font-family: $header-font
                             
-
-
-
             .nav-item:last-of-type
                 i
                     margin-right: .5em
