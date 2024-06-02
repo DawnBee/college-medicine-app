@@ -7,14 +7,18 @@ const AnnouncementList = () => {
     const [announcements, setAnnouncements] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/home/announcements`)
-            .then(res => {
-                setAnnouncements(res.data)
+        const fetchAnnouncements = async () => {
+          try {
+            const res = await axios.get(`${API_BASE_URL}/home/announcements`, {
+              params: { limit: 8}
             })
-            .catch(err => {
-                console.error('Error fetching announcements', err)
-            })              
-    }, [])
+            setAnnouncements(res.data)
+          } catch (err) {
+            console.error('Error fetching list of announcements:', err)
+          }
+        }
+        fetchAnnouncements()
+      },[])      
 
     const formatDate = (dateString) => {
         const options = {year: 'numeric', month: 'long', day: 'numeric'}

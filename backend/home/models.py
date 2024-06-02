@@ -14,6 +14,7 @@ class Announcements(models.Model):
 		return self.title
 
 	class Meta:
+		ordering = ['-date_added']
 		verbose_name = "Announcement"
 		verbose_name_plural = "Announcements"
 
@@ -43,7 +44,7 @@ class Events(models.Model):
 		verbose_name = "Event"
 		verbose_name_plural = "Events"
 		ordering = ['-date_added']
-
+		
 
 class Publications(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -51,11 +52,13 @@ class Publications(models.Model):
 	image = models.ImageField(default="default.png", upload_to="publications", null=True, blank=True)
 	description = models.TextField()
 	pdf = models.FileField(upload_to='publications/pdfs/', null=True, blank=True)
+	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.title
 
 	class Meta:
+		ordering = ['date_added']
 		verbose_name = "Publication"
 		verbose_name_plural = "Publications"
 
@@ -65,6 +68,7 @@ class Testimonials(models.Model):
 	image = models.ImageField(default="default.png", upload_to="testimonials", null=True, blank=True)
 	name = models.CharField(max_length=40, unique=True)
 	content = models.TextField()
+	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.name
@@ -90,5 +94,6 @@ class Testimonials(models.Model):
 		super().save(*args, **kwargs)
 
 	class Meta:
+		ordering = ['date_added']
 		verbose_name = "Testimonial"
 		verbose_name_plural = "Testimonials"

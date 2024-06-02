@@ -33,16 +33,20 @@ import sirenIcon from '../assets/images/siren.svg'
 const Announcements = () => {
   const [sliderImages, setSliderImages] = useState([])
   const [currentSlide, setCurrentSlide] = useState(0)
-  
+
   useEffect(() => {
-    axios.get(`${API_BASE_URL}/home/announcements`)
-    .then(res => {
-      setSliderImages(res.data)
-    })
-    .catch(err => {
-      console.error('Error fetching announcements:', err)
-    })
-  }, [])
+    const fetchAnnouncements = async () => {
+      try {
+        const res = await axios.get(`${API_BASE_URL}/home/announcements`, {
+          params: { limit: 3}
+        })
+        setSliderImages(res.data)
+      } catch (err) {
+        console.error('Error fetching announcements:', err)
+      }
+    }
+    fetchAnnouncements()
+  },[])  
   
   const totalSlides = sliderImages.length
 

@@ -19,14 +19,18 @@ const Publications = () => {
     const [publications, setPublications] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/home/publications`)
-        .then(res => {
+        const fetchPublications = async () => {
+          try {
+            const res = await axios.get(`${API_BASE_URL}/home/publications`, {
+              params: { limit: 4}
+            })
             setPublications(res.data)
-        })
-        .catch(err => {
+          } catch (err) {
             console.error('Error fetching publications:', err)
-        })         
-    }, [])
+          }
+        }
+        fetchPublications()
+      },[])
 
     return (
         <section className="publication-section">

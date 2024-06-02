@@ -18,14 +18,19 @@ const Testimonials = () => {
     const [testaments, setTestaments] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/home/testimonials`)
-        .then(res => {
+        const fetchTestaments = async () => {
+          try {
+            const res = await axios.get(`${API_BASE_URL}/home/testimonials`, {
+              params: { limit: 3}
+            })
             setTestaments(res.data)
-        })
-        .catch(err => {
+          } catch (err) {
             console.error('Error fetching testimonials:', err)
-        })        
-    }, [])
+          }
+        }
+        fetchTestaments()
+      },[])
+
   return (
     <section className="testimonial-section">
         <div className="layout-container">
