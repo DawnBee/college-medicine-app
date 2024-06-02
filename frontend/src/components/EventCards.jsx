@@ -40,14 +40,18 @@ const EventCards = () => {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-      axios.get(`${API_BASE_URL}/home/events`)
-        .then(res => {
+      const fetchEvents = async () => {
+        try {
+          const res = await axios.get(`${API_BASE_URL}/home/events`, {
+            params: { limit: 5}
+          })
           setEvents(res.data)
-        })
-        .catch(err => {
+        } catch (err) {
           console.error('Error fetching events:', err)
-        })            
-    }, [])
+        }
+      }
+      fetchEvents()
+    },[])
   
     const CustomLeftArrow = ({ onClick }) => (
       <i id="prev" className="slider-btn fa-solid fa-chevron-left" onClick={onClick}></i>
@@ -97,4 +101,4 @@ const EventCards = () => {
     )      
   }
   
-  export default EventCards
+export default EventCards

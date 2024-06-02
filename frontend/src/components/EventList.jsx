@@ -8,14 +8,18 @@ const EventList = () => {
     const [events, setEvents] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/home/events`)
-            .then(res => {
-                setEvents(res.data)
+        const fetchEvents = async () => {
+          try {
+            const res = await axios.get(`${API_BASE_URL}/home/events`, {
+              params: { limit: 6}
             })
-            .catch(err => {
-                console.error('Error fetching events:', err)
-            })                
-    }, [])
+            setEvents(res.data)
+          } catch (err) {
+            console.error('Error fetching list of events:', err)
+          }
+        }
+        fetchEvents()
+      },[])  
 
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }

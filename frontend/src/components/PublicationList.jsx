@@ -8,14 +8,18 @@ const PublicationList = () => {
     const [publications, setPublications] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/home/publications`)
-            .then(res => {
-                setPublications(res.data)
+        const fetchPublications = async () => {
+          try {
+            const res = await axios.get(`${API_BASE_URL}/home/publications`, {
+              params: { limit: 6}
             })
-            .catch(err => {
-                console.error('Error fetching publications', err)
-            })              
-    }, [])
+            setPublications(res.data)
+          } catch (err) {
+            console.error('Error fetching list of publications:', err)
+          }
+        }
+        fetchPublications()
+      },[])
 
   return (
     <aside className="list-sidebar">
