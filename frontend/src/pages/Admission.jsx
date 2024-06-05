@@ -37,7 +37,7 @@ const Admission = () => {
         <section id="payment" className="payment-fee-section">
             <div className="layout-container">
                 <div className="content-container">
-                    <h2 className="section-header">Payment and Fee</h2>
+                    <h2 className="section-header">Enrollment Payment & Fees</h2>
                     <div className="content">
                         <p>
                             The College of Medicine does not process payments directly. 
