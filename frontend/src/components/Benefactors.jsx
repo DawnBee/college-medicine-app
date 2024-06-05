@@ -40,8 +40,7 @@ const Benefactors = () => {
                             <img src={benefactor.image} alt="benefactor image" />
                             <div className="content">
                                 <h3>{benefactor.name}</h3>
-                                <em className="titles">{benefactor.position}</em>
-                                <p>{benefactor.content}</p>                                
+                                <em className="titles">{benefactor.position}</em>                             
                             </div>
                         </li>
                     ))}                     
