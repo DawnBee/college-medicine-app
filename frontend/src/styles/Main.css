@@ -2292,6 +2292,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 #about-content .history-section .layout-container .content .text-group {
   margin-top: 5em;
 }
+#about-content .history-section .layout-container .content .text-group .show-more:focus, #about-content .history-section .layout-container .content .text-group .show-more:hover {
+  text-decoration: underline;
+}
+#about-content .history-section .layout-container .content .text-group .show-more {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #0C4F3B;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
 #about-content .history-section .layout-container .content .text-group h2 {
   margin: 1em;
   font-size: 1rem;
@@ -3505,7 +3515,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #about-content .history-section .layout-container .content img {
     top: 50%;
     right: -5em;
-    width: 350px;
+    width: 340px;
     left: initial;
     max-height: 80%;
     transform: translateY(-50%);

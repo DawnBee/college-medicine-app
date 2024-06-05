@@ -235,3 +235,14 @@
     overflow: hidden
     border-top-left-radius: $border-radius-10
     border-top-right-radius: $border-radius-10
+
+@mixin show-more-styles()
+    .show-more:focus, .show-more:hover
+        text-decoration: underline
+
+    .show-more
+        font-size: 1rem
+        cursor: pointer
+        color: $bg-dark-green
+        font-family: $header-font
+        text-transform: capitalize
