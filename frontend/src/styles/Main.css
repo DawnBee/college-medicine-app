@@ -298,7 +298,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1rem, 2vw + 1rem, 2rem);
-  text-shadow: 0px 0 #0C4F3B, -2px 2px 0 #0C4F3B, 2px 2px 0 #0C4F3B;
+  text-shadow: 2px -2px 0 #0C4F3B, -2px 2px 0 #0C4F3B, 2px 2px 0 #0C4F3B;
 }
 #home-content .banner-container .header-box .primary::-moz-selection {
   color: #fff;
@@ -315,7 +315,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   text-wrap: balance;
   font-family: "Pacifico", cursive;
   font-size: clamp(1.5rem, 2vw + 1.5rem, 2.5rem);
-  text-shadow: 0px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+  text-shadow: 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
 }
 #home-content .banner-container .header-box .secondary::-moz-selection {
   color: #0C4F3B;
@@ -2876,11 +2876,11 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     margin-top: -25%;
   }
   #home-content .banner-container .header-box .primary {
-    text-shadow: 0px 0 #0C4F3B, -3.2px 3.2px 0 #0C4F3B, 3.2px 3.2px 0 #0C4F3B;
+    text-shadow: 3.2px -3.2px 0 #0C4F3B, -3.2px 3.2px 0 #0C4F3B, 3.2px 3.2px 0 #0C4F3B;
     font-size: clamp(1rem, 5vw + 1rem, 3rem);
   }
   #home-content .banner-container .header-box .secondary {
-    text-shadow: 0px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
+    text-shadow: 4px -4px 0 #000, -4px 4px 0 #000, 4px 4px 0 #000;
     font-size: clamp(1.8rem, 5vw + 1.8rem, 6rem);
   }
   #home-content .announcement-section .siren-icon {
