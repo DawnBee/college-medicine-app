@@ -133,9 +133,8 @@ const Navbar = ({currentPage}) => {
                             </div>
                         </span>                          
                     </li>
-                    {/* Search */}
-                    <li className="nav-item"><i className="fa-solid fa-magnifying-glass"></i><Link to="#" className="nav-link" style={inlineStyles}> Search </Link></li>
                 </ul>
+                {/* Hamburger Icon */}
                 {pagesWithDifferentStyles.includes(currentPage) 
                     ? <img className="hamburger" src={hamburgerIconBlack} alt="hamburger icon" onClick={toggleMenu}/> 
                     : <img className="hamburger" src={scrollY > 0 ? hamburgerIconBlack : hamburgerIconWhite} alt="hamburger icon" onClick={toggleMenu}/>
