@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Message, OrgChart, Faculty
+from .models import Message, OrgChart, Faculty, Lecturers
 from django.core.exceptions import ValidationError
 
 
@@ -19,3 +19,4 @@ class OrgChartAdmin(SingletonModelAdmin):
     pass
 
 admin.site.register(Faculty)
+admin.site.register(Lecturers)

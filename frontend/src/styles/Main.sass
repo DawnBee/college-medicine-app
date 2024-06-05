@@ -1511,8 +1511,7 @@ header.scrolled #navbar
                 .text
                     margin-top: 5em
                     font-weight: 500
-                    @include show-more-styles()
-                      
+                    @include show-more-styles()                      
 
     .org-chart-section
         .intro::before
@@ -1592,7 +1591,7 @@ header.scrolled #navbar
                         height: 100%
                         object-fit: cover
 
-    .lecturers-section
+    .faculties-section
         padding: 1em 0 0 0
         background: $bg-light-gray
 
@@ -1609,11 +1608,11 @@ header.scrolled #navbar
                 text-transform: uppercase
                 border-radius: $border-radius-5
 
-        .lecturer-list
+        .faculty-list
             padding: 1em
             list-style-type: none
                 
-            .lecturer-item
+            .faculty-item
                 max-width: 80%
                 margin: 2em auto
                 background: #fff
@@ -1658,14 +1657,50 @@ header.scrolled #navbar
                     position: absolute
                     margin-bottom: 1em
                     background: $secondary-color
+    
+    .lecturers-section
+        color: #fff
+        background: $secondary-color
 
-        .bottom-img
-            width: 100%
-            height: 15em
-            z-index: 900
-            object-fit: cover
-            position: relative       
+        .layout-container::before
+            @include vertical-line-style-left(#fff,12px)
 
+        .layout-container::after
+            @include horizontal-line-style-top(#fff,12px)
+            
+        .layout-container
+            padding: 1em
+            position: relative
+            
+            h2
+                margin: 1em 0
+                font-size: 1.5rem
+                text-align: center
+                text-transform: uppercase
+                font-family: $header-font
+                text-decoration: underline
+                
+            .lecturer-list
+                list-style-type: none
+                font-family: $header-font
+                
+                .lecturer-item
+                    gap: 1em
+                    margin: 1em
+                    display: flex
+                    padding: .8em
+                    align-items: center
+                    
+                    i
+                        font-size: 2rem
+                        
+    .bottom-img
+        width: 100%
+        height: 15em
+        z-index: 900
+        object-fit: cover
+        position: relative
+            
 // About Page    
 #about-content
     .hero-section
@@ -2808,13 +2843,13 @@ header.scrolled #navbar
                                 font-weight: 700
                                 font-size: clamp(1.6rem, 2vw + 1.6rem, 3rem)
 
-        .lecturers-section
-            .lecturer-list
+        .faculties-section
+            .faculty-list
                 gap: 1em
                 display: flex
                 justify-content: center
 
-                .lecturer-item
+                .faculty-item
                     flex: 1
                     margin: 0
                     max-width: 300px
@@ -2822,6 +2857,21 @@ header.scrolled #navbar
                     .image-box
                         img
                             max-height: 250px
+
+        .lecturers-section
+            .layout-container::before
+                @include vertical-line-style-left(#fff,20px)
+
+            .layout-container::after
+                @include horizontal-line-style-top(#fff,20px)                
+                
+            .layout-container
+                h2
+                    font-size: 2rem
+                    
+                .content
+                    display: grid
+                    grid-template-columns: repeat(2, 50%)
 
     // About
     #about-content
@@ -3029,7 +3079,6 @@ header.scrolled #navbar
 
 
 // **Breakpoints**
-
 // 'Footer' Breaks
 @media (min-width: 920px) and (max-width: 970px)
     #footer

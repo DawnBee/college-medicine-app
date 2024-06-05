@@ -11,7 +11,7 @@ const History = () => {
                 <div className="text-group">
                     <h2>A Brief history of the College</h2>
                     <ShowMoreText
-                        lines={8}
+                        lines={5}
                         more="show more"
                         less="show less"
                         className="text"
