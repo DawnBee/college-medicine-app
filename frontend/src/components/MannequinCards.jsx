@@ -61,7 +61,7 @@ const MannequinCards = () => {
                                 >
                                     <h3>{mannequin.name}</h3>
                                     <p>{mannequin.description}</p>
-                                    <button><a href={mannequin.url}>Learn More</a></button>
+                                    <button><a href={mannequin.url} target="_blank" rel="noopener noreferrer">Learn More</a></button>
                                 </div>
                             </div>
                         </li>
