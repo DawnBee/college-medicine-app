@@ -3,10 +3,7 @@ import styled from 'styled-components'
 import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
-// Asset Imports
-import bottomImage from '../assets/images/infirm-building.jpg'
-
-const NoFacultyFound = styled.div`
+const NoLecturerFound = styled.div`
   width: 100%;
   display: grid;
   min-height: 20em;
@@ -21,59 +18,46 @@ const Lecturers = () => {
     const [lecturers, setLecturers] = useState([])
 
     useEffect(() => {
-        axios.get(`${API_BASE_URL}/faculty/faculties`)
+        axios.get(`${API_BASE_URL}/faculty/lecturers`)
         .then(res => {
             setLecturers(res.data)
         })
         .catch(err => {
             console.error('Error fetching lecturers:', err)
-        })           
+        })
     }, [])
 
-    const itemsPerList = 4
+    const half = Math.ceil(lecturers.length / 2)
+    const lecturerLists = [
+      lecturers.slice(0, half),
+      lecturers.slice(half, lecturers.length),
+    ]
 
-    // Calculate the number of "lecturer-lists" needed
-    const numLists = Math.ceil(lecturers.length / itemsPerList)
-
-    // Create an array to hold the chunks of lecturers
-    const lecturerLists = Array.from({ length: numLists }, (_, index) => {
-        const start = index * itemsPerList
-        const end = start + itemsPerList
-        return lecturers.slice(start, end)
-    })
-
-    return (
-        <section id="faculties" className="lecturers-section">
-            <div className="layout-container">
-                <div className="header">
-                    <h2>Our Faculties</h2>
+  return (
+    <section id="lecturers" className="lecturers-section">
+        <div className="layout-container">
+            <h2>Our Lecturers</h2>
+            {lecturers.length > 0 ? (
+                <div className="content">
+                {lecturerLists.map((lecturerList, listIndex) => (
+                    <ul key={listIndex} className="lecturer-list">
+                    {lecturerList.map((lecturer) => (
+                        <li key={lecturer.id} className="lecturer-item">
+                        <i className="fa-solid fa-user-doctor"></i>
+                        {lecturer.name}
+                        </li>
+                    ))}
+                    </ul>
+                ))}
                 </div>
-                {lecturers.length > 0 ? (
-                    lecturerLists.map((lecturerList, listIndex) => (
-                        <ul key={listIndex} className="lecturer-list">
-                            {lecturerList.map((lecturer, index) => (
-                                <li key={index} className="lecturer-item">
-                                    <div className="image-box">
-                                        <img src={lecturer.image} alt="" className="lecturer-img" loading="lazy" />
-                                    </div>
-                                    <div className="content">
-                                        <p className="title">Dr. {lecturer.name}</p>
-                                        <p>{lecturer.position}</p>
-                                    </div>
-                                </li>
-                            ))}
-                        </ul>
-                    ))
-                ):(
-                    <NoFacultyFound>
-                        <p>'Faculty List' Empty!</p>
-                    </NoFacultyFound>
-                )}
-            </div>
-            <img className="bottom-img" aria-hidden="true" src={bottomImage} alt="bottom image" />
-        </section>
-    )
+            ) : (
+                <NoLecturerFound>
+                    <p>'Lecturers' List Empty!</p>
+                </NoLecturerFound>
+            )}
+        </div>
+    </section>
+  )
 }
 
 export default Lecturers
-

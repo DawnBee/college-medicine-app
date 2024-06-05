@@ -2038,16 +2038,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#faculty-content .lecturers-section {
+#faculty-content .faculties-section {
   padding: 1em 0 0 0;
   background: #F4F4F4;
 }
-#faculty-content .lecturers-section .header {
+#faculty-content .faculties-section .header {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#faculty-content .lecturers-section .header h2 {
+#faculty-content .faculties-section .header h2 {
   color: #fff;
   padding: 0.5em 1em;
   background: #272727;
@@ -2055,29 +2055,29 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   text-transform: uppercase;
   border-radius: 5px;
 }
-#faculty-content .lecturers-section .lecturer-list {
+#faculty-content .faculties-section .faculty-list {
   padding: 1em;
   list-style-type: none;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item {
+#faculty-content .faculties-section .faculty-list .faculty-item {
   max-width: 80%;
   margin: 2em auto;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .image-box:hover img,
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .image-box:focus-within img {
+#faculty-content .faculties-section .faculty-list .faculty-item .image-box:hover img,
+#faculty-content .faculties-section .faculty-list .faculty-item .image-box:focus-within img {
   transform: scale(1.1);
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .image-box {
+#faculty-content .faculties-section .faculty-list .faculty-item .image-box {
   position: relative;
   cursor: pointer;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .image-box img {
+#faculty-content .faculties-section .faculty-list .faculty-item .image-box img {
   width: 100%;
   max-height: 320px;
   -o-object-fit: cover;
@@ -2086,12 +2086,12 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .content {
+#faculty-content .faculties-section .faculty-list .faculty-item .content {
   padding: 1em;
   min-height: 10em;
   position: relative;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .content .title {
+#faculty-content .faculties-section .faculty-list .faculty-item .content .title {
   color: #fff;
   padding: 0.5em;
   border-radius: 5px;
@@ -2099,10 +2099,10 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background: #272727;
   font-family: "Montserrat", sans-serif;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .content p {
+#faculty-content .faculties-section .faculty-list .faculty-item .content p {
   padding: 0.5em;
 }
-#faculty-content .lecturers-section .lecturer-list .lecturer-item .content::before {
+#faculty-content .faculties-section .faculty-list .faculty-item .content::before {
   right: 0;
   bottom: 0;
   width: 6em;
@@ -2112,7 +2112,55 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   margin-bottom: 1em;
   background: #C02121;
 }
-#faculty-content .lecturers-section .bottom-img {
+#faculty-content .lecturers-section {
+  color: #fff;
+  background: #C02121;
+}
+#faculty-content .lecturers-section .layout-container::before {
+  top: 0;
+  width: 3px;
+  content: "";
+  height: 100%;
+  left: 12px;
+  position: absolute;
+  background: #fff;
+}
+#faculty-content .lecturers-section .layout-container::after {
+  left: 0;
+  height: 3px;
+  width: 100%;
+  content: "";
+  top: 12px;
+  position: absolute;
+  background: #fff;
+}
+#faculty-content .lecturers-section .layout-container {
+  padding: 1em;
+  position: relative;
+}
+#faculty-content .lecturers-section .layout-container h2 {
+  margin: 1em 0;
+  font-size: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+}
+#faculty-content .lecturers-section .layout-container .lecturer-list {
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+}
+#faculty-content .lecturers-section .layout-container .lecturer-list .lecturer-item {
+  gap: 1em;
+  margin: 1em;
+  display: flex;
+  padding: 0.8em;
+  align-items: center;
+}
+#faculty-content .lecturers-section .layout-container .lecturer-list .lecturer-item i {
+  font-size: 2rem;
+}
+#faculty-content .bottom-img {
   width: 100%;
   height: 15em;
   z-index: 900;
@@ -3412,18 +3460,43 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     font-weight: 700;
     font-size: clamp(1.6rem, 2vw + 1.6rem, 3rem);
   }
-  #faculty-content .lecturers-section .lecturer-list {
+  #faculty-content .faculties-section .faculty-list {
     gap: 1em;
     display: flex;
     justify-content: center;
   }
-  #faculty-content .lecturers-section .lecturer-list .lecturer-item {
+  #faculty-content .faculties-section .faculty-list .faculty-item {
     flex: 1;
     margin: 0;
     max-width: 300px;
   }
-  #faculty-content .lecturers-section .lecturer-list .lecturer-item .image-box img {
+  #faculty-content .faculties-section .faculty-list .faculty-item .image-box img {
     max-height: 250px;
+  }
+  #faculty-content .lecturers-section .layout-container::before {
+    top: 0;
+    width: 3px;
+    content: "";
+    height: 100%;
+    left: 20px;
+    position: absolute;
+    background: #fff;
+  }
+  #faculty-content .lecturers-section .layout-container::after {
+    left: 0;
+    height: 3px;
+    width: 100%;
+    content: "";
+    top: 20px;
+    position: absolute;
+    background: #fff;
+  }
+  #faculty-content .lecturers-section .layout-container h2 {
+    font-size: 2rem;
+  }
+  #faculty-content .lecturers-section .layout-container .content {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
   }
   #about-content .hero-section .layout-container::before {
     left: 0;

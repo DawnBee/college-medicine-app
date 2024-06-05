@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Message, OrgChart, Faculty
+from .models import Message, OrgChart, Faculty, Lecturers
 
 
 class MessageSerializer(serializers.ModelSerializer):
@@ -15,4 +15,9 @@ class OrgChartSerializer(serializers.ModelSerializer):
 class FacultySerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Faculty
-		fields = '__all__'				
+		fields = '__all__'
+
+class LecturerSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = Lecturers
+		fields = '__all__'						

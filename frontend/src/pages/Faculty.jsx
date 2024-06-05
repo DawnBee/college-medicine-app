@@ -9,11 +9,13 @@ import vienImage from '../assets/images/faculty/vien.svg'
 import darwizaImage from '../assets/images/faculty/darwiza.svg'
 import rizaldyImage from '../assets/images/faculty/rizaldy.svg'
 import logoOutline from '../assets/images/com-outline.svg'
+import bottomImage from '../assets/images/infirm-building.jpg'
 
 // Components
 import Message from '../components/Message'
 import OrgChart from '../components/OrgChart'
 import Quotes from '../components/Quotes'
+import Faculties from '../components/Faculties'
 import Lecturers from '../components/Lecturers'
 
 
@@ -92,7 +94,9 @@ const Faculty = () => {
         <Message />
         <OrgChart />
         <Quotes />
+        <Faculties />
         <Lecturers />
+        <img className="bottom-img" aria-hidden="true" src={bottomImage} alt="bottom image" />
     </main>
   )
 }
