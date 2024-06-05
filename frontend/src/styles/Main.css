@@ -2250,7 +2250,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item img {
   width: 60%;
-  max-height: 200px;
+  min-height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
@@ -2260,8 +2260,13 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
   margin-top: 1em;
 }
-#about-content .acknowledge-section .benefactor-list .benefactor-item .content p {
-  margin: 1em 0 0 0;
+#about-content .acknowledge-section .benefactor-list .benefactor-item .content h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+#about-content .acknowledge-section .benefactor-list .benefactor-item .content em {
+  font-size: 1.2rem;
 }
 #about-content .core-values-section {
   color: #fff;
@@ -3534,20 +3539,32 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #about-content .acknowledge-section .header h2 {
     font-size: 1.5rem;
   }
+  #about-content .acknowledge-section .benefactor-list .benefactor-item:nth-child(even) img {
+    order: 2;
+  }
+  #about-content .acknowledge-section .benefactor-list .benefactor-item:nth-child(even) .content {
+    order: 1;
+    text-align: right;
+  }
   #about-content .acknowledge-section .benefactor-list .benefactor-item {
-    gap: 1em;
+    gap: 2em;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item img {
-    min-width: 30%;
-    border-radius: 10px;
+    width: 40%;
+    max-height: 250px;
+    border-radius: 5px;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
+    width: 60%;
     text-align: initial;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item .content h3 {
+    font-size: 2.5rem;
+  }
+  #about-content .acknowledge-section .benefactor-list .benefactor-item .content em {
     font-size: 1.5rem;
   }
   #about-content .core-values-section .layout-container::before {
