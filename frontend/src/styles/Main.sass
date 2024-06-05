@@ -1511,16 +1511,8 @@ header.scrolled #navbar
                 .text
                     margin-top: 5em
                     font-weight: 500
-
-                    .show-more:focus, .show-more:hover
-                        text-decoration: underline
-
-                    .show-more
-                        font-size: 1rem
-                        cursor: pointer
-                        color: $bg-dark-green
-                        font-family: $header-font
-                        text-transform: capitalize                        
+                    @include show-more-styles()
+                      
 
     .org-chart-section
         .intro::before
@@ -1822,6 +1814,7 @@ header.scrolled #navbar
             
                 .text-group
                     margin-top: 5em
+                    @include show-more-styles()
 
                     h2
                         margin: 1em
@@ -2912,7 +2905,7 @@ header.scrolled #navbar
                     img
                         top: 50%
                         right: -5em
-                        width: 350px
+                        width: 340px
                         left: initial
                         max-height: 80%
                         transform: translateY(-50%)
