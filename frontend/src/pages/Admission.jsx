@@ -1,7 +1,6 @@
 // Asset Imports
 import pulseImage from '../assets/images/pulse-red.svg'
 import cashierImage from '../assets/images/cashiers-office.jpg'
-import scholarOverviewImage from '../assets/images/scholar-overview.jfif'
 import ecgLine from '../assets/images/ecg-line-white.svg'
 import yearEventImageOne from '../assets/images/event-1.jpg'
 import yearEventImageTwo from '../assets/images/event-2.jfif'
@@ -13,6 +12,7 @@ import bottomCrossImage from '../assets/images/white-crosses.svg'
 import MacroButtons from '../components/MacroButtons'
 import Process from '../components/Process'
 import Requirements from '../components/Requirements'
+import Scholarship from '../components/Scholarship'
 
 const Admission = () => {
   return (
@@ -66,59 +66,7 @@ const Admission = () => {
                 </div>
             </div>
         </section>
-        <section id="scholarship" className="scholarship-section">
-            <div className="top">
-                <div className="layout-container">
-                    <h2 className="section-header">Scholarship and Financial Aid</h2>
-                </div>
-            </div>
-            <div className="bottom layout-container">
-                <aside className="overview-container">
-                    <img className="overview-img" src={scholarOverviewImage} alt="overview image"/>
-                    <h3 className="overview-heading">Overview</h3>
-                    <div className="info">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Nisi ratione laboriosam, rerum praesentium ad impedit,
-                            perferendis officia adipisci deserunt quisquam, reprehenderit
-                            ipsam fugit soluta odit laudantium aliquam nemo aperiam cumque.
-                        </p>
-                    </div>
-                </aside>
-                <div className="aid-app-group">
-                    <div>
-                        <h3 className="sub-heading">Applying For Aid</h3>
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Alias quisquam sed animi nihil suscipit pariatur impedit necessitatibus
-                            beatae cum at.
-                        </p>
-                        <ul className="aid-list">
-                            <li className="aid-item">
-                                <i className="fa-regular fa-clipboard"></i>
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Dignissimos, voluptates repellat at dolorem distinctio accusamus.
-                                </p>
-                            </li>
-                            <li className="aid-item">
-                                <i className="fa-regular fa-clipboard"></i>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Incidunt dignissimos quidem est unde! Recusandae eos esse et.</p>
-                            </li>
-                            <li className="aid-item">
-                                <i className="fa-regular fa-clipboard"></i>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Rerum nobis reiciendis excepturi omnis! At accusamus asperiores ab vitae quas impedit.
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <Scholarship />
         <section id="month-act" className="year-highlight-section">
             <div className="layout-container">
                 <h2 className="section-header">Monthly Activities</h2>
