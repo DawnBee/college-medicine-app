@@ -1961,17 +1961,17 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   aspect-ratio: 1;
   border: 15px solid #9E2828;
 }
-#faculty-content .quotes-section {
+#faculty-content .highlights-section {
   padding: 2em;
 }
-#faculty-content .quotes-section .quotes-container {
+#faculty-content .highlights-section .highlights-container {
   color: #fff;
   position: relative;
 }
-#faculty-content .quotes-section .quotes-container .slider-btn:hover {
+#faculty-content .highlights-section .highlights-container .slider-btn:hover {
   background: #CD1919;
 }
-#faculty-content .quotes-section .quotes-container .slider-btn {
+#faculty-content .highlights-section .highlights-container .slider-btn {
   top: 50%;
   width: 50px;
   z-index: 700;
@@ -1987,23 +1987,23 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   transform: translateY(-50%);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-#faculty-content .quotes-section .quotes-container .fa-chevron-left {
+#faculty-content .highlights-section .highlights-container .fa-chevron-left {
   left: 0;
 }
-#faculty-content .quotes-section .quotes-container .fa-chevron-right {
+#faculty-content .highlights-section .highlights-container .fa-chevron-right {
   right: 0;
 }
-#faculty-content .quotes-section .quotes-container .fa-arrow-left, #faculty-content .quotes-section .quotes-container .fa-arrow-right {
+#faculty-content .highlights-section .highlights-container .fa-arrow-left, #faculty-content .highlights-section .highlights-container .fa-arrow-right {
   color: #fff;
   background: #9E2828;
 }
-#faculty-content .quotes-section .quotes-container .fa-arrow-left {
+#faculty-content .highlights-section .highlights-container .fa-arrow-left {
   left: 0px;
 }
-#faculty-content .quotes-section .quotes-container .fa-arrow-right {
+#faculty-content .highlights-section .highlights-container .fa-arrow-right {
   right: 0px;
 }
-#faculty-content .quotes-section .quotes-container .quotes-card {
+#faculty-content .highlights-section .highlights-container .highlight-card {
   display: grid;
   margin: 0 1em;
   background-size: 8%;
@@ -2017,22 +2017,22 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-image: url("../assets/images/quote-white.svg");
   grid-template-areas: ". . . . img" ". content content content img" ". . . . img";
 }
-#faculty-content .quotes-section .quotes-container .quotes-card .text-group {
+#faculty-content .highlights-section .highlights-container .highlight-card .text-group {
   grid-area: content;
   align-self: center;
   margin: 2em 1em 1em 1em;
 }
-#faculty-content .quotes-section .quotes-container .quotes-card .text-group .title {
+#faculty-content .highlights-section .highlights-container .highlight-card .text-group .title {
   margin-top: 1em;
 }
-#faculty-content .quotes-section .quotes-container .quotes-card .text-group .title p {
+#faculty-content .highlights-section .highlights-container .highlight-card .text-group .title p {
   font-family: "Montserrat", sans-serif;
   font-size: clamp(1.2rem, 2vw + 1.2rem, 1.8rem);
 }
-#faculty-content .quotes-section .quotes-container .quotes-card .image-frame {
+#faculty-content .highlights-section .highlights-container .highlight-card .image-frame {
   grid-area: img;
 }
-#faculty-content .quotes-section .quotes-container .quotes-card .image-frame img {
+#faculty-content .highlights-section .highlights-container .highlight-card .image-frame img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -3451,17 +3451,17 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     left: initial;
     transform: translateY(-50%);
   }
-  #faculty-content .quotes-section .quotes-container .fa-arrow-left, #faculty-content .quotes-section .quotes-container .fa-arrow-right {
+  #faculty-content .highlights-section .highlights-container .fa-arrow-left, #faculty-content .highlights-section .highlights-container .fa-arrow-right {
     font-size: 1.5rem;
   }
-  #faculty-content .quotes-section .quotes-container .quotes-card {
+  #faculty-content .highlights-section .highlights-container .highlight-card {
     max-height: 18em;
     background-size: 6%;
   }
-  #faculty-content .quotes-section .quotes-container .quotes-card .text-group {
+  #faculty-content .highlights-section .highlights-container .highlight-card .text-group {
     font-size: 1.5rem;
   }
-  #faculty-content .quotes-section .quotes-container .quotes-card .text-group .title p {
+  #faculty-content .highlights-section .highlights-container .highlight-card .text-group .title p {
     font-weight: 700;
     font-size: clamp(1.6rem, 2vw + 1.6rem, 3rem);
   }

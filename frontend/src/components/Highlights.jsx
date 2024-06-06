@@ -25,8 +25,8 @@ const responsive = {
     }
 }
 
-const Quotes = () => {
-    const quotes = [
+const Highlights = () => {
+    const highlights = [
         {
             image: analyzaImage,
             name: "Analyza Galia-Gabuay",
@@ -53,27 +53,27 @@ const Quotes = () => {
     )
 
   return (
-    <section id="highlights" className="quotes-section">
+    <section id="highlights" className="highlights-section">
         <div className="layout-container">
             <Carousel
                 infinite={true}
                 autoPlay={true}
                 autoPlaySpeed={3000}            
                 responsive={responsive}
-                containerClass="quotes-container"
+                containerClass="highlights-container"
                 customLeftArrow={<CustomLeftArrow />}
                 customRightArrow={<CustomRightArrow />}
             >
-                {quotes.map(( quote, index )=> (
-                    <div key={index} className="quotes-card">
+                {highlights.map(( highlight, index )=> (
+                    <div key={index} className="highlight-card">
                         <div className="text-group">
                             <div className="title">
-                                <p>Dr. {quote.name}</p>
-                                <em>{quote.position}</em>
+                                <p>Dr. {highlight.name}</p>
+                                <em>{highlight.position}</em>
                             </div>
                         </div>
                         <div className="image-frame">
-                            <img src={quote.image} alt="doctor's image" />
+                            <img src={highlight.image} alt="doctor's image" />
                         </div>
                     </div>
                 ))}
@@ -83,4 +83,4 @@ const Quotes = () => {
   )
 }
 
-export default Quotes
+export default Highlights
