@@ -31,10 +31,11 @@ const Gallery = () => {
     return (
         <section className="memories-section">
             <div className="intro">
-                <h2>Alumni Memories</h2>
+                <h2>Community Gallery</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum consequatur nihil ab tempora possimus, harum quod dolor velit sit tenetur.
+                    Showcasing the impactful outreach efforts and community 
+                    service initiatives of our dedicated medical students, 
+                    highlighting their commitment to making a difference in local communities
                 </p>
             </div>
             <div className="gallery">

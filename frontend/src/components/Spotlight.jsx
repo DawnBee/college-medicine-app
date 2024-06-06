@@ -5,14 +5,14 @@ const Spotlight = () => {
     const spotlights = [
         {
             image: studentImgOne,
-            title: "Night Gala Queen",
+            title: "Society of Medical Students (SOMMEDS)",
             content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore velit nisi totam?"
         }
     ]
   return (
     <section className="spotlight-section">
         <div className="spotlight-card">
-            <h2>Alumni Spotlight</h2>
+            <h2>Student Society</h2>
             {spotlights.map((spotlight, index) => (
                 <div key={index} className="content">
                     <img className="spotlight-img" src={spotlight.image} alt="spotlight image" />

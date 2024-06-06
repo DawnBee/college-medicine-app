@@ -121,7 +121,10 @@ const Navbar = ({currentPage}) => {
                             </div>
                         </span>                           
                     </li>
-                    {/* <li className="nav-item"><Link to="/alumni" className="nav-link" style={inlineStyles}> Alumni </Link></li> */}
+                    {/* Others */}
+                    <li className="nav-item">
+                        <Link to="/others" className="nav-link" style={inlineStyles}> Others </Link>
+                    </li>
                     {/* About */}
                     <li className="nav-item">
                         <Link to="/about" className="nav-link" style={inlineStyles}> About </Link>
