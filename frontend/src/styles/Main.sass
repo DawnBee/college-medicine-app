@@ -628,9 +628,17 @@ header.scrolled #navbar
                 gap: 1.5em
                 display: flex
                 align-items: center
-
+                
                 i
-                    @include list-icon-styles()
+                    color: #fff
+                    display: grid
+                    font-size: 2rem
+                    min-width: 70px
+                    aspect-ratio: 1
+                    align-self: center
+                    place-items: center
+                    border-radius: 1000px
+                    background: $primary-color
 
                 .content
                     .require-header
@@ -687,69 +695,90 @@ header.scrolled #navbar
             background-image: linear-gradient(to top, rgba(158, 40, 40, 1), rgba(158, 40, 40, 0))    
 
     .scholarship-section
-        .content
-            text-align: center
-
-            .header::before
+        background: #fff
+        .top
+            background: $bg-black
+            .layout-container::before
                 @include vertical-line-style-right(#fff, 12px)
 
-            .header
-                padding: 2em
-                position: relative
-                background: $bg-black
+            .layout-container
+                height: 20em
+                position: relative  
 
-                h2
+                .section-header
                     color: #fff
-                    font-size: 2rem
                     font-weight: 700
+                    padding-top: 1em
+                    text-align: center
                     text-wrap: balance
+                    text-transform: uppercase
+                    font-family: $header-font                
+        
+        .bottom
+            position: relative
+            .overview-container
+                left: 50%
+                top: -15em
+                width: 70vw
+                position: absolute
+                background: #fff
+                box-shadow: $drop-shadow
+                transform: translateX(-50%)
+                border-radius: $border-radius-10
+                
+                img
+                    width: 100%
+                    min-height: 20em
+                    object-fit: cover
+                    border-top-left-radius: $border-radius-10
+                    border-top-right-radius: $border-radius-10
+
+                .overview-heading
+                    margin: 1em 0 0 1.5em
                     text-transform: uppercase
                     font-family: $header-font
 
-            .intro
-                padding: 1em
-                h3
+                .info
+                    text-align: center
+
+                    p
+                        padding: 1.5em
+                        text-align: initial
+
+                    .overview-btn
+                        margin-bottom: 2em
+                        @include global-btn()
+            
+            .aid-app-group
+                padding: 25em 2em 2em 2em
+
+                .sub-heading
                     font-weight: 700
-                    font-size: 1.5rem
-                    padding-bottom: .8em
                     color: $primary-color
                     text-transform: uppercase
                     font-family: $header-font
+                
+                .aid-list
+                    list-style-type: none
 
-            .req-container
-                .req-list
-                    .req-item
+                    .aid-item
                         gap: 1em
+                        margin: 1em
                         display: flex
-                        margin: 1em 2em
                         align-items: center
-                        font-size: 1.125rem
-                        text-align: initial
+                        justify-content: center
+                        
                         i
-                            @include list-icon-styles()
-            
-        .overview-sidebar
-            width: 80%
-            text-align: center
-            margin: 1.5em auto
-            box-shadow: $drop-shadow
-            border-radius: $border-radius-5
-            
-            img
-                width: 100%
-                object-fit: cover
-                border-top-left-radius: $border-radius-5
-                border-top-right-radius: $border-radius-5
-
-            .text-group
-                padding: 1.2em
-
-                h3
-                    font-size: 1.5rem
-                    margin-bottom: .5em
-                    font-family: $header-font
-                    text-transform: uppercase
-                  
+                            color: #fff
+                            display: grid
+                            min-width: 60px
+                            aspect-ratio: 1
+                            font-size: 1.5rem
+                            align-self: center
+                            place-items: center
+                            border-radius: 1000px
+                            background: $primary-color
+                            
     .year-highlight-section
         color: #fff
         position: relative
@@ -2447,41 +2476,51 @@ header.scrolled #navbar
                     img
                         height: 100%
 
-        .scholarship-section
-            .layout-container
-                display: grid
-                grid-template-columns: 30% 70%
-                grid-template-areas: "sidebar main"
+        .scholarship-section             
+            .top
+                .layout-container::before
+                    @include vertical-line-style-right(#fff, 20px)
 
-                .content
-                    grid-area: main
-
-                    .header
-                        padding: 2.5em
-                        h2
-                            font-size: 2.5rem
+                .layout-container
+                    display: flex
+                    align-items: center
+                    justify-content: center
                     
-                    .intro
-                        text-indent: 2rem
-                        text-align: initial
+                    .section-header
+                        font-size: 3rem
+                        margin-left: 10em                     
 
-                    .req-container
-                        display: flex
-                        justify-content: space-around
+            .bottom
+                padding: 5em
+                .overview-container
+                    left: 7%
+                    max-width:23em
+                    min-height: 40em
+                    transform: translateX(0)
 
-                        .req-list
-                            .req-item
-                                font-weight: 600
-                                font-size: 1.3rem
+                    .overview-heading
+                        font-weight: 800
+                        font-size: 1.3rem
 
-                .overview-sidebar
-                    width: auto
-                    border-radius: 0
-                    grid-area: sidebar
-                    margin: 0 0 10px 0
+                    .overview-btn
+                        margin-top: 1em 
+                        margin-bottom: 0
+                        font-size: 1.2rem
+                
+                .aid-app-group
+                    gap: 1em
+                    padding: 0
+                    display: grid
+                    grid-template-columns: auto repeat(3, 1fr) auto
+                    
+                    div
+                        margin-left: 5em
+                        grid-column: 3 / span 2
 
-                    img
-                        border-radius: 0
+                        .sub-heading
+                            font-weight: 800
+                            font-size: 1.5rem
+                            margin: -2em 0 .5em 0
 
         .year-highlight-section
             .layout-container::before
@@ -3112,8 +3151,84 @@ header.scrolled #navbar
                         img
                             height: 100%
 
-// 'Simulation Page' Breaks    
+// 'Admission Page' Breaks
+@media (min-width: 320px) and (max-width: 380px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 33em 2em 2em 2em
+
+@media (min-width: 380px) and (max-width: 400px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .aid-app-group
+                    padding: 31em 2em 2em 2em
+
+@media (min-width: 400px) and (max-width: 480px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 29em 2em 2em 2em                    
+
+@media (min-width: 840px) and (max-width: 919px)
+    #admission-content
+        .scholarship-section
+            .bottom
+                .overview-container
+                    top: -13em
+
+                .aid-app-group
+                    padding: 30em 2em 2em 2em
+
+@media (min-width: 1390px) and (max-width: 1550px)
+    #admission-content
+        .scholarship-section
+            .top
+                .layout-container
+                    display: grid
+                    grid-template-columns: repeat(8, 1fr) 1em
+
+                    .section-header
+                        padding: 0
+                        margin: 0 1em
+                        grid-column: 4 / span 5
+
+// 'Admission' & 'Simulation Page' Breaks    
 @media (min-width: 920px) and (max-width: 1200px)
+    #admission-content
+        .scholarship-section
+            .top
+                .layout-container
+                    display: grid
+                    grid-template-columns: repeat(6, 1fr) 1em
+
+                    .section-header
+                        padding: 0
+                        margin: 0 12px
+                        grid-column: 4 / span 3
+
+            .bottom
+                padding: 5em 1em
+
+                .overview-container
+                    width: 40%
+
+                .aid-app-group
+                    grid-template-columns: repeat(6, 1fr)
+
+                    div
+                        margin: 0
+                        grid-column: 4 / span 3
+
     #simulation-content
         .faculty-involve-section
             .top
