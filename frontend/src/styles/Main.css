@@ -991,10 +991,13 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   background-image: linear-gradient(to top, rgb(158, 40, 40), rgba(158, 40, 40, 0));
 }
-#admission-content .scholarship-section .content {
-  text-align: center;
+#admission-content .scholarship-section {
+  background: #fff;
 }
-#admission-content .scholarship-section .content .header::before {
+#admission-content .scholarship-section .top {
+  background: #272727;
+}
+#admission-content .scholarship-section .top .layout-container::before {
   top: 0;
   width: 3px;
   content: "";
@@ -1003,71 +1006,93 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   background: #fff;
 }
-#admission-content .scholarship-section .content .header {
-  padding: 2em;
+#admission-content .scholarship-section .top .layout-container {
+  height: 20em;
   position: relative;
-  background: #272727;
 }
-#admission-content .scholarship-section .content .header h2 {
+#admission-content .scholarship-section .top .layout-container .section-header {
   color: #fff;
-  font-size: 2rem;
   font-weight: 700;
+  padding-top: 1em;
+  text-align: center;
   text-wrap: balance;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
-#admission-content .scholarship-section .content .intro {
-  padding: 1em;
+#admission-content .scholarship-section .bottom {
+  position: relative;
 }
-#admission-content .scholarship-section .content .intro h3 {
+#admission-content .scholarship-section .bottom .overview-container {
+  left: 50%;
+  top: -15em;
+  width: 70vw;
+  position: absolute;
+  background: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
+#admission-content .scholarship-section .bottom .overview-container img {
+  width: 100%;
+  min-height: 20em;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#admission-content .scholarship-section .bottom .overview-container .overview-heading {
+  margin: 1em 0 0 1.5em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+#admission-content .scholarship-section .bottom .overview-container .info {
+  text-align: center;
+}
+#admission-content .scholarship-section .bottom .overview-container .info p {
+  padding: 1.5em;
+  text-align: initial;
+}
+#admission-content .scholarship-section .bottom .overview-container .info .overview-btn {
+  margin-bottom: 2em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  background: #CD1919;
+  border-radius: 3px;
+}
+#admission-content .scholarship-section .bottom .aid-app-group {
+  padding: 25em 2em 2em 2em;
+}
+#admission-content .scholarship-section .bottom .aid-app-group .sub-heading {
   font-weight: 700;
-  font-size: 1.5rem;
-  padding-bottom: 0.8em;
   color: #9E2828;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
-#admission-content .scholarship-section .content .req-container .req-list .req-item {
-  gap: 1em;
-  display: flex;
-  margin: 1em 2em;
-  align-items: center;
-  font-size: 1.125rem;
-  text-align: initial;
+#admission-content .scholarship-section .bottom .aid-app-group .aid-list {
+  list-style-type: none;
 }
-#admission-content .scholarship-section .content .req-container .req-list .req-item i {
+#admission-content .scholarship-section .bottom .aid-app-group .aid-list .aid-item {
+  gap: 1em;
+  margin: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#admission-content .scholarship-section .bottom .aid-app-group .aid-list .aid-item i {
   color: #fff;
   display: grid;
-  font-size: 2rem;
-  min-width: 70px;
+  min-width: 60px;
   aspect-ratio: 1;
+  font-size: 1.5rem;
   align-self: center;
   place-items: center;
   border-radius: 1000px;
   background: #9E2828;
-}
-#admission-content .scholarship-section .overview-sidebar {
-  width: 80%;
-  text-align: center;
-  margin: 1.5em auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
-}
-#admission-content .scholarship-section .overview-sidebar img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-#admission-content .scholarship-section .overview-sidebar .text-group {
-  padding: 1.2em;
-}
-#admission-content .scholarship-section .overview-sidebar .text-group h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5em;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
 }
 #admission-content .year-highlight-section {
   color: #fff;
@@ -3055,40 +3080,56 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #admission-content .payment-fee-section .layout-container .image-frame img {
     height: 100%;
   }
-  #admission-content .scholarship-section .layout-container {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-areas: "sidebar main";
+  #admission-content .scholarship-section .top .layout-container::before {
+    top: 0;
+    width: 3px;
+    content: "";
+    height: 100%;
+    right: 20px;
+    position: absolute;
+    background: #fff;
   }
-  #admission-content .scholarship-section .layout-container .content {
-    grid-area: main;
-  }
-  #admission-content .scholarship-section .layout-container .content .header {
-    padding: 2.5em;
-  }
-  #admission-content .scholarship-section .layout-container .content .header h2 {
-    font-size: 2.5rem;
-  }
-  #admission-content .scholarship-section .layout-container .content .intro {
-    text-indent: 2rem;
-    text-align: initial;
-  }
-  #admission-content .scholarship-section .layout-container .content .req-container {
+  #admission-content .scholarship-section .top .layout-container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
   }
-  #admission-content .scholarship-section .layout-container .content .req-container .req-list .req-item {
-    font-weight: 600;
+  #admission-content .scholarship-section .top .layout-container .section-header {
+    font-size: 3rem;
+    margin-left: 10em;
+  }
+  #admission-content .scholarship-section .bottom {
+    padding: 5em;
+  }
+  #admission-content .scholarship-section .bottom .overview-container {
+    left: 7%;
+    max-width: 23em;
+    min-height: 40em;
+    transform: translateX(0);
+  }
+  #admission-content .scholarship-section .bottom .overview-container .overview-heading {
+    font-weight: 800;
     font-size: 1.3rem;
   }
-  #admission-content .scholarship-section .layout-container .overview-sidebar {
-    width: auto;
-    border-radius: 0;
-    grid-area: sidebar;
-    margin: 0 0 10px 0;
+  #admission-content .scholarship-section .bottom .overview-container .overview-btn {
+    margin-top: 1em;
+    margin-bottom: 0;
+    font-size: 1.2rem;
   }
-  #admission-content .scholarship-section .layout-container .overview-sidebar img {
-    border-radius: 0;
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    gap: 1em;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto repeat(3, 1fr) auto;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group div {
+    margin-left: 5em;
+    grid-column: 3/span 2;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group div .sub-heading {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin: -2em 0 0.5em 0;
   }
   #admission-content .year-highlight-section .layout-container::before {
     top: 0;
@@ -3728,7 +3769,69 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     height: 100%;
   }
 }
+@media (min-width: 320px) and (max-width: 380px) {
+  #admission-content .scholarship-section .bottom .overview-container {
+    top: -13em;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    padding: 33em 2em 2em 2em;
+  }
+}
+@media (min-width: 380px) and (max-width: 400px) {
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    padding: 31em 2em 2em 2em;
+  }
+}
+@media (min-width: 400px) and (max-width: 480px) {
+  #admission-content .scholarship-section .bottom .overview-container {
+    top: -13em;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    padding: 29em 2em 2em 2em;
+  }
+}
+@media (min-width: 840px) and (max-width: 919px) {
+  #admission-content .scholarship-section .bottom .overview-container {
+    top: -13em;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    padding: 30em 2em 2em 2em;
+  }
+}
+@media (min-width: 1390px) and (max-width: 1550px) {
+  #admission-content .scholarship-section .top .layout-container {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr) 1em;
+  }
+  #admission-content .scholarship-section .top .layout-container .section-header {
+    padding: 0;
+    margin: 0 1em;
+    grid-column: 4/span 5;
+  }
+}
 @media (min-width: 920px) and (max-width: 1200px) {
+  #admission-content .scholarship-section .top .layout-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr) 1em;
+  }
+  #admission-content .scholarship-section .top .layout-container .section-header {
+    padding: 0;
+    margin: 0 12px;
+    grid-column: 4/span 3;
+  }
+  #admission-content .scholarship-section .bottom {
+    padding: 5em 1em;
+  }
+  #admission-content .scholarship-section .bottom .overview-container {
+    width: 40%;
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  #admission-content .scholarship-section .bottom .aid-app-group div {
+    margin: 0;
+    grid-column: 4/span 3;
+  }
   #simulation-content .faculty-involve-section .top .layout-container img {
     width: 250px;
     height: 300px;
