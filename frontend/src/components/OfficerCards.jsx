@@ -25,34 +25,22 @@ const responsive = {
     }
   }
   
-const AlumniCards = () => {
-    const alumni = [
+const OfficerCards = () => {
+    const officers = [
         {
             name: "Avril Lavigne",
             image: studentImageOne,
-            specialization: "Neurologist",
-            year: "2021-2025",
-            occupation: "Neurologist",
-            employer: "St. Elizabeth Hospital",
-            achievements: "Top 3 Board Exam Passer",
+            position: "President",
         },
         {
             name: "Taylor Swift",
             image: studentImageFour,
-            specialization: "Pathologist",
-            year: "2021-2025",
-            occupation: "Neurologist",
-            employer: "Gensan Medical Center",
-            achievements: "Top 1 Best Album Seller",
+            position: "Vice President",
         },
         {
             name: "Leonardo DeCarpio",
             image: studentImageThree,
-            specialization: "Surgeon",
-            year: "2021-2025",
-            occupation: "Neurologist",
-            employer: "Davao Medical Center",
-            achievements: "3-Time Oscar Awardee",
+            position: "Secretary",
         }                
     ]
 
@@ -65,45 +53,32 @@ const AlumniCards = () => {
     )
     
   return (
-    <section className="alumni-info-section">
+    <section className="officer-info-section">
         <Carousel 
             responsive={responsive}
             containerClass="card-container"
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
         >
-            {alumni.map((alumnus, index) => (
-                <div key={index} className="alumni-card">
+            {officers.map((officer, index) => (
+                <div key={index} className="officer-card">
                     <div className="container">
                         <div className="header">
-                            <h2>Doctor of Medicine</h2>
-                            <em>{alumnus.specialization}</em>
+                            <h2>SOMMED - {officer.position}</h2>
                         </div>
                         <div className="image-frame">
-                            <img src={alumnus.image} alt="alumni image" />
+                            <img src={officer.image} alt="officer image" />
                         </div>
                         <div className="info-group">
                             <ul className="info-list">
                                 <li className="info-item">
                                     <strong>Name:</strong>
-                                    <p>Dr. {alumnus.name}</p>
+                                    <p>{officer.name}</p>
                                 </li>
                                 <li className="info-item">
-                                    <strong>Graduation Year:</strong>
-                                    <p>{alumnus.year}</p>
-                                </li>
-                                <li className="info-item">
-                                    <strong>Occupation:</strong>
-                                    <p>{alumnus.occupation}</p>
-                                </li>
-                                <li className="info-item">
-                                    <strong>Employer:</strong>
-                                    <p>{alumnus.employer}</p>
-                                </li>
-                                <li className="info-item">
-                                    <strong>Achievements:</strong>
-                                    <p>{alumnus.achievements}</p>
-                                </li>
+                                    <strong>Position:</strong>
+                                    <p>{officer.position}</p>
+                                </li>                                
                             </ul>
                         </div>                            
                     </div>
@@ -114,4 +89,4 @@ const AlumniCards = () => {
   )
 }
 
-export default AlumniCards
+export default OfficerCards

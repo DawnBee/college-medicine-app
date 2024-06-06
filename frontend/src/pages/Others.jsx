@@ -1,24 +1,24 @@
 // Components
-import AlumniCards from '../components/AlumniCards'
+import OfficerCards from '../components/OfficerCards'
 import Sidebar from '../components/Sidebar'
 import Gallery from '../components/Gallery'
 import Spotlight from '../components/Spotlight'
-import AlumniSearch from '../components/AlumniSearch'
+import OfficerSearch from '../components/OfficerSearch'
 
-const Alumni = () => {
+const Others = () => {
   return (
-    <main id="alumni-content">
+    <main id="other-content">
         <section className="hero-section">
             <div className="hero-overlay">
-                <h1 className="page-header">Alumni Tracker</h1>
-                <p>Connect, Engage, Reconnect: Stay Linked with your Alma Mater</p>
+                <h1 className="page-header">Community Extension</h1>
+                <p>Bridging Education and Community for Lasting Impact</p>
             </div>
         </section>
-        <AlumniSearch />
+        <OfficerSearch />
         <div className="grid-section-group layout-container">
             <Spotlight />
             <Gallery />
-            <AlumniCards />
+            <OfficerCards />
             <Sidebar />
         </div>
         <span style={{display: 'none'}}>Most toxic working environment I've ever been!</span>
@@ -26,4 +26,4 @@ const Alumni = () => {
   )
 }
 
-export default Alumni
+export default Others

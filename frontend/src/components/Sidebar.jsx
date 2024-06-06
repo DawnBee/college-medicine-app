@@ -1,12 +1,12 @@
 // Components
-import UpcomingEvents from './UpcomingEvents'
+import CommunityActivities from './CommunityActivities'
 import News from './News'
 
 const Sidebar = () => {
   return (
     <aside className="sidebar">
         <News />
-        < UpcomingEvents />
+        <CommunityActivities />
     </aside>
   )
 }

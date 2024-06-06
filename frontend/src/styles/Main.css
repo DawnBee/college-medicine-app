@@ -2366,7 +2366,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   margin: 1em 0;
 }
 
-#alumni-content .hero-section::before {
+#other-content .hero-section::before {
   top: 0;
   left: 0;
   content: "";
@@ -2375,7 +2375,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   background: linear-gradient(to top, #000, transparent);
 }
-#alumni-content .hero-section {
+#other-content .hero-section {
   height: 60vh;
   overflow: hidden;
   position: relative;
@@ -2385,7 +2385,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-repeat: no-repeat;
   background-image: url("../assets/images/bg-university-grounds.jpg");
 }
-#alumni-content .hero-section .hero-overlay {
+#other-content .hero-section .hero-overlay {
   top: 50%;
   left: 50%;
   width: 400px;
@@ -2397,23 +2397,23 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
-#alumni-content .hero-section .hero-overlay h1 {
+#other-content .hero-section .hero-overlay h1 {
   color: #fff;
   font-size: 4rem;
 }
-#alumni-content .hero-section .hero-overlay p {
+#other-content .hero-section .hero-overlay p {
   font-weight: 200;
 }
-#alumni-content .search-section {
+#other-content .search-section {
   color: #fff;
   padding: 1em 2em;
   background: #272727;
 }
-#alumni-content .search-section .form-group .label-group {
+#other-content .search-section .form-group .label-group {
   line-height: 5px;
   margin: 1em 0 1.5em 0;
 }
-#alumni-content .search-section .form-group .label-group label {
+#other-content .search-section .form-group .label-group label {
   margin: 1em 0;
   display: block;
   font-weight: 400;
@@ -2421,23 +2421,23 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
-#alumni-content .search-section .form-group .label-group em {
+#other-content .search-section .form-group .label-group em {
   font-weight: 100;
   font-size: 0.8rem;
   font-family: "Montserrat", sans-serif;
 }
-#alumni-content .search-section .form-group .search-wrapper {
+#other-content .search-section .form-group .search-wrapper {
   gap: 1em;
   display: flex;
   position: relative;
   justify-content: space-between;
 }
-#alumni-content .search-section .form-group .search-wrapper .field-group {
+#other-content .search-section .form-group .search-wrapper .field-group {
   flex-grow: 1;
   display: flex;
   align-items: center;
 }
-#alumni-content .search-section .form-group .search-wrapper .field-group .fa-magnifying-glass {
+#other-content .search-section .form-group .search-wrapper .field-group .fa-magnifying-glass {
   height: 100%;
   color: #000;
   padding: 5px;
@@ -2446,19 +2446,19 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-size: 1.125rem;
   place-items: center;
 }
-#alumni-content .search-section .form-group .search-wrapper .field-group input::-moz-placeholder {
+#other-content .search-section .form-group .search-wrapper .field-group input::-moz-placeholder {
   text-indent: 0.5em;
 }
-#alumni-content .search-section .form-group .search-wrapper .field-group input::placeholder {
+#other-content .search-section .form-group .search-wrapper .field-group input::placeholder {
   text-indent: 0.5em;
 }
-#alumni-content .search-section .form-group .search-wrapper .field-group input {
+#other-content .search-section .form-group .search-wrapper .field-group input {
   flex-grow: 1;
   height: 100%;
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-#alumni-content .search-section .form-group .search-wrapper button {
+#other-content .search-section .form-group .search-wrapper button {
   border: none;
   color: #fff;
   cursor: pointer;
@@ -2476,16 +2476,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   text-transform: capitalize;
 }
-#alumni-content .spotlight-section {
+#other-content .spotlight-section {
   padding: 1em;
   background: #F9F6EF;
 }
-#alumni-content .spotlight-section .spotlight-card {
+#other-content .spotlight-section .spotlight-card {
   width: 80%;
   margin: 0 auto;
   background: #fff;
 }
-#alumni-content .spotlight-section .spotlight-card h2 {
+#other-content .spotlight-section .spotlight-card h2 {
   color: #fff;
   padding: 5px 0;
   text-align: center;
@@ -2494,43 +2494,43 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   background: #CD1919;
 }
-#alumni-content .spotlight-section .spotlight-card .content {
+#other-content .spotlight-section .spotlight-card .content {
   gap: 1em;
   display: flex;
   padding: 1em 2em;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-#alumni-content .spotlight-section .spotlight-card .content img {
+#other-content .spotlight-section .spotlight-card .content img {
   min-width: 30%;
   max-height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 3px;
 }
-#alumni-content .spotlight-section .spotlight-card .content .text-group h3 {
+#other-content .spotlight-section .spotlight-card .content .text-group h3 {
   margin-bottom: 0.5em;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-#alumni-content .spotlight-section .spotlight-card .content .text-group p {
+#other-content .spotlight-section .spotlight-card .content .text-group p {
   font-weight: 500;
 }
-#alumni-content .memories-section {
+#other-content .memories-section {
   color: #fff;
   padding: 1em;
   background: #272727;
 }
-#alumni-content .memories-section .intro h2 {
+#other-content .memories-section .intro h2 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-#alumni-content .memories-section .intro p {
+#other-content .memories-section .intro p {
   margin: 1em 0;
 }
-#alumni-content .memories-section .gallery .expand-btn:hover {
+#other-content .memories-section .gallery .expand-btn:hover {
   color: rgba(255, 255, 255, 0.5);
 }
-#alumni-content .memories-section .gallery .expand-btn {
+#other-content .memories-section .gallery .expand-btn {
   gap: 5px;
   border: none;
   display: flex;
@@ -2543,23 +2543,23 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
 }
-#alumni-content .memories-section .gallery .img-container {
+#other-content .memories-section .gallery .img-container {
   gap: 1em;
   display: grid;
   grid-template-areas: "img-1 img-2 img-3" "img-4 img-4 img-5";
 }
-#alumni-content .memories-section .gallery .img-container .image-box:hover img,
-#alumni-content .memories-section .gallery .img-container .image-box:focus-within img {
+#other-content .memories-section .gallery .img-container .image-box:hover img,
+#other-content .memories-section .gallery .img-container .image-box:focus-within img {
   transform: scale(1.1);
 }
-#alumni-content .memories-section .gallery .img-container .image-box {
+#other-content .memories-section .gallery .img-container .image-box {
   cursor: pointer;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border-radius: 3px;
 }
-#alumni-content .memories-section .gallery .img-container .image-box img {
+#other-content .memories-section .gallery .img-container .image-box img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -2568,29 +2568,29 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   transition: transform 0.3s ease;
   border-radius: 3px;
 }
-#alumni-content .memories-section .gallery .img-container .image-box:nth-child(1) {
+#other-content .memories-section .gallery .img-container .image-box:nth-child(1) {
   grid-area: img-1;
 }
-#alumni-content .memories-section .gallery .img-container .image-box:nth-child(2) {
+#other-content .memories-section .gallery .img-container .image-box:nth-child(2) {
   grid-area: img-2;
 }
-#alumni-content .memories-section .gallery .img-container .image-box:nth-child(3) {
+#other-content .memories-section .gallery .img-container .image-box:nth-child(3) {
   grid-area: img-3;
 }
-#alumni-content .memories-section .gallery .img-container .image-box:nth-child(4) {
+#other-content .memories-section .gallery .img-container .image-box:nth-child(4) {
   grid-area: img-4;
 }
-#alumni-content .memories-section .gallery .img-container .image-box:nth-child(5) {
+#other-content .memories-section .gallery .img-container .image-box:nth-child(5) {
   grid-area: img-5;
 }
-#alumni-content .alumni-info-section {
+#other-content .officer-info-section {
   padding: 1em;
   background: #F9F6EF;
 }
-#alumni-content .alumni-info-section .card-container .slider-btn:hover {
+#other-content .officer-info-section .card-container .slider-btn:hover {
   background: #C02121;
 }
-#alumni-content .alumni-info-section .card-container .slider-btn {
+#other-content .officer-info-section .card-container .slider-btn {
   top: 50%;
   width: 50px;
   z-index: 700;
@@ -2606,35 +2606,35 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   transform: translateY(-50%);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-#alumni-content .alumni-info-section .card-container .fa-chevron-left {
+#other-content .officer-info-section .card-container .fa-chevron-left {
   left: 0;
 }
-#alumni-content .alumni-info-section .card-container .fa-chevron-right {
+#other-content .officer-info-section .card-container .fa-chevron-right {
   right: 0;
 }
-#alumni-content .alumni-info-section .card-container .slider-btn {
+#other-content .officer-info-section .card-container .slider-btn {
   color: #fff;
   background: #9E2828;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card {
+#other-content .officer-info-section .card-container .officer-card {
   width: 90%;
   margin: 10px auto;
   position: relative;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .header {
+#other-content .officer-info-section .card-container .officer-card .container .header {
   color: #fff;
   padding: 0.5em 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   background: #CD1919;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .image-frame {
+#other-content .officer-info-section .card-container .officer-card .container .image-frame {
   width: 80%;
   margin: 1em auto;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .image-frame img {
+#other-content .officer-info-section .card-container .officer-card .container .image-frame img {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
@@ -2642,25 +2642,25 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .info-group {
+#other-content .officer-info-section .card-container .officer-card .container .info-group {
   padding: 1em;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .info-group .info-list {
+#other-content .officer-info-section .card-container .officer-card .container .info-group .info-list {
   text-align: center;
   list-style-type: none;
   font-family: "Montserrat", sans-serif;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .info-group .info-list .info-item {
+#other-content .officer-info-section .card-container .officer-card .container .info-group .info-list .info-item {
   margin: 1em 0;
 }
-#alumni-content .alumni-info-section .card-container .alumni-card .container .info-group .info-list .info-item strong {
+#other-content .officer-info-section .card-container .officer-card .container .info-group .info-list .info-item strong {
   font-size: 1.2rem;
 }
-#alumni-content .sidebar {
+#other-content .sidebar {
   padding: 2em 0;
   background: #F9F6EF;
 }
-#alumni-content .sidebar .news-group::before {
+#other-content .sidebar .news-group::before {
   top: 0;
   left: 0;
   height: 1em;
@@ -2669,7 +2669,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   background: #CD1919;
 }
-#alumni-content .sidebar .news-group {
+#other-content .sidebar .news-group {
   width: 90%;
   padding: 1em;
   margin: 0 auto;
@@ -2678,10 +2678,10 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-#alumni-content .sidebar .news-group .expand-btn:hover {
+#other-content .sidebar .news-group .expand-btn:hover {
   color: rgba(0, 0, 0, 0.5);
 }
-#alumni-content .sidebar .news-group .expand-btn {
+#other-content .sidebar .news-group .expand-btn {
   gap: 5px;
   border: none;
   display: flex;
@@ -2694,16 +2694,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-#alumni-content .sidebar .news-group img {
+#other-content .sidebar .news-group img {
   margin: 1em auto;
   border-radius: 3px;
 }
-#alumni-content .sidebar .news-group .text-group h3 {
+#other-content .sidebar .news-group .text-group h3 {
   margin: 0.5em 0;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
-#alumni-content .sidebar .upcoming-events::before {
+#other-content .sidebar .community-activities::before {
   top: 0;
   left: 0;
   height: 1em;
@@ -2712,7 +2712,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: absolute;
   background: #CD1919;
 }
-#alumni-content .sidebar .upcoming-events {
+#other-content .sidebar .community-activities {
   width: 90%;
   padding: 1em;
   margin: 2em auto;
@@ -2720,10 +2720,10 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
-#alumni-content .sidebar .upcoming-events .expand-btn:hover {
+#other-content .sidebar .community-activities .expand-btn:hover {
   color: rgba(0, 0, 0, 0.5);
 }
-#alumni-content .sidebar .upcoming-events .expand-btn {
+#other-content .sidebar .community-activities .expand-btn {
   gap: 5px;
   border: none;
   display: flex;
@@ -2736,7 +2736,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-#alumni-content .sidebar .upcoming-events h2 {
+#other-content .sidebar .community-activities h2 {
   font-size: 2rem;
   font-weight: 700;
   margin: 1em auto;
@@ -2744,16 +2744,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
 }
-#alumni-content .sidebar .upcoming-events .event-list {
+#other-content .sidebar .community-activities .activity-list {
   list-style-type: none;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item {
+#other-content .sidebar .community-activities .activity-list .activity-item {
   gap: 1em;
   display: flex;
   margin: 1em auto;
   font-family: "Montserrat", sans-serif;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item .date-box {
+#other-content .sidebar .community-activities .activity-list .activity-item .date-box {
   color: #fff;
   display: grid;
   min-width: 25%;
@@ -2763,20 +2763,20 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   border-radius: 3px;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item .date-box .date {
+#other-content .sidebar .community-activities .activity-list .activity-item .date-box .date {
   font-size: 1.2rem;
   text-align: center;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item .date-box .date span {
+#other-content .sidebar .community-activities .activity-list .activity-item .date-box .date span {
   display: block;
   font-size: 2.5rem;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item .text-group .name {
+#other-content .sidebar .community-activities .activity-list .activity-item .text-group .name {
   margin-bottom: 5px;
   color: #9E2828;
   text-transform: uppercase;
 }
-#alumni-content .sidebar .upcoming-events .event-list .event-item .text-group .time {
+#other-content .sidebar .community-activities .activity-list .activity-item .text-group .time {
   margin-top: 5px;
   font-weight: 300;
 }
@@ -3618,108 +3618,120 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     margin: 1em 0;
     font-size: 1.5rem;
   }
-  #alumni-content {
+  #other-content {
     background: #F9F6EF;
   }
-  #alumni-content .hero-section {
+  #other-content .hero-section {
     height: 100vh;
   }
-  #alumni-content .hero-section .hero-overlay h1 {
+  #other-content .hero-section .hero-overlay h1 {
     font-size: 6rem;
   }
-  #alumni-content .hero-section .hero-overlay p {
+  #other-content .hero-section .hero-overlay p {
     font-size: 1.7rem;
   }
-  #alumni-content .search-section .form-group {
+  #other-content .search-section .form-group {
     width: 80%;
     margin: 0 auto;
   }
-  #alumni-content .search-section .form-group .label-group label {
+  #other-content .search-section .form-group .label-group label {
     font-size: 2rem;
   }
-  #alumni-content .search-section .form-group .label-group em {
+  #other-content .search-section .form-group .label-group em {
     font-size: 1rem;
   }
-  #alumni-content .search-section .form-group .search-wrapper {
+  #other-content .search-section .form-group .search-wrapper {
     height: 2.5em;
   }
-  #alumni-content .search-section .form-group .search-wrapper .field-group .fa-magnifying-glass {
+  #other-content .search-section .form-group .search-wrapper .field-group .fa-magnifying-glass {
     padding: 10px;
   }
-  #alumni-content .search-section .form-group .search-wrapper .field-group input::-moz-placeholder {
+  #other-content .search-section .form-group .search-wrapper .field-group input::-moz-placeholder {
     font-size: 1.2rem;
   }
-  #alumni-content .search-section .form-group .search-wrapper .field-group input::placeholder {
+  #other-content .search-section .form-group .search-wrapper .field-group input::placeholder {
     font-size: 1.2rem;
   }
-  #alumni-content .search-section .form-group .search-wrapper button {
+  #other-content .search-section .form-group .search-wrapper button {
     font-size: 1.125rem;
   }
-  #alumni-content .grid-section-group {
+  #other-content .grid-section-group {
     padding: 1em;
     display: grid;
     background: #F9F6EF;
     grid-template-columns: 30% 70%;
     grid-template-rows: repeat(3, auto);
-    grid-template-areas: "sidebar spotlight" "sidebar memories" "sidebar alum-info";
+    grid-template-areas: "sidebar spotlight" "sidebar memories" "sidebar officer-info";
   }
-  #alumni-content .grid-section-group .spotlight-section {
+  #other-content .grid-section-group .spotlight-section {
     padding: 1em 0;
     grid-area: spotlight;
   }
-  #alumni-content .grid-section-group .spotlight-section .spotlight-card {
+  #other-content .grid-section-group .spotlight-section .spotlight-card {
     margin: 0;
     width: 100%;
   }
-  #alumni-content .grid-section-group .spotlight-section .spotlight-card .content img {
+  #other-content .grid-section-group .spotlight-section .spotlight-card .content img {
     max-height: 250px;
   }
-  #alumni-content .grid-section-group .spotlight-section .spotlight-card .content .text-group {
+  #other-content .grid-section-group .spotlight-section .spotlight-card .content .text-group {
     align-self: center;
   }
-  #alumni-content .grid-section-group .memories-section {
+  #other-content .grid-section-group .memories-section {
     grid-area: memories;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   }
-  #alumni-content .grid-section-group .memories-section .gallery .img-container {
+  #other-content .grid-section-group .memories-section .gallery .img-container {
     grid-template-rows: repeat(2, 200px);
   }
-  #alumni-content .grid-section-group .alumni-info-section {
-    grid-area: alum-info;
+  #other-content .grid-section-group .officer-info-section {
+    grid-area: officer-info;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .slider-btn {
+  #other-content .grid-section-group .officer-info-section .card-container {
+    padding: 10px 0;
+  }
+  #other-content .grid-section-group .officer-info-section .card-container .slider-btn {
     width: 65px;
     font-size: 1.5rem;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card {
+    height: 100%;
+    margin: 0 auto;
+  }
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container {
+    height: 100%;
     display: grid;
     grid-template-rows: 15% 85%;
     grid-template-columns: repeat(5, 1fr);
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container .header {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .header {
     grid-row: 1;
     grid-column: 3/span 3;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container .image-frame {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .image-frame {
     margin: 0;
     width: 100%;
     grid-row: 1/span 2;
     grid-column: 1/span 2;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container .image-frame img {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .image-frame img {
     height: 100%;
-    max-height: 100%;
     border-radius: 0;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container .info-group {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .info-group {
     padding: 0;
+    display: flex;
     grid-column: 3/span 3;
   }
-  #alumni-content .grid-section-group .alumni-info-section .card-container .alumni-card .container .info-group .info-list {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .info-group .info-list {
     margin: 0 1em;
+    align-self: center;
     text-align: initial;
   }
-  #alumni-content .grid-section-group .sidebar {
+  #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .info-group .info-list .info-item strong, #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .info-group .info-list .info-item p {
+    font-size: 1.8rem;
+  }
+  #other-content .grid-section-group .sidebar {
     padding: 1em 0;
     grid-area: sidebar;
   }
@@ -3841,13 +3853,13 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
 }
 @media (min-width: 320px) and (max-width: 350px) {
-  #alumni-content .search-section .form-group .label-group {
+  #other-content .search-section .form-group .label-group {
     line-height: initial;
   }
-  #alumni-content .search-section .form-group .search-wrapper button p {
+  #other-content .search-section .form-group .search-wrapper button p {
     display: none;
   }
-  #alumni-content .spotlight-section .spotlight-card .content {
+  #other-content .spotlight-section .spotlight-card .content {
     flex-direction: column;
   }
 }

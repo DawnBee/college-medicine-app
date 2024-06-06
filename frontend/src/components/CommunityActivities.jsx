@@ -1,5 +1,5 @@
-const UpcomingEvents = () => {
-    const upcomingEvents = [
+const CommunityActivities = () => {
+    const activities = [
         {
             title: "Workshop",
             date: ["March", "13"],
@@ -9,30 +9,30 @@ const UpcomingEvents = () => {
         {
             title: "Grand Reunion",
             date: ["May", "15"],
-            content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            content: "Dolor, sit amet consectetur.",
             time: "8AM"
         },
         {
             title: "Fund Run",
             date: ["April", "24"],
-            content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+            content: "Ipsum dolor, consectetur adipisicing elit.",
             time: "8AM"
         },        
     ]
 
   return (
-    <article className="upcoming-events">
-        <h2>Upcoming Events</h2>
-        <ul className="event-list">
-            {upcomingEvents.map((event, index) => (
-                <li key={index} className="event-item">
+    <article className="community-activities">
+        <h2>Community Activities</h2>
+        <ul className="activity-list">
+            {activities.map((activity, index) => (
+                <li key={index} className="activity-item">
                     <div className="date-box">
-                        <p className="date">{event.date[0]}<span>{event.date[1]}</span></p>
+                        <p className="date">{activity.date[0]}<span>{activity.date[1]}</span></p>
                     </div>
                     <div className="text-group">
-                        <h3 className="name">{event.title}</h3>
-                        <p>{event.content}</p>
-                        <p className="time">{event.time}</p>
+                        <h3 className="name">{activity.title}</h3>
+                        <p>{activity.content}</p>
+                        <p className="time">{activity.time}</p>
                     </div>
                 </li>
             ))}
@@ -42,4 +42,4 @@ const UpcomingEvents = () => {
   )
 }
 
-export default UpcomingEvents
+export default CommunityActivities
