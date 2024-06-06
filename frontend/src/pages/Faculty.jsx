@@ -14,7 +14,7 @@ import bottomImage from '../assets/images/infirm-building.jpg'
 // Components
 import Message from '../components/Message'
 import OrgChart from '../components/OrgChart'
-import Quotes from '../components/Quotes'
+import Highlights from '../components/Highlights'
 import Faculties from '../components/Faculties'
 import Lecturers from '../components/Lecturers'
 
@@ -93,7 +93,7 @@ const Faculty = () => {
         </section>
         <Message />
         <OrgChart />
-        <Quotes />
+        <Highlights />
         <Faculties />
         <Lecturers />
         <img className="bottom-img" aria-hidden="true" src={bottomImage} alt="bottom image" />
