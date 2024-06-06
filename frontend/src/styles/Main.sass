@@ -1865,8 +1865,8 @@ header.scrolled #navbar
                     p
                         margin: 1em 0
 
-// Alumni Page    
-#alumni-content
+// Others Page    
+#other-content
     .hero-section::before
         @include color-overlay(linear-gradient(to top, #000, transparent))
 
@@ -2034,7 +2034,7 @@ header.scrolled #navbar
                 .image-box:nth-child(5)
                     grid-area: img-5
 
-    .alumni-info-section
+    .officer-info-section
         padding: 1em
         background: $bg-light-biege
 
@@ -2044,7 +2044,7 @@ header.scrolled #navbar
                 color: #fff
                 background: $primary-color        
 
-            .alumni-card
+            .officer-card
                 width: 90%
                 margin: 10px auto
                 position: relative
@@ -2112,10 +2112,10 @@ header.scrolled #navbar
                     text-transform: uppercase
                     font-family: $header-font
 
-        .upcoming-events::before
+        .community-activities::before
             @include sidebar-top-style()
             
-        .upcoming-events
+        .community-activities
             width: 90%
             padding: 1em
             margin: 2em auto
@@ -2132,10 +2132,10 @@ header.scrolled #navbar
                 font-family: $header-font
                 text-transform: uppercase
                 
-            .event-list
+            .activity-list
                 list-style-type: none
 
-                .event-item
+                .activity-item
                     gap: 1em
                     display: flex
                     margin: 1em auto
@@ -2984,8 +2984,8 @@ header.scrolled #navbar
                             margin: 1em 0
                             font-size: 1.5rem
 
-    // Alumni
-    #alumni-content
+    // Others
+    #other-content
         background: $bg-light-biege
 
         .hero-section
@@ -3027,7 +3027,7 @@ header.scrolled #navbar
             background: $bg-light-biege
             grid-template-columns: 30% 70%
             grid-template-rows: repeat(3, auto)
-            grid-template-areas: "sidebar spotlight" "sidebar memories" "sidebar alum-info"
+            grid-template-areas: "sidebar spotlight" "sidebar memories" "sidebar officer-info"
 
             .spotlight-section
                 padding: 1em 0
@@ -3052,16 +3052,22 @@ header.scrolled #navbar
                     .img-container
                         grid-template-rows: repeat(2, 200px)
 
-            .alumni-info-section
-                grid-area: alum-info
+            .officer-info-section
+                grid-area: officer-info
 
                 .card-container
+                    padding: 10px 0
+
                     .slider-btn
                         width: 65px
                         font-size: 1.5rem
 
-                    .alumni-card
+                    .officer-card
+                        height: 100%
+                        margin: 0 auto
+
                         .container
+                            height: 100%
                             display: grid
                             grid-template-rows: 15% 85%
                             grid-template-columns: repeat(5, 1fr)
@@ -3078,17 +3084,22 @@ header.scrolled #navbar
 
                                 img
                                     height: 100%
-                                    max-height: 100%
                                     border-radius: 0
                                     
                             .info-group
                                 padding: 0
+                                display: flex
                                 grid-column: 3 / span 3
 
                                 .info-list
                                     margin: 0 1em
+                                    align-self: center
                                     text-align: initial
 
+                                    .info-item
+                                        strong, p
+                                            font-size: 1.8rem
+                                    
             .sidebar
                 padding: 1em 0
                 grid-area: sidebar                          
@@ -3245,9 +3256,9 @@ header.scrolled #navbar
                     div
                         margin: 1em
 
-// 'Alumni Page' Breaks
+// 'Others Page' Breaks
 @media (min-width: 320px) and (max-width: 350px)
-    #alumni-content
+    #other-content
         .search-section
             .form-group
                 .label-group

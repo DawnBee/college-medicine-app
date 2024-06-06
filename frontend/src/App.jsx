@@ -10,7 +10,7 @@ import Home from './pages/Home'
 import Admission from './pages/Admission'
 import Simulation from './pages/Simulation'
 import Faculty from './pages/Faculty'
-import Alumni from './pages/Alumni'
+import Others from './pages/Others'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
 
@@ -29,7 +29,7 @@ const router = createBrowserRouter(
         <Route path='/Admission' element={<Admission />} />
         <Route path='/Simulation' element={<Simulation />} />
         <Route path='/Faculty' element={<Faculty />} />
-        <Route path='/Alumni' element={<Alumni />} />
+        <Route path='/Others' element={<Others />} />
         <Route path='/About' element={<About />} />
       </Route>
       {/* Detail */}
