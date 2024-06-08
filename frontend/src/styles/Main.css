@@ -1938,6 +1938,10 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 }
 #faculty-content .highlights-section {
   padding: 2em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/images/wooden-theme.png");
 }
 #faculty-content .highlights-section .highlights-container {
   color: #fff;
@@ -1984,10 +1988,12 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: 8%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   background-position: 3% 5%;
-  background-color: #272727;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   background-repeat: no-repeat;
   border-radius: 5px;
   grid-template-rows: 10px 2fr 10px;
+  background-color: rgba(0, 0, 0, 0.85);
   grid-template-columns: 1em repeat(4, 2fr);
   background-image: url("../assets/images/quote-white.svg");
   grid-template-areas: ". . . . img" ". content content content img" ". . . . img";
