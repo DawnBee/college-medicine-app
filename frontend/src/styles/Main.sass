@@ -1514,6 +1514,8 @@ header.scrolled #navbar
             
     .highlights-section
         padding: 2em
+        @include bg-image-format("../assets/images/wooden-theme.png")
+
         .highlights-container
             color: #fff
             position: relative
@@ -1535,14 +1537,15 @@ header.scrolled #navbar
                 background-size: 8%
                 box-shadow: $drop-shadow
                 background-position: 3% 5%
-                background-color: $bg-black
+                backdrop-filter: blur(5px)
                 background-repeat: no-repeat
                 border-radius: $border-radius-5
                 grid-template-rows: 10px 2fr 10px
+                background-color: rgba(0,0,0,.85)
                 grid-template-columns: 1em repeat(4, 2fr)
                 background-image: url("../assets/images/quote-white.svg")
                 grid-template-areas: ". . . . img" ". content content content img" ". . . . img"
-             
+
                 .text-group
                     grid-area: content
                     align-self: center
