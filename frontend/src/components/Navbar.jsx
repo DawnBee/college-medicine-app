@@ -88,8 +88,8 @@ const Navbar = ({currentPage}) => {
                         <Link to="/admission" className="nav-link" style={inlineStyles}> Admission </Link>
                         <span className="drop-arrow" style={inlineArrowStyles}>
                             <div className="dropdown-menu">
-                                <CustomALink to="process">Process</CustomALink>
-                                <CustomALink to="payment">Payment & Fee</CustomALink>
+                                <CustomALink to="process">Admission Process</CustomALink>
+                                <CustomALink to="payment">Enrollment Fees</CustomALink>
                             </div>
                         </span>
                     </li>
@@ -99,10 +99,10 @@ const Navbar = ({currentPage}) => {
                         <span className="drop-arrow" style={inlineArrowStyles}>
                             <div className="dropdown-menu">
                                 <CustomALink to="facility">Facilities</CustomALink>
-                                <CustomALink to="center">SimBased Educ..</CustomALink>
+                                <CustomALink to="center">SimBased Education</CustomALink>
                                 <CustomALink to="mannequins">Mannequins</CustomALink>
-                                <CustomALink to="trainers">Task Trainers</CustomALink>
-                                <CustomALink to="sim-training">SimBased Trainings</CustomALink>
+                                <CustomALink to="trainers">Trainers</CustomALink>
+                                <CustomALink to="sim-training">SBE Trainings</CustomALink>
                                 <CustomALink to="faculty-involve">Faculty Training</CustomALink>                                         
                             </div>
                         </span>                    
@@ -121,10 +121,6 @@ const Navbar = ({currentPage}) => {
                             </div>
                         </span>                           
                     </li>
-                    {/* Others */}
-                    <li className="nav-item">
-                        <Link to="/others" className="nav-link" style={inlineStyles}> Others </Link>
-                    </li>
                     {/* About */}
                     <li className="nav-item">
                         <Link to="/about" className="nav-link" style={inlineStyles}> About </Link>
@@ -135,6 +131,10 @@ const Navbar = ({currentPage}) => {
                                 <CustomALink to="history">History</CustomALink>                                    
                             </div>
                         </span>                          
+                    </li>                    
+                    {/* Others */}
+                    <li className="nav-item">
+                        <Link to="/others" className="nav-link" style={inlineStyles}> Others </Link>
                     </li>
                 </ul>
                 {/* Hamburger Icon */}
