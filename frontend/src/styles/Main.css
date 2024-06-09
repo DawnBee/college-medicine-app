@@ -2256,22 +2256,28 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item {
   width: 80%;
-  padding: 1.5em;
   margin: 1.2em auto;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
-#about-content .acknowledge-section .benefactor-list .benefactor-item img {
-  width: 60%;
-  min-height: 200px;
+#about-content .acknowledge-section .benefactor-list .benefactor-item .img-frame {
+  width: 100%;
+  padding: 1em;
+  background: #C02121;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+#about-content .acknowledge-section .benefactor-list .benefactor-item .img-frame img {
+  width: 90%;
+  max-height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
-  border: 15px solid #C02121;
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
+  padding: 1.2rem;
   margin-top: 1em;
 }
 #about-content .acknowledge-section .benefactor-list .benefactor-item .content h3 {
@@ -3553,8 +3559,12 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #about-content .acknowledge-section .header h2 {
     font-size: 1.5rem;
   }
-  #about-content .acknowledge-section .benefactor-list .benefactor-item:nth-child(even) img {
+  #about-content .acknowledge-section .benefactor-list .benefactor-item:nth-child(even) .img-frame {
     order: 2;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item:nth-child(even) .content {
     order: 1;
@@ -3566,10 +3576,11 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     align-items: center;
     border-radius: 5px;
   }
-  #about-content .acknowledge-section .benefactor-list .benefactor-item img {
+  #about-content .acknowledge-section .benefactor-list .benefactor-item .img-frame {
     width: 40%;
     max-height: 250px;
-    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 5px;
   }
   #about-content .acknowledge-section .benefactor-list .benefactor-item .content {
     width: 60%;
