@@ -2215,7 +2215,6 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
-#about-content .curriculum-section .layout-container .view-file-btn:focus,
 #about-content .curriculum-section .layout-container .view-file-btn:hover {
   background: #272727;
 }
@@ -2306,7 +2305,16 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   padding: 1em;
   position: relative;
 }
-#about-content .core-values-section .layout-container img {
+#about-content .core-values-section .layout-container h2 {
+  margin: 0.5em;
+  padding: 0.5rem 1em;
+  background: #272727;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+#about-content .core-values-section .layout-container .content img {
   width: 80%;
   margin: 1em;
   -o-object-fit: cover;
@@ -2314,24 +2322,23 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 5px;
 }
-#about-content .core-values-section .layout-container .content {
-  width: 90%;
-  padding: 1.5em;
-  margin: 2em auto;
-  position: relative;
-  border: 3px solid #fff;
-  border-radius: 5px;
+#about-content .core-values-section .layout-container .content .value-list {
+  list-style-type: none;
 }
-#about-content .core-values-section .layout-container .content h2 {
-  top: -1em;
-  left: -15px;
-  color: #fff;
-  padding: 0.3em 0.5em;
+#about-content .core-values-section .layout-container .content .value-list .value-item {
+  margin: 2em 0;
+  position: relative;
+  padding: 1.8em 1em;
+  border: 2px solid #fff;
+}
+#about-content .core-values-section .layout-container .content .value-list .value-item h3 {
+  left: -2%;
+  top: -20%;
   position: absolute;
+  padding: 0.5rem 1rem;
   background: #272727;
-  text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 #about-content .history-section {
   background: #F4F4F4;
@@ -3601,23 +3608,18 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     position: absolute;
     background: #fff;
   }
-  #about-content .core-values-section .layout-container {
-    gap: 1em;
-    display: flex;
-    padding: 1em 2em;
-    align-items: center;
-  }
-  #about-content .core-values-section .layout-container img {
-    width: 30%;
-    height: 80vh;
-  }
   #about-content .core-values-section .layout-container .content {
-    width: auto;
+    gap: 2.5em;
     padding: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column nowrap;
+    display: grid;
+    grid-template-columns: 30% 65%;
+  }
+  #about-content .core-values-section .layout-container .content img {
+    margin: 0;
+    width: auto;
+    min-height: 320px;
+    max-height: 450px;
+    align-self: center;
   }
   #about-content .history-section .layout-container {
     padding: 2em;

@@ -12,6 +12,7 @@ class SingletonModel(models.Model):
 			raise ValidationError(f"Only one instance of {self.__class__.__name__} is allowed.")
 		return super().save(*args, **kwargs)
 
+
 class Benefactors(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	image = models.ImageField(default="default.png", upload_to="benefactors", null=True, blank=True)
@@ -50,18 +51,3 @@ class Curriculum(SingletonModel):
 	class Meta:
 		verbose_name = "Curriculum"
 		verbose_name_plural = "Curriculum"
-
-
-class Values(models.Model):
-	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	title = models.CharField(max_length=30)
-	content = models.TextField()
-	date_added = models.DateTimeField(auto_now_add=True)
-
-	def __str__(self):
-		return self.title
-
-	class Meta:
-		verbose_name = "Core Value"
-		verbose_name_plural = "Core Values"
-		ordering = ['date_added']

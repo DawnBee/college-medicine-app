@@ -1,11 +1,10 @@
 from rest_framework.routers import DefaultRouter
-from .views import BenefactorViewSet, ValueViewSet, CurriculumViewSet
+from .views import BenefactorViewSet, CurriculumViewSet
 
 about_router = DefaultRouter()
 
 viewset_mapping = {
     'benefactors': BenefactorViewSet,
-    'values': ValueViewSet,
     'curriculum': CurriculumViewSet,
 }
 
