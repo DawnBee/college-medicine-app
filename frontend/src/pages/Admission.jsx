@@ -13,6 +13,7 @@ import MacroButtons from '../components/MacroButtons'
 import Process from '../components/Process'
 import Requirements from '../components/Requirements'
 import Scholarship from '../components/Scholarship'
+import EmailButton from '../components/EmailButton'
 
 const Admission = () => {
   return (
@@ -24,7 +25,7 @@ const Admission = () => {
                 <p>
                     Unlock Your Future: Explore Our Admission Pathways Today
                 </p>
-                <button className="hero-cta">Contact us</button>
+                <EmailButton />
             </div>
         </section>
         <section id="process" className="process-section">
