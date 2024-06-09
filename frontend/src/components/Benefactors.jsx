@@ -37,7 +37,9 @@ const Benefactors = () => {
                 <ul className="benefactor-list">
                     {benefactors.map((benefactor)=> (
                         <li key={benefactor.id} className="benefactor-item">
-                            <img src={benefactor.image} alt="benefactor image" />
+                            <div className="img-frame">
+                                <img src={benefactor.image} alt="benefactor image" />
+                            </div>
                             <div className="content">
                                 <h3>{benefactor.name}</h3>
                                 <em className="titles">{benefactor.position}</em>                             
