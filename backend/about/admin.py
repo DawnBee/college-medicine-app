@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Benefactors, Values, Curriculum
+from .models import Benefactors, Curriculum
 
 
 class SingletonModelAdmin(admin.ModelAdmin):
@@ -13,4 +13,3 @@ class CurriculumAdmin(SingletonModelAdmin):
     pass
 
 admin.site.register(Benefactors)
-admin.site.register(Values)

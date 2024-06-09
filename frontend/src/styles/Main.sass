@@ -1723,7 +1723,6 @@ header.scrolled #navbar
                 font-family: $header-font
                 text-transform: capitalize
             
-            .view-file-btn:focus,
             .view-file-btn:hover 
                 background: $bg-black
 
@@ -1806,31 +1805,40 @@ header.scrolled #navbar
             padding: 1em
             position: relative
 
-            img
-                width: 80%  
-                margin: 1em
-                object-fit: cover
-                box-shadow: $drop-shadow
-                border-radius: $border-radius-5
-            
-            .content
-                width: 90%
-                padding: 1.5em
-                margin: 2em auto
-                position: relative
-                border: 3px solid #fff
-                border-radius: $border-radius-5
+            h2
+                margin: .5em
+                padding: .5rem 1em
+                background: $bg-black
+                display: inline-block
+                font-family: $header-font
+                text-transform: uppercase
+                border-radius: $border-radius-3
 
-                h2
-                    top: -1em
-                    left: -15px
-                    color: #fff
-                    padding: .3em .5em
-                    position: absolute
-                    background: $bg-black
-                    text-transform: uppercase
-                    font-family: $header-font
+            .content
+                img
+                    width: 80% 
+                    margin: 1em
+                    object-fit: cover
+                    box-shadow: $drop-shadow
                     border-radius: $border-radius-5
+            
+                .value-list
+                    list-style-type: none
+
+                    .value-item
+                        margin: 2em 0
+                        position: relative
+                        padding: 1.8em 1em
+                        border: 2px solid #fff
+
+                        h3
+                            left: -2%
+                            top: -20%
+                            position: absolute
+                            padding: .5rem 1rem
+                            background: $bg-black
+                            font-family: $header-font
+                            border-radius: $border-radius-3
                     
     .history-section
         background: $bg-light-gray
@@ -2957,23 +2965,19 @@ header.scrolled #navbar
                 @include vertical-line-style-left(#fff, 20px)
 
             .layout-container
-                gap: 1em
-                display: flex
-                padding: 1em 2em
-                align-items: center
-
-                img
-                    width: 30%
-                    height: 80vh
-                
                 .content
-                    width: auto
+                    gap: 2.5em
                     padding: 2em
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    flex-flow: column nowrap
+                    display: grid
+                    grid-template-columns: 30% 65%
 
+                    img
+                        margin: 0
+                        width: auto
+                        min-height: 320px
+                        max-height: 450px
+                        align-self: center
+                        
         .history-section
             .layout-container
                 padding: 2em
