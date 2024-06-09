@@ -41,7 +41,7 @@ const ParallaxBanner = () => {
           <div className="banner-container">
             <div className="header-box">
               <h1 className="primary">College of Medicine</h1>
-              <h2 className="secondary">Dalubhasang Doktor; Makataong Doktor</h2>              
+              <h2 className="secondary">Dalubhasang Doktor, Makataong Doktor</h2>              
             </div>
             <img className="banner-image" src={bannerImage} alt="banner image" draggable="false" />
           </div>
