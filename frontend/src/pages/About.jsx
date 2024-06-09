@@ -5,13 +5,13 @@ import collegeGrounds from '../assets/images/library-2.jpg'
 import Benefactors from '../components/Benefactors'
 import Values from '../components/Values'
 import History from '../components/History'
+import Curriculum from '../components/Curriculum'
 
 const About = () => {
   return (
     <main id="about-content">
         <section className="hero-section">
             <div className="layout-container">
-                <h1>About</h1>
                 <div className="hero-content">
                     <img alt="hero image" className="hero-img" src={collegeGrounds} />
                     <div className="text-group">
@@ -25,6 +25,7 @@ const About = () => {
                 </div>
             </div>
         </section>
+        <Curriculum />
         <Benefactors />
         <Values />
         <History />

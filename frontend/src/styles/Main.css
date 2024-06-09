@@ -2176,13 +2176,6 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   text-align: center;
   padding: 7em 1em 1em 1em;
 }
-#about-content .hero-section .layout-container h1 {
-  margin: 0.5em;
-  color: #fff;
-  font-weight: 800;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-}
 #about-content .hero-section .layout-container .hero-content {
   width: 75%;
   padding: 1em;
@@ -2201,6 +2194,46 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
+}
+#about-content .curriculum-section .layout-container::before {
+  top: 0;
+  width: 3px;
+  content: "";
+  height: 100%;
+  left: 12px;
+  position: absolute;
+  background: #000;
+}
+#about-content .curriculum-section .layout-container {
+  padding: 2em;
+  position: relative;
+  text-align: center;
+}
+#about-content .curriculum-section .layout-container h2 {
+  font-weight: 700;
+  margin-bottom: 1em;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+}
+#about-content .curriculum-section .layout-container .view-file-btn:focus,
+#about-content .curriculum-section .layout-container .view-file-btn:hover {
+  background: #272727;
+}
+#about-content .curriculum-section .layout-container .view-file-btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  background: #0C4F3B;
+  border-radius: 3px;
+  transition: background-color 0.5s ease;
+}
+#about-content .curriculum-section .layout-container .view-file-btn i {
+  margin-right: 0.5rem;
 }
 #about-content .acknowledge-section {
   padding: 1em;
@@ -3496,6 +3529,22 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
   #about-content .hero-section .layout-container .hero-content .text-group h2 {
     font-weight: 700;
+  }
+  #about-content .curriculum-section .layout-container::before {
+    top: 0;
+    width: 3px;
+    content: "";
+    height: 100%;
+    left: 20px;
+    position: absolute;
+    background: #000;
+  }
+  #about-content .curriculum-section .layout-container h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+  #about-content .curriculum-section .layout-container .view-file-btn {
+    font-size: 1.2rem;
   }
   #about-content .acknowledge-section .header {
     width: 80%;

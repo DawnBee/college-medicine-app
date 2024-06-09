@@ -44,6 +44,10 @@ class OrgChart(SingletonModel):
 	def __str__(self):
 		return 'Organizational Chart'
 
+	class Meta:
+		verbose_name = "Organizational Chart"
+		verbose_name_plural = "Org Chart"
+
 
 class Faculty(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)

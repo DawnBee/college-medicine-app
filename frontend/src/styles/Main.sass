@@ -1690,13 +1690,6 @@ header.scrolled #navbar
             position: relative
             text-align: center
             padding: 7em 1em 1em 1em
-
-            h1
-                margin: .5em
-                color: #fff
-                font-weight: 800
-                font-family: $header-font
-                text-transform: uppercase
             
             .hero-content
                 width: 75%
@@ -1714,7 +1707,42 @@ header.scrolled #navbar
                     font-weight: 600
                     font-family: $header-font
                     text-transform: capitalize
-                    
+    
+    .curriculum-section
+        .layout-container::before
+            @include vertical-line-style-left(#000,12px)
+            
+        .layout-container
+            padding: 2em
+            position: relative
+            text-align: center
+
+            h2
+                font-weight: 700
+                margin-bottom: 1em
+                font-family: $header-font
+                text-transform: capitalize
+            
+            .view-file-btn:focus,
+            .view-file-btn:hover 
+                background: $bg-black
+
+            .view-file-btn
+                border: none
+                color: #fff
+                cursor: pointer
+                font-weight: 700
+                padding: .5em 1em
+                margin-top: 1.5rem
+                font-size: 1.125rem
+                box-shadow: $drop-shadow
+                background: $bg-dark-green
+                border-radius: $border-radius-3
+                transition: background-color .5s ease
+                         
+                i
+                    margin-right: .5rem 
+
     .acknowledge-section
         padding: 1em
         text-align: center
@@ -2862,7 +2890,19 @@ header.scrolled #navbar
                     .text-group
                         h2
                             font-weight: 700
+        
+        .curriculum-section
+            .layout-container::before
+                @include vertical-line-style-left(#000,20px)
+                
+            .layout-container
+                h2
+                    font-weight: 800
+                    font-size: 2.5rem
 
+                .view-file-btn
+                    font-size: 1.2rem
+        
         .acknowledge-section
             .header
                 width: 80%
@@ -2901,7 +2941,6 @@ header.scrolled #navbar
                             font-size: 1.5rem
 
         .core-values-section
-
             .layout-container::before
                 @include vertical-line-style-left(#fff, 20px)
 
