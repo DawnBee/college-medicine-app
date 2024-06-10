@@ -83,6 +83,13 @@ h1, h2, h3, h4, ul, p {
 #detail-content .main-section .lower p {
   text-indent: 2rem;
 }
+#detail-content .main-section .lower .officer-name {
+  font-size: clamp(1.2rem, 2vw + 1.2rem, 2rem);
+}
+#detail-content .main-section .lower .officer-name span {
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+}
 #detail-content .main-section .lower .lower-header {
   gap: 1em;
   display: flex;
@@ -222,6 +229,9 @@ h1, h2, h3, h4, ul, p {
     -o-object-fit: cover;
        object-fit: cover;
     max-height: 350px;
+  }
+  #detail-content .main-section .upper .officer {
+    max-height: 500px;
   }
   #detail-content .list-sidebar {
     padding: 1.5em;

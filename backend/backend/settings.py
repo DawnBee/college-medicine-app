@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'simulation.apps.SimulationConfig',
     'faculty.apps.FacultyConfig',
     'about.apps.AboutConfig',
+    'others.apps.OthersConfig',
     'rest_framework',
     'corsheaders',
 ]
@@ -179,7 +180,7 @@ JAZZMIN_SETTINGS = {
     "navigation_expanded": True,
     "hide_apps": [],
     "hide_models": [],
-    "order_with_respect_to": ["home","admission","simulation","faculty","about"],
+    "order_with_respect_to": ["home","admission","simulation","faculty","about","others"],
     "icons": {
         "auth": "fas fa-users-cog",
         "auth.user": "fas fa-user",

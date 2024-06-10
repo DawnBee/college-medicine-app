@@ -18,6 +18,7 @@ import NotFound from './pages/NotFound'
 import EventDetail from './components/EventDetail'
 import AnnouncementDetail from './components/AnnouncementDetail'
 import PublicationDetail from './components/PublicationDetail'
+import OfficerDetail from './components/OfficerDetail'
 
 
 const router = createBrowserRouter(
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
         <Route path="/Events/:id" element={<EventDetail />} />
         <Route path="/Announcements/:id" element={<AnnouncementDetail />} />
         <Route path="/Publications/:id" element={<PublicationDetail />} />
+        <Route path="/Officers/:id" element={<OfficerDetail />} />
       </Route>
       {/* 404 Page */}
       <Route path='*' element={<NotFound />} />
