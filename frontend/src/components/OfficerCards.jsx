@@ -1,10 +1,9 @@
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
-
-// Asset Imports
-import studentImageOne from '../assets/images/student-1.jpg'
-import studentImageFour from '../assets/images/student-4.jpg'
-import studentImageThree from '../assets/images/student-3.jpg'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import { API_BASE_URL } from '../api'
+import axios from 'axios'
 
 const responsive = {
     superLargeDesktop: {
@@ -26,45 +25,46 @@ const responsive = {
   }
   
 const OfficerCards = () => {
-    const officers = [
-        {
-            name: "Avril Lavigne",
-            image: studentImageOne,
-            position: "President",
-        },
-        {
-            name: "Taylor Swift",
-            image: studentImageFour,
-            position: "Vice President",
-        },
-        {
-            name: "Leonardo DeCarpio",
-            image: studentImageThree,
-            position: "Secretary",
-        }                
-    ]
+    const [officers, setOfficers] = useState([])
 
+    useEffect(() => {
+        const fetchOfficers = async () => {
+            try {
+                const res = await axios.get(`${API_BASE_URL}/others/officers`, {
+                    params : {limit : 3}
+                })
+                setOfficers(res.data)
+            } catch (err) {
+                console.error('Error fetching officers:', err)
+            }
+        }
+        fetchOfficers()
+    }, [])
+
+    // Slider Arrows
     const CustomLeftArrow = ({ onClick }) => (
         <i id="prev" className="slider-btn fa-solid fa-chevron-left" onClick={onClick}></i>
     )
-    
     const CustomRightArrow = ({ onClick }) => (
         <i id="next" className="slider-btn fa-solid fa-chevron-right" onClick={onClick}></i>
     )
     
   return (
     <section className="officer-info-section">
-        <Carousel 
+        <Carousel        
             responsive={responsive}
             containerClass="card-container"
             customLeftArrow={<CustomLeftArrow />}
             customRightArrow={<CustomRightArrow />}
         >
-            {officers.map((officer, index) => (
-                <div key={index} className="officer-card">
+            {officers.map((officer) => (
+                <div key={officer.id} className="officer-card">
                     <div className="container">
                         <div className="header">
-                            <h2>SOMMED - {officer.position}</h2>
+                            <Link to={`/officers/${officer.id}`}>
+                                <h2>SOMMED</h2>
+                                <em>{officer.position}</em>
+                            </Link>
                         </div>
                         <div className="image-frame">
                             <img src={officer.image} alt="officer image" />

@@ -1984,18 +1984,19 @@ header.scrolled #navbar
                 background: $tertiary-color
                 
             .content
-                gap: 1em
-                display: flex
                 padding: 1em 2em
+                text-align: center
                 box-shadow: $drop-shadow
 
                 img
-                    min-width: 30%
+                    aspect-ratio: 1
                     max-height: 150px
                     object-fit: cover
-                    border-radius: $border-radius-3
+                    border-radius: 1000px
                 
                 .text-group
+                    margin-top: 1rem
+
                     h3
                         margin-bottom: .5em
                         font-family: $header-font
@@ -2070,11 +2071,13 @@ header.scrolled #navbar
 
                 .container
                     .header
-                        color: #fff
                         padding: .5em 0
                         text-align: center
                         font-family: $header-font
                         background: $tertiary-color
+                        a
+                            color: #fff
+                            text-decoration: none
 
                     .image-frame
                         width: 80%
@@ -2139,7 +2142,6 @@ header.scrolled #navbar
             position: relative            
             background: #fff
             box-shadow: $drop-shadow
-            @include expand-btn(#000, rgba(0,0,0,.5), 400)
             
             h2
                 font-size: 2rem
@@ -3057,6 +3059,11 @@ header.scrolled #navbar
                     width: 100%
 
                     .content
+                        gap: 1.2em
+                        display: flex
+                        align-items: center
+                        text-align: initial
+
                         img
                             max-height: 250px
 
@@ -3088,7 +3095,7 @@ header.scrolled #navbar
                         .container
                             height: 100%
                             display: grid
-                            grid-template-rows: 15% 85%
+                            grid-template-rows: 20% 80%
                             grid-template-columns: repeat(5, 1fr)
 
                             .header
@@ -3211,11 +3218,6 @@ header.scrolled #navbar
                     button
                         p
                             display: none
-
-        .spotlight-section
-            .spotlight-card
-                .content
-                    flex-direction: column
 
 // 'About Page' Breaks    
 @media (min-width: 920px) and (max-width: 1050px)

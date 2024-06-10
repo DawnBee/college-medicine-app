@@ -36,7 +36,14 @@
             padding: 1em
 
             p
-                text-indent: 2rem            
+                text-indent: 2rem
+            
+            // Specific for Officer Detail
+            .officer-name
+                font-size: clamp(1.2rem, 2vw + 1.2rem, 2rem)
+                span
+                    font-weight: 600
+                    font-family: $header-font          
 
             .lower-header
                 gap: 1em
@@ -168,6 +175,10 @@
                     width: 80%
                     object-fit: cover
                     max-height: 350px
+
+                // Specific for Officer Detail
+                .officer
+                    max-height: 500px
         
         .list-sidebar
             padding: 1.5em

@@ -9,7 +9,7 @@ from admission.urls import admission_router
 from simulation.urls import simulation_router
 from faculty.urls import faculty_router
 from about.urls import about_router
-
+from others.urls import other_router
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -18,6 +18,7 @@ urlpatterns = [
     path('api/simulation/', include(simulation_router.urls)),
     path('api/faculty/', include(faculty_router.urls)),
     path('api/about/', include(about_router.urls)),
+    path('api/others/', include(other_router.urls)),
 ]
 
 if settings.DEBUG:

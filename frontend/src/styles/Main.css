@@ -2522,17 +2522,19 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background: #CD1919;
 }
 #other-content .spotlight-section .spotlight-card .content {
-  gap: 1em;
-  display: flex;
   padding: 1em 2em;
+  text-align: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 #other-content .spotlight-section .spotlight-card .content img {
-  min-width: 30%;
+  aspect-ratio: 1;
   max-height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 3px;
+  border-radius: 1000px;
+}
+#other-content .spotlight-section .spotlight-card .content .text-group {
+  margin-top: 1rem;
 }
 #other-content .spotlight-section .spotlight-card .content .text-group h3 {
   margin-bottom: 0.5em;
@@ -2651,11 +2653,14 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 #other-content .officer-info-section .card-container .officer-card .container .header {
-  color: #fff;
   padding: 0.5em 0;
   text-align: center;
   font-family: "Montserrat", sans-serif;
   background: #CD1919;
+}
+#other-content .officer-info-section .card-container .officer-card .container .header a {
+  color: #fff;
+  text-decoration: none;
 }
 #other-content .officer-info-section .card-container .officer-card .container .image-frame {
   width: 80%;
@@ -2746,22 +2751,6 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   position: relative;
   background: #fff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-}
-#other-content .sidebar .community-activities .expand-btn:hover {
-  color: rgba(0, 0, 0, 0.5);
-}
-#other-content .sidebar .community-activities .expand-btn {
-  gap: 5px;
-  border: none;
-  display: flex;
-  cursor: pointer;
-  margin: 1em auto;
-  color: #000;
-  align-items: center;
-  background: transparent;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
 }
 #other-content .sidebar .community-activities h2 {
   font-size: 2rem;
@@ -3698,6 +3687,12 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     margin: 0;
     width: 100%;
   }
+  #other-content .grid-section-group .spotlight-section .spotlight-card .content {
+    gap: 1.2em;
+    display: flex;
+    align-items: center;
+    text-align: initial;
+  }
   #other-content .grid-section-group .spotlight-section .spotlight-card .content img {
     max-height: 250px;
   }
@@ -3728,7 +3723,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #other-content .grid-section-group .officer-info-section .card-container .officer-card .container {
     height: 100%;
     display: grid;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 20% 80%;
     grid-template-columns: repeat(5, 1fr);
   }
   #other-content .grid-section-group .officer-info-section .card-container .officer-card .container .header {
@@ -3823,9 +3818,6 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   }
   #other-content .search-section .form-group .search-wrapper button p {
     display: none;
-  }
-  #other-content .spotlight-section .spotlight-card .content {
-    flex-direction: column;
   }
 }
 @media (min-width: 920px) and (max-width: 1050px) {

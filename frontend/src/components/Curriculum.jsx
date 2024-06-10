@@ -27,7 +27,7 @@ const Curriculum = () => {
             medical education journey.
         </p>
         {curriculum.map((curr) => (
-            <a href={curr.pdf} target="_blank" rel="noopener noreferrer">
+            <a key={curr.id} href={curr.pdf} target="_blank" rel="noopener noreferrer">
                 <button className="view-file-btn">
                     <i className="fa-regular fa-file-pdf" />
                     View File
