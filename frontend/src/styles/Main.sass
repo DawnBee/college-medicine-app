@@ -1935,6 +1935,7 @@ header.scrolled #navbar
                 .field-group
                     flex-grow: 1
                     display: flex
+                    position: relative
                     align-items: center
 
                     .fa-magnifying-glass
@@ -1955,6 +1956,52 @@ header.scrolled #navbar
                         border: none
                         box-shadow: $drop-shadow
 
+                    .result-list
+                        left: 0
+                        bottom: 0
+                        width: 100%
+                        z-index: 300
+                        color: #000
+                        background: #fff
+                        position: absolute
+                        list-style-type: none
+                        box-shadow: $drop-shadow
+                        transform: translateY(100%)
+
+                        .result-item:hover,
+                        .result-item:nth-child(even):hover
+                            cursor: pointer
+                            background: $bg-black
+                            a
+                                color: #fff
+
+                        .result-item:nth-child(even)
+                            background: $bg-light-gray
+                            
+                        .result-item
+                            padding: .5em
+                            transition: background .3s ease
+                            a
+                                gap: 10px
+                                color: #000
+                                display: flex
+                                text-decoration: none
+                                p
+                                    font-weight: 700
+                                    font-family: $header-font
+                                    em
+                                        font-weight: 200
+                                        font-family: $content-font
+                                img
+                                    width: 30px
+                                    aspect-ratio: 1
+                                    object-fit: cover
+                                    border-radius: $border-radius-3
+                
+                button:hover
+                    background-color: $bg-dark-green
+                    transition: background-color .5s ease
+
                 button
                     @include global-btn()
                     gap: 1em
@@ -1964,7 +2011,7 @@ header.scrolled #navbar
                     align-items: center
                     box-shadow: $drop-shadow
                     text-transform: capitalize
-                    
+
     .spotlight-section
         padding: 1em
         background: $bg-light-biege
