@@ -1,7 +1,7 @@
 from .serializers import NewsSerializer, ActivitySerializer, OfficerSerializer
 from .models import News, Activities, Officers
-from rest_framework import viewsets
-from home.utils import _list
+from rest_framework import viewsets, filters
+from .utils import _list
 
 
 class NewsViewSet(viewsets.ModelViewSet):
@@ -21,6 +21,8 @@ class ActivityViewSet(viewsets.ModelViewSet):
 class OfficerViewSet(viewsets.ModelViewSet):
 	queryset = Officers.objects.all()
 	serializer_class = OfficerSerializer
+	filter_backends = [filters.SearchFilter]
+	search_fields = ['name', 'position']
 
 	def list(self, request, *args, **kwargs):
-		return _list(self, request, *args, **kwargs)		
+		return _list(self, request, *args, **kwargs)
