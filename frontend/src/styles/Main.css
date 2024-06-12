@@ -2462,6 +2462,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 #other-content .search-section .form-group .search-wrapper .field-group {
   flex-grow: 1;
   display: flex;
+  position: relative;
   align-items: center;
 }
 #other-content .search-section .form-group .search-wrapper .field-group .fa-magnifying-glass {
@@ -2484,6 +2485,59 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   height: 100%;
   border: none;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 300;
+  color: #000;
+  background: #fff;
+  position: absolute;
+  list-style-type: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(100%);
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item:hover,
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item:nth-child(even):hover {
+  cursor: pointer;
+  background: #272727;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item:hover a,
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item:nth-child(even):hover a {
+  color: #fff;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item:nth-child(even) {
+  background: #F4F4F4;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item {
+  padding: 0.5em;
+  transition: background 0.3s ease;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item a {
+  gap: 10px;
+  color: #000;
+  display: flex;
+  text-decoration: none;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item a p {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item a p em {
+  font-weight: 200;
+  font-family: "Lora", serif;
+}
+#other-content .search-section .form-group .search-wrapper .field-group .result-list .result-item a img {
+  width: 30px;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+}
+#other-content .search-section .form-group .search-wrapper button:hover {
+  background-color: #0C4F3B;
+  transition: background-color 0.5s ease;
 }
 #other-content .search-section .form-group .search-wrapper button {
   border: none;
