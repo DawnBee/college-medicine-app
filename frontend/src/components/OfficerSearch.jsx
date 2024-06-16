@@ -83,8 +83,8 @@ const OfficerSearch = () => {
                                     result.position.toLowerCase().includes(searchTerm.toLowerCase())
                                 )
                                 .map((result) => (
-                                  <li className="result-item">
-                                    <Link to={`/officers/${result.id}`} key={result.id}>
+                                  <li className="result-item" key={result.id}>
+                                    <Link to={`/officers/${result.id}`}>
                                       <img src={result.image} alt="search-result-img"/>
                                       <p>{result.name} - <em>{result.position}</em></p>
                                     </Link>                                        
