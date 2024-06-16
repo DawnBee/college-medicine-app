@@ -75,8 +75,8 @@ class Testimonials(models.Model):
 
 	def clean(self):
 		super().clean()
-		if len(self.content) > 250:
-			raise ValidationError({'content': 'maximum length is 250 characters.'})
+		if len(self.content) > 400:
+			raise ValidationError({'content': 'maximum length is 400 characters.'})
 
 	def save(self, *args, **kwargs):
 		self.full_clean()
