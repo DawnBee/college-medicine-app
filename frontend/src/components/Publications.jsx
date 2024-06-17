@@ -40,7 +40,7 @@ const Publications = () => {
                     <div className="bento-container">
                     {publications.map((publication, index) => {
                         let truncatedTitle = publication.title.length > 20 ? `${publication.title.substring(0, 20)}...` : publication.title
-                        let truncatedDescription = publication.description.length > 90 ? `${publication.description.substring(0, 90)}...` : publication.description
+                        let truncatedDescription = publication.description.length > 50 ? `${publication.description.substring(0, 50)}...` : publication.description
 
                         return (
                             <div key={publication.id} className="bento-box">
