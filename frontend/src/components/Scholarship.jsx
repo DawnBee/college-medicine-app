@@ -1,5 +1,5 @@
 // Asset Imports
-import scholarOverviewImage from '../assets/images/scholar-overview.jfif'
+import scholarOverviewImage from '../assets/images/admission/scholarship.jpg'
 
 const Scholarship = () => {
   return (

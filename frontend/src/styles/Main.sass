@@ -449,7 +449,7 @@ header.scrolled #navbar
         
     .hero-section
         @include hero-styles(60vh, $placeholder)
-        @include bg-image-format("../assets/images/admission.jpg")
+        @include bg-image-format("../assets/images/admission/hero.jpg")
 
         .hero-overlay
             padding: 1em
@@ -823,44 +823,40 @@ header.scrolled #navbar
 
                     .event-item
                         width: 80%
-                        margin: 4em auto
+                        display: grid
+                        margin: 2em auto
                         background: #fff
                         position: relative
                         box-shadow: $drop-shadow
                         border-radius: $border-radius-10
+                        grid-template-rows: repeat(2, 50%)
                         @include img-hover-effect()
-
-                        .day
-                            top: -40px
-                            left: -20px
-                            z-index: 300
-                            font-size: 5rem
-                            font-weight: 900
-                            position: absolute
-                            font-family: $header-font
-
-                        .card-title
-                            margin: 0
-                            font-size: 1.2rem
-                            padding: .5em 1em
-                            display: inline-block
-                            font-family: $header-font
-                            background: $primary-color
-                            text-transform: capitalize
-                            border-bottom-right-radius: $border-radius-5
 
                         .image-box
                             @include img-box-styles()
+                            max-height: 280px
 
                             img
                                 width: 100%
+                                aspect-ratio: 1
                                 object-fit: cover
                                 transition: $img-trans-effect
                                 border-top-left-radius: $border-radius-10
                                 border-top-right-radius: $border-radius-10
-                        p
-                            padding: 1em 
-                            color: #000
+                        
+                        .content
+                            .card-title
+                                margin: 0
+                                font-size: 1.2rem
+                                padding: .5em 1em
+                                display: inline-block
+                                font-family: $header-font
+                                background: $primary-color
+                                text-transform: capitalize
+                                border-bottom-right-radius: $border-radius-5                                
+                            p
+                                padding: 1em 
+                                color: #000
                                                
             .bot-cross-style
                 bottom: 0
@@ -2609,6 +2605,9 @@ header.scrolled #navbar
                             .event-item     
                                 margin: 0
                                 max-width: 300px
+
+                                .image-box
+                                    max-height: 230px
 
     // Simulation
     #simulation-content
