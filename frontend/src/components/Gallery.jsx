@@ -1,24 +1,25 @@
 import { useState } from 'react'
 
 // Asset Imports
-import eventOne from '../assets/images/event-1.jpg'
-import eventTwo from '../assets/images/event-2.jfif'
-import eventThree from '../assets/images/event-3.jpg'
-import eventFour from '../assets/images/event-4.jpeg'
-import simOne from '../assets/images/sim-1.jpg'
-import simTwo from '../assets/images/sim-2.jpg'
-import simThree from '../assets/images/sim-3.jpg'
-import simFour from '../assets/images/sim-4.jpg'
-import studentOne from '../assets/images/student-1.jpg'
-import studentThree from '../assets/images/student-3.jpg'
-import collegeGrounds from '../assets/images/bg-university-grounds.jpg'
+import act_1 from '../assets/images/others/act-1.jpg'
+import act_2 from '../assets/images/others/act-2.jpg'
+import act_3 from '../assets/images/others/act-3.jpg'
+import act_4 from '../assets/images/others/act-4.jpg'
+import act_5 from '../assets/images/others/act-5.jpg'
+import act_6 from '../assets/images/others/act-6.jpg'
+import act_7 from '../assets/images/others/act-7.jpg'
+import act_8 from '../assets/images/others/act-8.jpg'
+import act_9 from '../assets/images/others/act-9.jpg'
+import act_10 from '../assets/images/others/act-10.jpg'
+import act_11 from '../assets/images/others/act-11.jpg'
+
 
 const Gallery = () => {
     const [showSecondGroup, setShowSecondGroup] = useState(false)
 
     const images = [
-        eventOne, eventTwo, eventThree, eventFour, simOne,
-        simTwo, simThree, simFour, collegeGrounds, studentOne, studentThree
+        act_1, act_2, act_3, act_4, act_5,
+        act_6, act_7, act_8, act_9, act_10, act_11
     ]
 
     const firstGroup = images.slice(0, 5)
