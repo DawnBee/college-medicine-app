@@ -21,7 +21,7 @@ const Others = () => {
             <OfficerCards />
             <Sidebar />
         </div>
-        <span style={{display: 'none'}}>Most toxic working environment I've ever been!</span>
+        {/* Most 'Toxic' working environment I've ever been! */}
     </main>
   )
 }

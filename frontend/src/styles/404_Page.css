@@ -39,6 +39,7 @@ h1, h2, h3, h4, ul, p {
 #not-found-content {
   height: 100vh;
   display: grid;
+  position: relative;
   place-items: center;
 }
 #not-found-content .container {
@@ -63,4 +64,11 @@ h1, h2, h3, h4, ul, p {
   text-decoration: none;
   background: #0C4F3B;
   border-radius: 3px;
+}
+#not-found-content .easter-egg {
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  position: absolute;
+  text-decoration: none;
 }/*# sourceMappingURL=404_Page.css.map */
