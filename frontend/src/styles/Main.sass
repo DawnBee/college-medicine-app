@@ -883,7 +883,7 @@ header.scrolled #navbar
 
     .hero-section
         @include hero-styles(60vh, $placeholder)
-        @include bg-image-format("../assets/images/sim-2.jpg")
+        @include bg-image-format("../assets/images/simulation/hero.png")
         
         .hero-overlay
             padding: 1em
@@ -1234,6 +1234,17 @@ header.scrolled #navbar
 
             p
                 margin: 1em 0
+
+            .logo-container
+                gap: 1em
+                display: flex
+                margin-top: 1em
+                align-items: center
+                justify-content: center
+                
+                img
+                    width: 80px
+                    aspect-ratio: 1                
         
         .content
             .training-list
@@ -2743,7 +2754,7 @@ header.scrolled #navbar
                     display: grid
                     grid-template-rows: repeat(2, 230px)
                     grid-template-columns: repeat(4, 1fr)
-                    grid-template-areas: "sam birth adult-child matt" "cpr breast breast matt"
+                    grid-template-areas: "sam airway ac cpr" "veni intra intra cpr"
 
                     .trainer-item
                         margin: 0
@@ -2752,16 +2763,16 @@ header.scrolled #navbar
                         
                     .sam
                         grid-area: sam
-                    .birth
-                        grid-area: birth
+                    .airway
+                        grid-area: airway
                     .adult-child
-                        grid-area: adult-child
+                        grid-area: ac
+                    .venipuncture
+                        grid-area: veni
+                    .intraosseous
+                        grid-area: intra                                                                                          
                     .cpr
                         grid-area: cpr
-                    .breast
-                        grid-area: breast                                                                                          
-                    .matt
-                        grid-area: matt
 
         .simbased-training-section
             .intro-group
@@ -2778,6 +2789,9 @@ header.scrolled #navbar
                         gap: 2em
                         display: flex
                         padding: 1.2em
+
+                        img
+                            min-width: 30%
                         
                         .text-group
                             text-align: initial

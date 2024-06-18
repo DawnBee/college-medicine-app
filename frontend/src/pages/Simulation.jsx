@@ -1,21 +1,15 @@
 // Asset Imports
 import pulseImage from '../assets/images/pulse-red.svg'
 import facilityVideo from '../assets/videos/final-cut.mp4'
-import simImageOne from '../assets/images/sim-1.jpg'
-import simImageTwo from '../assets/images/sim-2.jpg'
-import simImageThree from '../assets/images/sim-3.jpg'
-import simImageFour from '../assets/images/sim-4.jpg'
-import trainerSAM from '../assets/images/SAM-sim.jpg'
-import trainerBirthing from '../assets/images/birthing.jpg'
-import trainerAdultChild from '../assets/images/adult-child.jpg'
-import trainerCPR from '../assets/images/cpr.jpg'
-import trainerBreast from '../assets/images/breast.jpg'
-import trainerMATT from '../assets/images/matt.jpg'
-import bgImage from '../assets/images/bg-img.jpg'
+import simImageOne from '../assets/images/simulation/sim-1.jpg'
+import simImageTwo from '../assets/images/simulation/sim-2.jpg'
+import simImageThree from '../assets/images/simulation/sim-3.jpg'
+import facultyImage from '../assets/images/simulation/faculty-training.jpg'
 
 // Components
 import MannequinCards from '../components/MannequinCards'
 import SimTraining from '../components/SimTraining'
+import Trainers from '../components/Trainers'
 
 const Simulation = () => {
   return (
@@ -49,16 +43,21 @@ const Simulation = () => {
                         <li className="facility-item">
                             <h3>Simulation Lab</h3>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                                Magnam ut tempora natus animi quam voluptate quibusdam labore
-                                odio rem obcaecati!
+                                A medical simulation lab is a facility where healthcare 
+                                professionals practice clinical skills using advanced technology 
+                                and lifelike mannequins. It offers a realistic environment for 
+                                training in various medical scenarios, from routine procedures 
+                                to emergency situations, aiming to improve diagnostic skills, 
+                                decision-making, and teamwork among learners.
                             </p>
                         </li>
                         <li className="facility-item">
                             <h3>Clinical Skills Lab</h3>
                             <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Architecto, autem necessitatibus!
+                                A Clinical Skills Lab is a facility where healthcare professionals 
+                                practice medical procedures and patient care using advanced simulators 
+                                and equipment. It provides a realistic environment for training in 
+                                various clinical scenarios, enhancing skills in diagnosis, treatment, and teamwork.
                             </p>
                         </li>
                     </ul>
@@ -73,7 +72,7 @@ const Simulation = () => {
                 <div className="wrapper">
                     <div className="collage-container">
                         <div className="image-wrapper">
-                            <img src={simImageFour} />
+                            <img src={simImageOne} />
                             <img src={simImageTwo} />
                             <img src={simImageThree} />
                         </div>
@@ -85,30 +84,30 @@ const Simulation = () => {
                     <div className="text-content">
                         <h3>What is Simulation?</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Officia deserunt non temporibus blanditiis, 
-                            ullam accusantium ab maxime voluptates totam praesentium?
+                            Simulation is the imitation of real-world processes or systems 
+                            for training, testing, or research purposes, using models or 
+                            virtual environments to replicate conditions and scenarios.
                         </p>
                         <ul className="sim-list">
                             <li className="sim-item">
                                 <i className="fa-solid fa-stethoscope"></i>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Repudiandae, culpa.
+                                    To provide students with hands-on practice in a safe, 
+                                    controlled environment, improving their proficiency in medical procedures and patient care.
                                 </p>
                             </li>
                             <li className="sim-item">
                                 <i className="fa-solid fa-heart-pulse"></i>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Perferendis fugiat voluptate facere assumenda.
+                                    To develop critical thinking and decision-making abilities 
+                                    by exposing students to a variety of clinical scenarios and emergencies.
                                 </p>
                             </li>
                             <li className="sim-item">
                                 <i className="fa-solid fa-user-doctor"></i>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                    Placeat quos doloribus, sit inventore atque perferendis.
+                                    To foster effective teamwork and communication skills among 
+                                    healthcare professionals by simulating real-life collaborative situations.
                                 </p>
                             </li>
                         </ul>
@@ -117,45 +116,13 @@ const Simulation = () => {
             </div>
         </section>
         <MannequinCards />
-        <section id="trainers" className="task-trainers-section">
-            <div className="layout-container">
-                <div className="header">
-                    <h2>Advanced Task Trainers</h2>
-                </div>
-                <ul className="trainer-list">
-                    <li className="trainer-item sam">
-                        <img src={trainerSAM} alt="" className="trainer-img" />
-                        <h3>SAM - Auscultation</h3>
-                    </li>
-                    <li className="trainer-item birth">
-                        <img src={trainerBirthing} alt="" className="trainer-img" />
-                        <h3>Birthing Simulator</h3>
-                    </li>
-                    <li className="trainer-item adult-child">
-                        <img src={trainerAdultChild} alt="" className="trainer-img" />
-                        <h3>Adult/Child CPR</h3>
-                    </li>
-                    <li className="trainer-item cpr">
-                        <img src={trainerCPR} alt="" className="trainer-img" />
-                        <h3>CPR Trainer</h3>
-                    </li>
-                    <li className="trainer-item breast">
-                        <img src={trainerBreast} alt="" className="trainer-img" />
-                        <h3>Breast Exam</h3>
-                    </li>
-                    <li className="trainer-item matt">
-                        <img src={trainerMATT} alt="" className="trainer-img" />
-                        <h3>MATT - Auscultation</h3>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <Trainers />
         <SimTraining />
         <section id="faculty-involve" className="faculty-involve-section">
             <div className="top">
                 <div className="layout-container">
                     <h2>Faculty Training</h2>
-                    <img src={simImageOne} alt="top image" />
+                    <img src={facultyImage} alt="top image" />
                 </div>
             </div>
             <div className="bot">
@@ -163,17 +130,26 @@ const Simulation = () => {
                     <div className="info-group">
                         <h3>Role of Faculty</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Expedita, libero atque. Necessitatibus ducimus itaque ratione!
-                            Earum saepe deleniti quibusdam officiis?
+                            The role of faculty in our simulation lab
+                            is crucial for guiding and instructing students 
+                            throughout their training. Faculty members design
+                            realistic simulation scenarios, provide hands-on
+                            instruction, and offer immediate feedback to help 
+                            students develop their clinical skills, 
+                            critical thinking, and professional behavior. Their 
+                            expertise and mentorship ensure that students gain 
+                            confidence and competence in a supportive learning environment
                         </p>
                     </div>
                     <div className="info-group">
                         <h3>Expertise & Qualifications</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                            Expedita, libero atque. Necessitatibus ducimus itaque ratione!
-                            Earum saepe deleniti quibusdam officiis?
+                            Faculty training involves equipping instructors and doctors 
+                            with the skills to effectively use various task trainers
+                            and simulation tools. This training ensures that faculty 
+                            members are proficient in the latest simulation technology 
+                            and techniques, enabling them to create realistic scenarios 
+                            and provide high-quality instruction and feedback to students.
                         </p>
                     </div>
                 </div>
