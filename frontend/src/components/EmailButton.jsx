@@ -1,6 +1,6 @@
 const EmailButton = () => {
     const handleClick = () => {
-        const email = 'college-of-medicine@msugensan.edu.ph'
+        const email = 'com_admissions@msugensan.edu.ph'
         const subject = 'College Admission Inquiry'
         
         // Construct the Gmail compose URL

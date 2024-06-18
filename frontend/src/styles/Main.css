@@ -725,7 +725,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/admission.jpg");
+  background-image: url("../assets/images/admission/hero.jpg");
 }
 #admission-content .hero-section .hero-overlay {
   padding: 1em;
@@ -1146,26 +1146,35 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
 }
 #admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item {
   width: 80%;
-  margin: 4em auto;
+  display: grid;
+  margin: 2em auto;
   background: #fff;
   position: relative;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  grid-template-rows: repeat(2, 50%);
 }
 #admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box:hover img,
 #admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box:focus-within img {
   transform: scale(1.1);
 }
-#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .day {
-  top: -40px;
-  left: -20px;
-  z-index: 300;
-  font-size: 5rem;
-  font-weight: 900;
-  position: absolute;
-  font-family: "Montserrat", sans-serif;
+#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box {
+  cursor: pointer;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  max-height: 280px;
 }
-#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .card-title {
+#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box img {
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s ease;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .content .card-title {
   margin: 0;
   font-size: 1.2rem;
   padding: 0.5em 1em;
@@ -1175,21 +1184,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   text-transform: capitalize;
   border-bottom-right-radius: 5px;
 }
-#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box {
-  cursor: pointer;
-  overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .image-box img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: transform 0.3s ease;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item p {
+#admission-content .year-highlight-section .highlight-event-container .month-events .event-list .event-item .content p {
   padding: 1em;
   color: #000;
 }
@@ -3028,8 +3023,8 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #home-content .publication-section .bento-container {
     gap: 1em;
     display: grid;
-    grid-template-rows: repeat(2, auto);
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(320px, 320px));
     grid-template-areas: "wide wide tall" "sml-1 sml-2 tall";
   }
   #home-content .publication-section .bento-container .bento-box:nth-child(1) {
@@ -3230,6 +3225,9 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   #admission-content .year-highlight-section .highlight-event-container .month-group .month-events .event-list .event-item {
     margin: 0;
     max-width: 300px;
+  }
+  #admission-content .year-highlight-section .highlight-event-container .month-group .month-events .event-list .event-item .image-box {
+    max-height: 230px;
   }
   #simulation-content .hero-section {
     height: 100vh;
