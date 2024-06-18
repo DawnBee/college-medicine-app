@@ -1,10 +1,10 @@
 import { useState } from 'react'
 
 // Asset Imports
-import simApollo from '../assets/images/apollo-sim.jpg'
-import simAres from '../assets/images/ares-sim.jpg'
-import simAria from '../assets/images/aria-sim.jpg'
-import simLuna from '../assets/images/luna-sim.jpg'
+import simApollo from '../assets/images/simulation/apollo.png'
+import simAres from '../assets/images/simulation/ares.png'
+import simAria from '../assets/images/simulation/aria.png'
+import simLuna from '../assets/images/simulation/luna.png'
 
 const mannequins = [
     {
@@ -68,9 +68,10 @@ const MannequinCards = () => {
                     ))}
                 </ul>
                 <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                    Deserunt distinctio nemo ex sapiente rem magni pariatur explicabo 
-                    corporis cumque aperiam facilis, hic similique velit doloribus?
+                    High-Fidelity mannequins are advanced, lifelike training tools 
+                    used in medical simulations. They can mimic human physiology 
+                    and respond to treatments, providing realistic scenarios for 
+                    healthcare professionals to practice clinical skills and emergency responses.
                 </p>
             </div>
         </section>
