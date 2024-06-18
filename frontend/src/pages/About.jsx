@@ -17,9 +17,10 @@ const About = () => {
                     <div className="text-group">
                         <h2>Service to the Nation</h2>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                            Minus perspiciatis possimus adipisci numquam accusantium 
-                            distinctio tempore eaque vel! Tempora dolor, vel ratione esse reiciendis quod.
+                            Welcome to our medical school, dedicated to fostering
+                            "Dalubhasang Doktor, Makataong Doktor." Our mission 
+                            is to cultivate excellence in medical expertise and 
+                            humane values, preparing students to positively impact society.
                         </p>
                     </div>
                 </div>
