@@ -16,8 +16,8 @@ class SingletonModel(models.Model):
 class Benefactors(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	image = models.ImageField(default="default.png", upload_to="benefactors", null=True, blank=True)
-	name = models.CharField(max_length=40, unique=True)
-	position = models.CharField(max_length=50)
+	name = models.CharField(max_length=60, unique=True)
+	position = models.CharField(max_length=100)
 
 	def __str__(self):
 		return self.name.capitalize()
