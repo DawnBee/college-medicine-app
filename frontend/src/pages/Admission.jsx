@@ -1,12 +1,6 @@
 // Asset Imports
 import pulseImage from '../assets/images/pulse-red.svg'
-import cashierImage from '../assets/images/cashiers-office.jpg'
-import ecgLine from '../assets/images/ecg-line-white.svg'
-import yearEventImageOne from '../assets/images/event-1.jpg'
-import yearEventImageTwo from '../assets/images/event-2.jfif'
-import yearEventImageThree from '../assets/images/event-3.jpg'
-import bottomImage from '../assets/images/library-2.jpg'
-import bottomCrossImage from '../assets/images/white-crosses.svg'
+import cashierImage from '../assets/images/admission/payment-fee.jpg'
 
 // Components
 import MacroButtons from '../components/MacroButtons'
@@ -14,6 +8,7 @@ import Process from '../components/Process'
 import Requirements from '../components/Requirements'
 import Scholarship from '../components/Scholarship'
 import EmailButton from '../components/EmailButton'
+import MonthActivities from '../components/MonthActivities'
 
 const Admission = () => {
   return (
@@ -68,151 +63,7 @@ const Admission = () => {
             </div>
         </section>
         <Scholarship />
-        <section id="month-act" className="year-highlight-section">
-            <div className="layout-container">
-                <h2 className="section-header">Monthly Activities</h2>
-                <div className="intro-group">
-                    <i aria-hidden="true" className="fa-solid fa-calendar-week"></i>         
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Itaque laudantium nostrum sapiente officiis, 
-                        quo voluptatem dolorum asperiores aspernatur voluptate minima eius. 
-                    </p>   
-                </div>
-                <div className="highlight-event-container">
-                    <div className="header-group">
-                        <div className="image-frame">
-                            <img aria-hidden="true" className="ecg-line-style" src={ecgLine} alt="styling image" draggable="false"/>
-                        </div>                        
-                        <h3 className="month-header">Aug - Dec<span>1st Semester</span></h3>
-                    </div>
-                    <div className="month-group">
-                        <div className="month-events">
-                            <h4>August</h4>
-                            <ul className="event-list">
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageOne} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, corrupti?
-                                    </p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">21</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageTwo} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Spring Break</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit itaque nam sint.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="month-events">
-                            <h4>September</h4>
-                            <ul className="event-list">
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageThree} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.</p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">22</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageOne} alt="acad event image"  className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Intramurals</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit, 
-                                        amet consectetur adipisicing elit. Sint modi, deleniti quisquam assumenda cumque suscipit!
-                                    </p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageTwo} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="header-group">
-                        <div className="image-frame">
-                            <img aria-hidden="true" className="ecg-line-style" src={ecgLine} alt="styling image" draggable="false"/>
-                        </div>                        
-                        <h3 className="month-header">Jan - June<span>2nd Semester</span></h3>
-                    </div>
-                    <div className="month-group">
-                        <div className="month-events">
-                            <h4>January</h4>
-                            <ul className="event-list">
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageOne} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, corrupti?
-                                    </p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">21</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageTwo} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Spring Break</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit itaque nam sint.</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div className="month-events">
-                            <h4>June</h4>
-                            <ul className="event-list">
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageThree} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.</p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">22</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageOne} alt="acad event image"  className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Intramurals</h5>
-                                    <p>
-                                        Lorem ipsum dolor sit, 
-                                        amet consectetur adipisicing elit. Sint modi, deleniti quisquam assumenda cumque suscipit!
-                                    </p>
-                                </li>
-                                <li className="event-item">
-                                    <span className="day">07</span>
-                                    <div className="image-box">
-                                        <img src={yearEventImageTwo} alt="acad event image" className="acad-event-img"/>
-                                    </div>
-                                    <h5 className="card-title">Entrance Exam</h5>
-                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, blanditiis.</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <img className="bot-cross-style" src={bottomCrossImage} alt="bottom cross image"/>   
-                </div>
-            </div>                    
-            <img className="bottom-img" aria-hidden="true" src={bottomImage} alt="bottom image"/>
-        </section>
+        <MonthActivities />
     </main>
   )
 }

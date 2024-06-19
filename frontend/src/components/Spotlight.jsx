@@ -1,12 +1,12 @@
 // Asset Imports
-import studentImgOne from '../assets/images/student-1.jpg'
+import orgLogo from '../assets/images/others/sommed-logo.png'
 
 const Spotlight = () => {
     const spotlights = [
         {
-            image: studentImgOne,
+            image: orgLogo,
             title: "Society of Medical Students (SOMMEDS)",
-            content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore velit nisi totam?"
+            content: "is the premier medical student organization dedicated to fostering academic excellence, professional development, and community service among future healthcare leaders."
         }
     ]
   return (
@@ -19,6 +19,7 @@ const Spotlight = () => {
                     <div className="text-group">
                         <h3>{spotlight.title}</h3>
                         <p>{spotlight.content}</p>
+                        <a className="page-link" href="#">Visit Page</a>
                     </div>
                 </div>
             ))}

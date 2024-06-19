@@ -449,7 +449,7 @@ header.scrolled #navbar
         
     .hero-section
         @include hero-styles(60vh, $placeholder)
-        @include bg-image-format("../assets/images/admission.jpg")
+        @include bg-image-format("../assets/images/admission/hero.jpg")
 
         .hero-overlay
             padding: 1em
@@ -823,44 +823,40 @@ header.scrolled #navbar
 
                     .event-item
                         width: 80%
-                        margin: 4em auto
+                        display: grid
+                        margin: 2em auto
                         background: #fff
                         position: relative
                         box-shadow: $drop-shadow
                         border-radius: $border-radius-10
+                        grid-template-rows: repeat(2, 50%)
                         @include img-hover-effect()
-
-                        .day
-                            top: -40px
-                            left: -20px
-                            z-index: 300
-                            font-size: 5rem
-                            font-weight: 900
-                            position: absolute
-                            font-family: $header-font
-
-                        .card-title
-                            margin: 0
-                            font-size: 1.2rem
-                            padding: .5em 1em
-                            display: inline-block
-                            font-family: $header-font
-                            background: $primary-color
-                            text-transform: capitalize
-                            border-bottom-right-radius: $border-radius-5
 
                         .image-box
                             @include img-box-styles()
+                            max-height: 280px
 
                             img
                                 width: 100%
+                                aspect-ratio: 1
                                 object-fit: cover
                                 transition: $img-trans-effect
                                 border-top-left-radius: $border-radius-10
                                 border-top-right-radius: $border-radius-10
-                        p
-                            padding: 1em 
-                            color: #000
+                        
+                        .content
+                            .card-title
+                                margin: 0
+                                font-size: 1.2rem
+                                padding: .5em 1em
+                                display: inline-block
+                                font-family: $header-font
+                                background: $primary-color
+                                text-transform: capitalize
+                                border-bottom-right-radius: $border-radius-5                                
+                            p
+                                padding: 1em 
+                                color: #000
                                                
             .bot-cross-style
                 bottom: 0
@@ -883,7 +879,7 @@ header.scrolled #navbar
 
     .hero-section
         @include hero-styles(60vh, $placeholder)
-        @include bg-image-format("../assets/images/sim-2.jpg")
+        @include bg-image-format("../assets/images/simulation/hero.png")
         
         .hero-overlay
             padding: 1em
@@ -1234,6 +1230,17 @@ header.scrolled #navbar
 
             p
                 margin: 1em 0
+
+            .logo-container
+                gap: 1em
+                display: flex
+                margin-top: 1em
+                align-items: center
+                justify-content: center
+                
+                img
+                    width: 80px
+                    aspect-ratio: 1                
         
         .content
             .training-list
@@ -1889,7 +1896,7 @@ header.scrolled #navbar
 
     .hero-section
         @include hero-styles(60vh, $placeholder)
-        @include bg-image-format("../assets/images/bg-university-grounds.jpg")
+        @include bg-image-format("../assets/images/others/act-3.jpg")
 
         .hero-overlay
             @include hero-overlay()
@@ -2043,6 +2050,7 @@ header.scrolled #navbar
                 
                 .text-group
                     margin-top: 1rem
+                    text-align: center
 
                     h3
                         margin-bottom: .5em
@@ -2050,7 +2058,24 @@ header.scrolled #navbar
                         text-transform: uppercase
                     p
                         font-weight: 500
+                        text-indent: 2rem
+                        text-align: initial
 
+                    .page-link:hover
+                        text-decoration: underline
+
+                    .page-link
+                        color: #fff
+                        margin: .8em auto
+                        text-align: center
+                        padding: .5rem 1rem
+                        text-decoration: none                        
+                        display: inline-block
+                        font-family: $header-font
+                        background: $bg-dark-green
+                        text-transform: capitalize
+                        border-radius: $border-radius-3
+                            
     .memories-section
         color: #fff
         padding: 1em
@@ -2413,8 +2438,8 @@ header.scrolled #navbar
             .bento-container
                 gap: 1em
                 display: grid
-                grid-template-rows: repeat(2, auto)
                 grid-template-columns: repeat(3,1fr)
+                grid-template-rows: repeat(2, minmax(320px, 320px))
                 grid-template-areas: "wide wide tall" "sml-1 sml-2 tall"                          
                             
                 .bento-box:nth-child(1)
@@ -2610,6 +2635,9 @@ header.scrolled #navbar
                                 margin: 0
                                 max-width: 300px
 
+                                .image-box
+                                    max-height: 230px
+
     // Simulation
     #simulation-content
         .hero-section
@@ -2743,7 +2771,7 @@ header.scrolled #navbar
                     display: grid
                     grid-template-rows: repeat(2, 230px)
                     grid-template-columns: repeat(4, 1fr)
-                    grid-template-areas: "sam birth adult-child matt" "cpr breast breast matt"
+                    grid-template-areas: "sam airway ac cpr" "veni intra intra cpr"
 
                     .trainer-item
                         margin: 0
@@ -2752,16 +2780,16 @@ header.scrolled #navbar
                         
                     .sam
                         grid-area: sam
-                    .birth
-                        grid-area: birth
+                    .airway
+                        grid-area: airway
                     .adult-child
-                        grid-area: adult-child
+                        grid-area: ac
+                    .venipuncture
+                        grid-area: veni
+                    .intraosseous
+                        grid-area: intra                                                                                          
                     .cpr
                         grid-area: cpr
-                    .breast
-                        grid-area: breast                                                                                          
-                    .matt
-                        grid-area: matt
 
         .simbased-training-section
             .intro-group
@@ -2778,6 +2806,9 @@ header.scrolled #navbar
                         gap: 2em
                         display: flex
                         padding: 1.2em
+
+                        img
+                            min-width: 30%
                         
                         .text-group
                             text-align: initial
@@ -3142,7 +3173,7 @@ header.scrolled #navbar
                         .container
                             height: 100%
                             display: grid
-                            grid-template-rows: 20% 80%
+                            grid-template-rows: 22% 78%
                             grid-template-columns: repeat(5, 1fr)
 
                             .header

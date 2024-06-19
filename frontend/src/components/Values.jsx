@@ -1,5 +1,5 @@
 // Asset Imports
-import coreValueImage from '../assets/images/sim-1.jpg'
+import coreValueImage from '../assets/images/about/values.jpg'
 
 const Values = () => {
   return (

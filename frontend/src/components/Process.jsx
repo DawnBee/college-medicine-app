@@ -4,7 +4,7 @@ import { API_BASE_URL } from '../api'
 import axios from 'axios'
 
 // Asset Imports
-import processImage from '../assets/images/event-1.jpg'
+import processImage from '../assets/images/admission/enrollment.jpg'
 
 const NoProcessFound = styled.div`
   width: 100%;
