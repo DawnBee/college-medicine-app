@@ -221,7 +221,9 @@ h1, h2, h3, h4, ul, p {
     position: relative;
   }
   #detail-content .main-section .upper .detail-title {
-    text-indent: 2rem;
+    max-width: 50%;
+    margin-left: 1em;
+    text-wrap: balance;
     text-align: initial;
   }
   #detail-content .main-section .upper .detail-img {
