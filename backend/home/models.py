@@ -5,7 +5,7 @@ import uuid
 
 class Announcements(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	title = models.CharField(max_length=50)
+	title = models.CharField(max_length=100)
 	image = models.ImageField(default="default.png", upload_to="announcements", null=True, blank=True)
 	description = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
@@ -21,7 +21,7 @@ class Announcements(models.Model):
 
 class Events(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	title = models.CharField(max_length=50)
+	title = models.CharField(max_length=100)
 	image = models.ImageField(default="default.png", upload_to="events", null=True, blank=True)
 	description = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
@@ -48,7 +48,7 @@ class Events(models.Model):
 
 class Publications(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	title = models.CharField(max_length=50, unique=True)
+	title = models.CharField(max_length=150, unique=True)
 	image = models.ImageField(default="default.png", upload_to="publications", null=True, blank=True)
 	description = models.TextField()
 	pdf = models.FileField(upload_to='publications/pdfs/', null=True, blank=True)
@@ -66,7 +66,7 @@ class Publications(models.Model):
 class Testimonials(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	image = models.ImageField(default="default.png", upload_to="testimonials", null=True, blank=True)
-	name = models.CharField(max_length=40, unique=True)
+	name = models.CharField(max_length=60, unique=True)
 	content = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
 
