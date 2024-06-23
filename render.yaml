@@ -1,0 +1,4 @@
+services:
+  - name: web
+    env: python
+    startCommand: gunicorn backend.wsgi:application
