@@ -8,14 +8,14 @@ const MacroButtons = () => {
                 <li className="macro-btn req">
                     <i className="fa-regular fa-clipboard"></i>
                     <span className="anchor-tag">Requirements</span>
-                    <p>Explore and Fulfill All Admission Requirements Here</p>
+                    <p>Explore and Fulfill Admission Requirements Here</p>
                 </li>
             </Link>
             <Link to="month-act" spy={true} smooth={true} duration={800} className="anchor-link">
                 <li className="macro-btn req">
                     <i className="fa-regular fa-calendar"></i>
                     <span className="anchor-tag">Monthly Activities</span>
-                    <p>Check Out Our Monthly Activities Here</p>
+                    <p>Check Out Our Monthly Activities Right Here</p>
                 </li>
             </Link>
             <Link to="scholarship" spy={true} smooth={true} duration={650} className="anchor-link">
