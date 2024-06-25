@@ -7,11 +7,11 @@ const Scholarship = () => {
         <div className="layout-container">
             <div className="content">
                 <div className="header">
-                    <h2>Scholarship and Financial Aid</h2>
+                    <h2>CHED Medical Scholarship and Return Service Program (MSRS)</h2>
                 </div>
                 <div className="intro">
-                    <h3>Applying for Aid</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, nemo explicabo.</p>
+                    <h3>Requirements</h3>
+                    <p>Please submit the following documents:</p>
                 </div>
                 <div className="req-container">
                     <ul className="req-list">
@@ -33,10 +33,11 @@ const Scholarship = () => {
                 <div className="text-group">
                     <h3>Overview</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Cupiditate laudantium veritatis debitis, iste sapiente fugit, 
-                        optio animi possimus, deserunt doloribus provident assumenda 
-                        officiis inventore quam molestias error. Vero, velit sed!
+                        The MSRS program aims to provide opportunities to deserving Filipino students 
+                        willing to fulfill the mandatory return service, prioritizing applicants
+                        residing in areas without government physicians, Geographically isolated and 
+                        Disadvantaged Areas (GIDA), or among the top twenty (20%) provinces and/or municipalities 
+                        as identified by the PSA. 
                     </p>
                 </div>
             </aside>
