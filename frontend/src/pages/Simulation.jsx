@@ -1,5 +1,5 @@
 // Asset Imports
-import pulseImage from '../assets/images/pulse-red.svg'
+import pulseImage from '../assets/images/general/pulse-red.svg'
 import facilityVideo from '../assets/videos/final-cut.mp4'
 import simImageOne from '../assets/images/simulation/sim-1.jpg'
 import simImageTwo from '../assets/images/simulation/sim-2.jpg'

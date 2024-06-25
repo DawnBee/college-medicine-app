@@ -383,7 +383,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/events-red-side-style.svg");
+  background-image: url("../assets/images/home/events-red-side-style.svg");
 }
 #home-content .event-section .layout-container {
   overflow: hidden;
@@ -485,7 +485,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-medical.svg");
+  background-image: url("../assets/images/general/bg-medical.svg");
 }
 #home-content .publication-section .publication-header {
   color: #fff;
@@ -682,7 +682,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/infirm-building.jpg");
+  background-image: url("../assets/images/general/infirm-building.jpg");
 }
 #home-content .testimonial-section .testimonial-card {
   margin: 1em;
@@ -1329,7 +1329,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/side-boxes-bottom.svg");
+  background-image: url("../assets/images/simulation/side-boxes-bottom.svg");
 }
 #simulation-content .sim-lab-section .layout-container h2 {
   margin: 2em;
@@ -1448,7 +1448,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-medical.svg");
+  background-image: url("../assets/images/general/bg-medical.svg");
 }
 #simulation-content .sim-mannequins-section .layout-container {
   padding: 1em;
@@ -1548,7 +1548,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: 100% auto;
   background-position: bottom;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/side-boxes-bottom.svg");
+  background-image: url("../assets/images/simulation/side-boxes-bottom.svg");
 }
 #simulation-content .task-trainers-section .layout-container h2 {
   margin: 1em;
@@ -1712,7 +1712,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/library-2.jpg");
+  background-image: url("../assets/images/general/library-2.jpg");
 }
 #faculty-content .hero-section .page-header {
   top: 50%;
@@ -1832,7 +1832,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-position: left;
   background-size: auto 100%;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/ecg-line-vertical.svg");
+  background-image: url("../assets/images/faculty/ecg-line-vertical.svg");
 }
 #faculty-content .mission-vision-section .layout-container .content div {
   padding: 1em;
@@ -1877,7 +1877,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-repeat: no-repeat;
   background-position: 5% center;
   border-radius: 5px;
-  background-image: url("../assets/images/quote-gray.svg");
+  background-image: url("../assets/images/faculty/quote-gray.svg");
 }
 #faculty-content .college-message-section .layout-container .content .message-img {
   left: 50%;
@@ -1935,7 +1935,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/bg-medical.svg");
+  background-image: url("../assets/images/general/bg-medical.svg");
 }
 #faculty-content .org-chart-section .chart-container img {
   height: 90%;
@@ -1947,7 +1947,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../assets/images/wooden-theme.png");
+  background-image: url("../assets/images/faculty/wooden-theme.png");
 }
 #faculty-content .highlights-section .highlights-container {
   color: #fff;
@@ -2001,7 +2001,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   grid-template-rows: 10px 2fr 10px;
   background-color: rgba(0, 0, 0, 0.85);
   grid-template-columns: 1em repeat(4, 2fr);
-  background-image: url("../assets/images/quote-white.svg");
+  background-image: url("../assets/images/faculty/quote-white.svg");
   grid-template-areas: ". . . . img" ". content content content img" ". . . . img";
 }
 #faculty-content .highlights-section .highlights-container .highlight-card .text-group {
@@ -3304,7 +3304,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     padding-bottom: 1em;
     background-position: left;
     background-size: auto 100%;
-    background-image: url("../assets/images/side-boxes-left.svg");
+    background-image: url("../assets/images/simulation/side-boxes-left.svg");
   }
   #simulation-content .sim-lab-section .layout-container .header {
     display: flex;
@@ -3365,7 +3365,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     padding: 3em;
     background-position: right;
     background-size: auto 100%;
-    background-image: url("../assets/images/side-boxes-right.svg");
+    background-image: url("../assets/images/simulation/side-boxes-right.svg");
   }
   #simulation-content .task-trainers-section .layout-container .header {
     display: flex;
