@@ -6,5 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    proxy: {
+      '/api': {
+        target: 'https://college-medicine-app.onrender.com',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
 })
