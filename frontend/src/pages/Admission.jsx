@@ -1,5 +1,5 @@
 // Asset Imports
-import pulseImage from '../assets/images/pulse-red.svg'
+import pulseImage from '../assets/images/general/pulse-red.svg'
 import cashierImage from '../assets/images/admission/payment-fee.jpg'
 
 // Components

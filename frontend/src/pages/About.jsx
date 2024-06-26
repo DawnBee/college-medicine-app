@@ -1,5 +1,5 @@
 // Asset Imports
-import collegeGrounds from '../assets/images/library-2.jpg'
+import collegeGrounds from '../assets/images/general/library-2.jpg'
 
 // Components
 import Benefactors from '../components/Benefactors'

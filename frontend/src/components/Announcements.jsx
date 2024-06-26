@@ -28,7 +28,7 @@ const NoSlideFound = styled.div`
 `;
 
 // Asset Imports
-import sirenIcon from '../assets/images/siren.svg'
+import sirenIcon from '../assets/images/home/siren.svg'
 
 const Announcements = () => {
   const [sliderImages, setSliderImages] = useState([])

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 // Assets
-import Icon from '../assets/images/404-icon.png'
+import Icon from '../assets/images/general/404-icon.png'
 
 // Styles
 import '../styles/404_Page.sass'

@@ -10,17 +10,21 @@ const Values = () => {
                 <img src={coreValueImage} alt="core values image" />
                 <ul className="value-list">
                     <li className="value-item">
-                        <h3>1st Value Here</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, corrupti!</p>
+                        <h3>Competence</h3>
+                        <p>Skilled and capable, demonstrating proficiency and effectiveness.</p>
                     </li>
                     <li className="value-item">
-                        <h3>2nd Value Here</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, corrupti!</p>
+                        <h3>Excellence</h3>
+                        <p>Outstanding quality, surpassing ordinary standards and expectations.</p>
                     </li>
                     <li className="value-item">
-                        <h3>3rd Value Here</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, corrupti!</p>
+                        <h3>Compassion</h3>
+                        <p>Deep empathy and kindness, driven to help others in need.</p>
                     </li>
+                    <li className="value-item">
+                        <h3>Humane</h3>
+                        <p>Treating others with respect, care, and compassion, recognizing their dignity.</p>
+                    </li>                    
                 </ul>
             </div>
         </div>
