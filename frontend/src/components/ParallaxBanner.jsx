@@ -3,8 +3,8 @@ import { Parallax, Background } from 'react-parallax'
 
 // Asset Imports
 import heroVideo from '../assets/videos/msu-video.mp4'
-import overlayLogo from '../assets/images/overlay-logo.svg'
-import bannerImage from '../assets/images/banner-image.png'
+import overlayLogo from '../assets/images/general/overlay-logo.svg'
+import bannerImage from '../assets/images/home/banner-image.png'
 
 const ParallaxBanner = () => {
   const [isMobile, setIsMobile] = useState(window.matchMedia('(max-width: 920px)').matches)

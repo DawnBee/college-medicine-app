@@ -1,7 +1,7 @@
 // Asset Imports
-import ecgLine from '../assets/images/ecg-line-white.svg'
-import bottomImage from '../assets/images/library-2.jpg'
-import bottomCrossImage from '../assets/images/white-crosses.svg'
+import ecgLine from '../assets/images/admission/ecg-line-white.svg'
+import bottomImage from '../assets/images/general/library-2.jpg'
+import bottomCrossImage from '../assets/images/admission/white-crosses.svg'
 import intramsImage from '../assets/images/admission/intrams.jpg'
 import grandIftarImage from '../assets/images/admission/iftar.jpg'
 import entranceExamImage from '../assets/images/admission/entrance-exam.jpg'

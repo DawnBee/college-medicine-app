@@ -3,9 +3,9 @@ import { useState, useEffect, useRef } from 'react'
 import { Link as ALink } from 'react-scroll'
 
 // Asset Imports
-import logo from '../assets/images/com-logo.png'
-import hamburgerIconWhite from '../assets/images/burger-menu-white.svg'
-import hamburgerIconBlack from '../assets/images/burger-menu-black.svg'
+import logo from '../assets/images/general/com-logo.png'
+import hamburgerIconWhite from '../assets/images/general/burger-menu-white.svg'
+import hamburgerIconBlack from '../assets/images/general/burger-menu-black.svg'
 
 const Navbar = ({currentPage}) => {
     const navMenuRef = useRef(null)

@@ -8,8 +8,8 @@ import shilroseImage from '../assets/images/faculty/shilrose.svg'
 import vienImage from '../assets/images/faculty/vien.svg'
 import darwizaImage from '../assets/images/faculty/darwiza.svg'
 import rizaldyImage from '../assets/images/faculty/rizaldy.svg'
-import logoOutline from '../assets/images/com-outline.svg'
-import bottomImage from '../assets/images/infirm-building.jpg'
+import logoOutline from '../assets/images/general/com-outline.svg'
+import bottomImage from '../assets/images/general/infirm-building.jpg'
 
 // Components
 import Message from '../components/Message'
