@@ -1,6 +1,6 @@
 // Asset Imports
 import pulseImage from '../assets/images/general/pulse-red.svg'
-import facilityVideo from '../assets/videos/final-cut.mp4'
+import facilityImg from '../assets/images/simulation/facility.jpg'
 import simImageOne from '../assets/images/simulation/sim-1.jpg'
 import simImageTwo from '../assets/images/simulation/sim-2.jpg'
 import simImageThree from '../assets/images/simulation/sim-3.jpg'
@@ -28,9 +28,7 @@ const Simulation = () => {
         <section id="facility" className="facility-section">
             <div className="layout-container">
                 <div className="first">
-                    <video className="bg-video" autoPlay muted loop>
-                        <source src={facilityVideo} type="video/mp4" />
-                    </video>
+                    <img alt="facility-img" src={facilityImg} />
                     <h2>Simulation Center</h2>
                     <p>
                         Currently located at the CETD Campus, 2nd Floor of the Library Building, 
