@@ -10,7 +10,9 @@ const Footer = () => {
         <section className="contact-copyright-info">
             <div className="social-media-links">
                 <h3>Connect with us</h3>
-                <i className="fa-brands fa-facebook"></i>
+                <a href="https://www.facebook.com/medicinemsugensan">
+                    <i className="fa-brands fa-facebook"></i>
+                </a>
                 <i className="fa-brands fa-viber"></i>
                 <i className="fa-brands fa-facebook-messenger"></i>
             </div>

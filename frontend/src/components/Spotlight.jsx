@@ -19,7 +19,7 @@ const Spotlight = () => {
                     <div className="text-group">
                         <h3>{spotlight.title}</h3>
                         <p>{spotlight.content}</p>
-                        <a className="page-link" href="#">Visit Page</a>
+                        <a className="page-link" href="https://www.facebook.com/MSUGSCSoMedS">Visit Page</a>
                     </div>
                 </div>
             ))}
