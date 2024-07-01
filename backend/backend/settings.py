@@ -117,10 +117,6 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / 'media'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / "staticfiles"
@@ -132,6 +128,9 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.getenv('CLOUD_API_KEY'),
     'API_SECRET': os.getenv('CLOUD_API_KEY'),
 }
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Jazzmin Configs
