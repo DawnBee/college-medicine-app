@@ -27,7 +27,7 @@ const Activities = () => {
             {activities.map((activity) => {
                 // Parse and format datetime
                 let date = new Date(activity.date_held)
-                let formattedMonth = format(date, 'MMMM')
+                let formattedMonth = format(date, 'MMM')
                 let formattedDay = format(date, 'dd')
                 let formattedTime = format(date, 'h a')
 
