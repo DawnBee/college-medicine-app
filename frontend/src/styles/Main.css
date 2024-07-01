@@ -194,6 +194,9 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   margin-bottom: 0.5em;
   text-transform: capitalize;
 }
+#footer .social-media-links a {
+  color: #fff;
+}
 #footer .social-media-links i {
   margin: 3px;
   cursor: pointer;
