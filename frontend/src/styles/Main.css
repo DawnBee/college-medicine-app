@@ -1303,7 +1303,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
 }
-#simulation-content .facility-section .first video {
+#simulation-content .facility-section .first img {
   width: 90%;
   margin: 2em 0 1em 0;
   border: 3px solid #fff;
@@ -3292,7 +3292,7 @@ header.scrolled #navbar .nav-menu .nav-item .drop-arrow .dropdown-menu a {
     text-align: initial;
     border-bottom-right-radius: 10px;
   }
-  #simulation-content .facility-section .layout-container .first video {
+  #simulation-content .facility-section .layout-container .first img {
     width: 80%;
     display: block;
     margin: 1em auto;
