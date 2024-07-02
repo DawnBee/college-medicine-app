@@ -1,3 +1,4 @@
+from cloudinary_storage.storage import RawMediaCloudinaryStorage
 from django.core.exceptions import ValidationError
 from django_resized import ResizedImageField
 from django.db import models
@@ -41,7 +42,7 @@ class Publications(models.Model):
 	title = models.CharField(max_length=150, unique=True)
 	image = models.ImageField(default="default.png", upload_to="publications", null=True, blank=True)
 	description = models.TextField()
-	pdf = models.FileField(upload_to='publications/pdfs/', null=True, blank=True)
+	pdf = models.FileField(upload_to='publications/pdfs/', storage=RawMediaCloudinaryStorage(), null=True, blank=True)
 	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):

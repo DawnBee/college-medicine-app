@@ -130,8 +130,12 @@ CLOUDINARY_STORAGE = {
 }
 
 MEDIA_URL = '/college-medicine/media/'
+
+# Default file storage
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+# Storage for raw files
+RAW_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage'
 
 # Jazzmin Configs
 JAZZMIN_SETTINGS = {
