@@ -1,3 +1,4 @@
+from django_resized import ResizedImageField
 from django.utils import timezone
 from django.db import models
 from PIL import Image
@@ -38,23 +39,12 @@ class Activities(models.Model):
 
 class Officers(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	image = models.ImageField(default="default.png", upload_to="officers", null=True, blank=True)
+	image = ResizedImageField(size=[800,800], quality=85, default="default.png", upload_to="officers", null=True, blank=True)
 	name = models.CharField(max_length=40, unique=True)
 	position = models.CharField(max_length=50)	
 
 	def __str__(self):
 		return f"{self.name} - {self.position}"
-
-	# Resizes Image Uploads
-	def save(self,*args,**kwargs):
-		super().save(*args,**kwargs)
-		if self.image:
-			img = Image.open(self.image.path)
-			max_size = 800
-
-			if img.height > max_size or img.width > max_size:
-				img.thumbnail((max_size, max_size), Image.LANCZOS)
-				img.save(self.image.path)		
 
 	class Meta:
 		ordering = ['name']
