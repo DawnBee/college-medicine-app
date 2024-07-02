@@ -1,4 +1,5 @@
 from django.core.exceptions import ValidationError
+from django_resized import ResizedImageField
 from django.db import models
 from PIL import Image
 import uuid
@@ -22,23 +23,12 @@ class Announcements(models.Model):
 class Events(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	title = models.CharField(max_length=100)
-	image = models.ImageField(default="default.png", upload_to="events", null=True, blank=True)
+	image = ResizedImageField(size=[500,500], quality=85, default="default.png", upload_to="events", null=True, blank=True)
 	description = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 		return self.title
-
-	# Resizes Image Uploads
-	def save(self,*args,**kwargs):
-		super().save(*args,**kwargs)
-		if self.image:
-			img = Image.open(self.image.path)
-			max_size = 800
-
-			if img.height > max_size or img.width > max_size:
-				img.thumbnail((max_size, max_size), Image.LANCZOS)
-				img.save(self.image.path)
 
 	class Meta:
 		verbose_name = "Event"
@@ -65,7 +55,7 @@ class Publications(models.Model):
 
 class Testimonials(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	image = models.ImageField(default="default.png", upload_to="testimonials", null=True, blank=True)
+	image = ResizedImageField(size=[300,300], quality=85, default="default.png", upload_to="testimonials", null=True, blank=True)
 	name = models.CharField(max_length=60, unique=True)
 	content = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
@@ -80,17 +70,6 @@ class Testimonials(models.Model):
 
 	def save(self, *args, **kwargs):
 		self.full_clean()
-		super().save(*args, **kwargs)
-
-		# Resizes Image Uploads
-		if self.image:
-			img = Image.open(self.image.path)
-			max_size = 350
-
-			if img.height > max_size or img.width > max_size:
-				img.thumbnail((max_size, max_size), Image.LANCZOS)
-				img.save(self.image.path)
-
 		super().save(*args, **kwargs)
 
 	class Meta:
