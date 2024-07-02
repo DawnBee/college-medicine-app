@@ -23,7 +23,7 @@ class Announcements(models.Model):
 class Events(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 	title = models.CharField(max_length=100)
-	image = ResizedImageField(size=[500,500], quality=85, default="default.png", upload_to="events", null=True, blank=True)
+	image = ResizedImageField(size=[800,800], quality=85, default="default.png", upload_to="events", null=True, blank=True)
 	description = models.TextField()
 	date_added = models.DateTimeField(auto_now_add=True)
 
