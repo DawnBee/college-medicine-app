@@ -1,3 +1,4 @@
+from django_resized import ResizedImageField
 from django.db import models
 from PIL import Image
 import uuid
@@ -15,23 +16,12 @@ class SingletonModel(models.Model):
 
 class Benefactors(models.Model):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	image = models.ImageField(default="default.png", upload_to="benefactors", null=True, blank=True)
+	image = ResizedImageField(size=[400,400], quality=85, default="default.png", upload_to="benefactors", null=True, blank=True)
 	name = models.CharField(max_length=60, unique=True)
 	position = models.CharField(max_length=100)
 
 	def __str__(self):
 		return self.name.capitalize()
-
-	# Resizes Image Uploads
-	def save(self,*args,**kwargs):
-		super().save(*args,**kwargs)
-		if self.image:
-			img = Image.open(self.image.path)
-			max_size = 400
-
-			if img.height > max_size or img.width > max_size:
-				img.thumbnail((max_size, max_size), Image.LANCZOS)
-				img.save(self.image.path)
 
 	class Meta:
 		ordering = ['name']
