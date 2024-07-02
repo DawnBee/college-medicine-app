@@ -129,7 +129,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': os.getenv('CLOUD_API_SECRET'),
 }
 
-MEDIA_URL = '/media/'
+MEDIA_URL = '/college-medicine/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
