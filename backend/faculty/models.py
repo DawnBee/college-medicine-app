@@ -17,7 +17,7 @@ class SingletonModel(models.Model):
 
 class Message(SingletonModel):
 	id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-	image = ResizedImageField(size=[300,300], quality=85, default="default.png", upload_to="org_chart", null=True, blank=True)
+	image = ResizedImageField(size=[800,800], quality=85, default="default.png", upload_to="org_chart", null=True, blank=True)
 	representative = models.CharField(max_length=20)
 	content = models.TextField()
 
