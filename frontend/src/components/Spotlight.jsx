@@ -5,7 +5,7 @@ const Spotlight = () => {
     const spotlights = [
         {
             image: orgLogo,
-            title: "Society of Medical Students (SOMMEDS)",
+            title: "Society of Medical Students (SOMED)",
             content: "is the premier medical student organization dedicated to fostering academic excellence, professional development, and community service among future healthcare leaders."
         }
     ]
