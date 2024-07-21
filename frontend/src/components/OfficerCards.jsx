@@ -62,7 +62,7 @@ const OfficerCards = () => {
                     <div className="container">
                         <div className="header">
                             <Link to={`/officers/${officer.id}`}>
-                                <h2>SOMMED</h2>
+                                <h2>SOMED</h2>
                                 <em>{officer.position}</em>
                             </Link>
                         </div>
