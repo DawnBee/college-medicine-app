@@ -21,7 +21,6 @@ const Others = () => {
             <OfficerCards />
             <Sidebar />
         </div>
-        {/* Most 'Toxic' working environment I've ever been! */}
     </main>
   )
 }
