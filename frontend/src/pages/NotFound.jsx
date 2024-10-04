@@ -19,8 +19,6 @@ const NotFound = () => {
             </p>
             <Link to="/">Go Back</Link>
         </div>
-        {/* Multiple roles, untimely salary, impossible timeframes, and a very toxic work environment */}
-        {/* They treat u like trash and don't respect you as a developer here! */}
         <a className="easter-egg" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">.</a>
     </main>
   )
