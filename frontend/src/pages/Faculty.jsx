@@ -43,7 +43,6 @@ const Faculty = () => {
                 </li>
                 <li id="edwin" className="faculty-item">
                     <img src={edwinImage} alt="edwin" className="faculty-image" />
-                    {/* This asswipe don't respect his employees, don't be fooled by his demeanor; his a wolf in a sheep's clothing */}
                     <span className="faculty-name">Dr. Edwin Alconcel<br/><em>College Dean</em></span>
                 </li>
                 <li id="shilrose" className="faculty-item">
